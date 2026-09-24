@@ -1,0 +1,10 @@
+%%% case isort_tests.rs::test_isort_add_imports_preserve_order
+%%% input -
+[tool.isort]
+add_imports = ["from __future__ import annotations", "import sys"]
+%%% output short
+[tool.isort]
+add_imports = [ "from __future__ import annotations", "import sys" ]
+%%% output long
+[tool.isort]
+add_imports = [ "from __future__ import annotations", "import sys" ]

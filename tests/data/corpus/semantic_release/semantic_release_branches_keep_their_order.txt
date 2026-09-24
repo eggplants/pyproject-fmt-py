@@ -1,0 +1,16 @@
+%%% case semantic_release_tests.rs::test_semantic_release_branches_keep_their_order
+%%% input -
+[tool.semantic_release.branches.z-specific]
+match = "release/.*"
+
+[tool.semantic_release.branches.a-fallback]
+match = ".*"
+%%% output short
+[tool.semantic_release]
+branches.z-specific.match = "release/.*"
+branches.a-fallback.match = ".*"
+%%% output long
+[tool.semantic_release.branches.z-specific]
+match = "release/.*"
+[tool.semantic_release.branches.a-fallback]
+match = ".*"

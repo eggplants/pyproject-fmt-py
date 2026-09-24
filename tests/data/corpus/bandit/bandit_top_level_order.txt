@@ -1,0 +1,19 @@
+%%% case bandit_tests.rs::test_bandit_top_level_order
+%%% input -
+[tool.bandit]
+skips = ["B101"]
+tests = ["B201"]
+targets = ["src"]
+exclude_dirs = ["tests"]
+%%% output short
+[tool.bandit]
+exclude_dirs = [ "tests" ]
+targets = [ "src" ]
+tests = [ "B201" ]
+skips = [ "B101" ]
+%%% output long
+[tool.bandit]
+exclude_dirs = [ "tests" ]
+targets = [ "src" ]
+tests = [ "B201" ]
+skips = [ "B101" ]

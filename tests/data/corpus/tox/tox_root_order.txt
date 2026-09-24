@@ -1,0 +1,19 @@
+%%% case tox_tests.rs::test_tox_root_order
+%%% input -
+[tool.tox]
+skip_missing_interpreters = true
+env_list = ["py312", "py311"]
+min_version = "4.0"
+requires = ["tox-uv"]
+%%% output short
+[tool.tox]
+min_version = "4.0"
+requires = [ "tox-uv" ]
+env_list = [ "py312", "py311" ]
+skip_missing_interpreters = true
+%%% output long
+[tool.tox]
+min_version = "4.0"
+requires = [ "tox-uv" ]
+env_list = [ "py312", "py311" ]
+skip_missing_interpreters = true

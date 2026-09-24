@@ -1,0 +1,10 @@
+%%% case cibuildwheel_tests.rs::test_cibw_enable_sorted
+%%% input -
+[tool.cibuildwheel]
+enable = ["pypy", "cpython-prerelease", "cpython-freethreading"]
+%%% output short
+[tool.cibuildwheel]
+enable = [ "cpython-freethreading", "cpython-prerelease", "pypy" ]
+%%% output long
+[tool.cibuildwheel]
+enable = [ "cpython-freethreading", "cpython-prerelease", "pypy" ]

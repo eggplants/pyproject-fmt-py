@@ -1,0 +1,13 @@
+%%% case deptry_tests.rs::test_deptry_long_format
+%%% input -
+[tool.deptry]
+exclude = ["zeta", "alpha"]
+ignore = ["DEP002", "DEP001"]
+%%% output short
+[tool.deptry]
+exclude = [ "alpha", "zeta" ]
+ignore = [ "DEP001", "DEP002" ]
+%%% output long
+[tool.deptry]
+exclude = [ "alpha", "zeta" ]
+ignore = [ "DEP001", "DEP002" ]

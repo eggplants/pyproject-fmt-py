@@ -1,0 +1,22 @@
+%%% case pytest_tests.rs::test_pytest_filterwarnings_keep_their_order
+%%% input -
+[tool.pytest.ini_options]
+filterwarnings = [
+  "error",
+  "ignore::PendingDeprecationWarning",
+  "ignore::DeprecationWarning",
+]
+%%% output short
+[tool.pytest]
+ini_options.filterwarnings = [
+  "error",
+  "ignore::PendingDeprecationWarning",
+  "ignore::DeprecationWarning",
+]
+%%% output long
+[tool.pytest.ini_options]
+filterwarnings = [
+  "error",
+  "ignore::PendingDeprecationWarning",
+  "ignore::DeprecationWarning",
+]

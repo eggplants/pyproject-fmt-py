@@ -1,0 +1,17 @@
+%%% case build_systems_tests.rs::test_format_build_systems_setuptools_backend_keeps_wheel_with_marker
+%%% input -
+[build-system]
+requires = ["setuptools", "wheel; sys_platform=='win32'"]
+build-backend = "setuptools.build_meta"
+%%% output short
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [ "setuptools", "wheel; sys_platform=='win32'" ]
+%%% output long
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [ "setuptools", "wheel; sys_platform=='win32'" ]
+%%% output keep-full-version
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [ "setuptools", "wheel; sys_platform=='win32'" ]

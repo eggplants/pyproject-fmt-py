@@ -1,0 +1,26 @@
+%%% case project_tests.rs::test_project_classifiers_wide_range
+%%% input -
+[project]
+requires-python = ">=3.9"
+%%% output short
+[project]
+requires-python = ">=3.9"
+%%% output long
+[project]
+requires-python = ">=3.9"
+%%% output keep-full-version
+[project]
+requires-python = ">=3.9"
+%%% output classifiers
+[project]
+requires-python = ">=3.9"
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]

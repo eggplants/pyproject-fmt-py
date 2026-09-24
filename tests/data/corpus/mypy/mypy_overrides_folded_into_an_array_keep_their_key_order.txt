@@ -1,0 +1,12 @@
+%%% case mypy_tests.rs::test_mypy_overrides_folded_into_an_array_keep_their_key_order
+%%% input -
+[[tool.mypy.overrides]]
+strict = true
+module = ["z", "a"]
+%%% output short
+[tool.mypy]
+overrides = [ { module = [ "a", "z" ], strict = true } ]
+%%% output long
+[[tool.mypy.overrides]]
+module = [ "a", "z" ]
+strict = true

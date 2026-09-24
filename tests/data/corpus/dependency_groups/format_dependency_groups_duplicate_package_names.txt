@@ -1,0 +1,13 @@
+%%% case dependency_groups_tests.rs::test_format_dependency_groups_duplicate_package_names
+%%% input -
+[dependency-groups]
+test=["pkg>=2.0","pkg>=1.0","other"]
+%%% output short
+[dependency-groups]
+test = [ "other", "pkg>=1", "pkg>=2" ]
+%%% output long
+[dependency-groups]
+test = [ "other", "pkg>=1", "pkg>=2" ]
+%%% output keep-full-version
+[dependency-groups]
+test = [ "other", "pkg>=1.0", "pkg>=2.0" ]

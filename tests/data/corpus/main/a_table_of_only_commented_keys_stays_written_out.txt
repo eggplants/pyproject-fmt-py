@@ -1,0 +1,30 @@
+%%% case main_tests.rs::test_a_table_of_only_commented_keys_stays_written_out
+%%% input -
+[tool.hatch.envs.default]
+dependencies = ["a"]
+
+[tool.hatch.envs.default.scripts]
+# run = "x"
+%%% output short
+[tool.hatch]
+envs.default.dependencies = [ "a" ]
+
+[tool.hatch.envs.default.scripts]
+# run = "x"
+%%% output long
+[tool.hatch.envs.default]
+dependencies = [ "a" ]
+[tool.hatch.envs.default.scripts]
+# run = "x"
+%%% output classifiers
+[tool.hatch]
+envs.default.dependencies = [ "a" ]
+
+[tool.hatch.envs.default.scripts]
+# run = "x"
+%%% output narrow
+[tool.hatch]
+envs.default.dependencies = [ "a" ]
+
+[tool.hatch.envs.default.scripts]
+# run = "x"

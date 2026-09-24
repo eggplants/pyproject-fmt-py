@@ -1,0 +1,19 @@
+%%% case uv_tests.rs::test_uv_pip_table_no_collapse
+%%% input -
+[tool.uv.pip]
+upgrade-package = ["requests", "flask"]
+no-binary-package = ["scipy", "numpy"]
+extra = ["dev", "test", "docs"]
+index-url = "https://pypi.org/simple"
+%%% output short
+[tool.uv]
+pip.extra = [ "dev", "docs", "test" ]
+pip.index-url = "https://pypi.org/simple"
+pip.no-binary-package = [ "numpy", "scipy" ]
+pip.upgrade-package = [ "flask", "requests" ]
+%%% output long
+[tool.uv.pip]
+index-url = "https://pypi.org/simple"
+no-binary-package = [ "numpy", "scipy" ]
+extra = [ "dev", "docs", "test" ]
+upgrade-package = [ "flask", "requests" ]

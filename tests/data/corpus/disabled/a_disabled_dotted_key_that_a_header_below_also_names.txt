@@ -1,0 +1,19 @@
+%%% case disabled_tests.rs::test_a_disabled_dotted_key_that_a_header_below_also_names
+%%% input -
+[tool.uv]
+# sources.mine = { path = "." }
+package = true
+
+[tool.uv.sources]
+mine = { workspace = true }
+%%% output short
+[tool.uv]
+# sources.mine = { path = "." }
+sources.mine = { workspace = true }
+package = true
+%%% output long
+[tool.uv]
+# sources.mine = { path = "." }
+package = true
+[tool.uv.sources]
+mine = { workspace = true }

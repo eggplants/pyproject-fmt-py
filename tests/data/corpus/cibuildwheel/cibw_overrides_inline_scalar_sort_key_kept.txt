@@ -1,0 +1,10 @@
+%%% case cibuildwheel_tests.rs::test_cibw_overrides_inline_scalar_sort_key_kept
+%%% input -
+[tool.cibuildwheel]
+overrides = [ { test-extras = "test", select = "cp310-*" } ]
+%%% output short
+[tool.cibuildwheel]
+overrides = [ { select = "cp310-*", test-extras = "test" } ]
+%%% output long
+[tool.cibuildwheel]
+overrides = [ { select = "cp310-*", test-extras = "test" } ]

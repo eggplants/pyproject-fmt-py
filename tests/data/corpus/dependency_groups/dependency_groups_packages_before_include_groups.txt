@@ -1,0 +1,33 @@
+%%% case dependency_groups_tests.rs::test_dependency_groups_packages_before_include_groups
+%%% input -
+[dependency-groups]
+all = [
+  {include-group = "base"},
+  "zz-pkg",
+  "aa-pkg",
+]
+base = ["x"]
+%%% output short
+[dependency-groups]
+all = [
+  { include-group = "base" },
+  "aa-pkg",
+  "zz-pkg",
+]
+base = [ "x" ]
+%%% output long
+[dependency-groups]
+all = [
+  { include-group = "base" },
+  "aa-pkg",
+  "zz-pkg",
+]
+base = [ "x" ]
+%%% output keep-full-version
+[dependency-groups]
+all = [
+  { include-group = "base" },
+  "aa-pkg",
+  "zz-pkg",
+]
+base = [ "x" ]

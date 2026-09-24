@@ -1,0 +1,13 @@
+%%% case build_systems_tests.rs::test_format_build_systems_keeps_a_requirement_it_cannot_read
+%%% input -
+[build-system]
+requires = ["good >= 1.0.0", "!! not a requirement !!"]
+%%% output short
+[build-system]
+requires = [ "!! not a requirement !!", "good>=1" ]
+%%% output long
+[build-system]
+requires = [ "!! not a requirement !!", "good>=1" ]
+%%% output keep-full-version
+[build-system]
+requires = [ "!! not a requirement !!", "good>=1.0.0" ]

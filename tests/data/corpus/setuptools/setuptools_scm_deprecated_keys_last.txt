@@ -1,0 +1,13 @@
+%%% case setuptools_tests.rs::test_setuptools_scm_deprecated_keys_last
+%%% input -
+[tool.setuptools_scm]
+write_to = "src/_version.py"
+version_scheme = "guess-next-dev"
+%%% output short
+[tool.setuptools_scm]
+version_scheme = "guess-next-dev"
+write_to = "src/_version.py"
+%%% output long
+[tool.setuptools_scm]
+version_scheme = "guess-next-dev"
+write_to = "src/_version.py"

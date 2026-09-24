@@ -1,0 +1,16 @@
+%%% case poetry_tests.rs::test_poetry_expanded_quoted_group_dependencies_order
+%%% input -
+[tool.poetry.group."a.b".dependencies]
+zeta = "1"
+python = "3.12"
+alpha = "1"
+%%% output short
+[tool.poetry]
+group."a.b".dependencies.python = "3.12"
+group."a.b".dependencies.alpha = "1"
+group."a.b".dependencies.zeta = "1"
+%%% output long
+[tool.poetry.group."a.b".dependencies]
+python = "3.12"
+alpha = "1"
+zeta = "1"

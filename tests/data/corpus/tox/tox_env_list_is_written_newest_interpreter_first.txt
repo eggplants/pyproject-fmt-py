@@ -1,0 +1,10 @@
+%%% case tox_tests.rs::test_tox_env_list_is_written_newest_interpreter_first
+%%% input -
+[tool.tox]
+env_list = ["py312", "py310", "py311", "py313"]
+%%% output short
+[tool.tox]
+env_list = [ "py313", "py312", "py311", "py310" ]
+%%% output long
+[tool.tox]
+env_list = [ "py313", "py312", "py311", "py310" ]

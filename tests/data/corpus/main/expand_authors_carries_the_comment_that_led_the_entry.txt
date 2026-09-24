@@ -1,0 +1,36 @@
+%%% case main_tests.rs::test_expand_authors_carries_the_comment_that_led_the_entry
+%%% input -
+[project]
+name = "example"
+# people published in package metadata
+authors = [ { name = "Alice" } ]
+%%% output short
+[project]
+name = "example"
+# people published in package metadata
+authors = [ { name = "Alice" } ]
+%%% output long
+[project]
+name = "example"
+# people published in package metadata
+[[project.authors]]
+name = "Alice"
+%%% output classifiers
+[project]
+name = "example"
+# people published in package metadata
+authors = [ { name = "Alice" } ]
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]
+%%% output narrow
+[project]
+name = "example"
+# people published in package metadata
+authors = [ { name = "Alice" } ]

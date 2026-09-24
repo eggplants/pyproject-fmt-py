@@ -1,0 +1,13 @@
+%%% case poetry_tests.rs::test_poetry_long_format_plugins_unquoted_inner
+%%% input -
+[tool.poetry.plugins.console_scripts]
+zebra = "z:Z"
+alpha = "a:A"
+%%% output short
+[tool.poetry]
+plugins.console_scripts.alpha = "a:A"
+plugins.console_scripts.zebra = "z:Z"
+%%% output long
+[tool.poetry.plugins.console_scripts]
+alpha = "a:A"
+zebra = "z:Z"

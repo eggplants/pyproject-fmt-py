@@ -1,0 +1,10 @@
+%%% case cibuildwheel_tests.rs::test_cibw_overrides_inline_without_select_untouched
+%%% input -
+[tool.cibuildwheel]
+overrides = [ { test-command = "pytest", before-all = "make" } ]
+%%% output short
+[tool.cibuildwheel]
+overrides = [ { test-command = "pytest", before-all = "make" } ]
+%%% output long
+[tool.cibuildwheel]
+overrides = [ { test-command = "pytest", before-all = "make" } ]

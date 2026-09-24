@@ -1,0 +1,16 @@
+%%% case disabled_tests.rs::test_disabled_key_output_is_idempotent
+%%% input -
+[[tool.uv.index]]
+name = "pypi"
+url = "https://pypi.org/simple"
+# default = true
+%%% output short
+[[tool.uv.index]]
+name = "pypi"
+url = "https://pypi.org/simple"
+# default = true
+%%% output long
+[[tool.uv.index]]
+name = "pypi"
+url = "https://pypi.org/simple"
+# default = true

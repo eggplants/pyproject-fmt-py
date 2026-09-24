@@ -1,0 +1,11 @@
+%%% case uv_tests.rs::test_uv_workspace_exclude
+%%% input -
+[tool.uv]
+workspace.exclude = ["examples/demo", "examples/alpha"]
+%%% output short
+[tool.uv]
+workspace.exclude = [ "examples/alpha", "examples/demo" ]
+%%% output long
+[tool.uv]
+[tool.uv.workspace]
+exclude = [ "examples/alpha", "examples/demo" ]

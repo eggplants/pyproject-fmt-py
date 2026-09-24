@@ -1,0 +1,16 @@
+%%% case mypy_tests.rs::test_mypy_unknown_keys_alphabetized_at_end
+%%% input -
+[tool.mypy]
+zzz_unknown = true
+aaa_unknown = false
+strict = true
+%%% output short
+[tool.mypy]
+strict = true
+aaa_unknown = false
+zzz_unknown = true
+%%% output long
+[tool.mypy]
+strict = true
+aaa_unknown = false
+zzz_unknown = true

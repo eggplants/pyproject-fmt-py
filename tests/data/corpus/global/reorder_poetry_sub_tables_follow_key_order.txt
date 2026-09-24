@@ -1,0 +1,20 @@
+%%% case global_tests.rs::test_reorder_poetry_sub_tables_follow_key_order
+%%% input -
+[tool.poetry.urls]
+a = "b"
+[tool.poetry.group.dev.dependencies]
+pytest = "*"
+[tool.poetry.dependencies]
+python = "^3.9"
+%%% output short
+[tool.poetry]
+dependencies.python = "^3.9"
+group.dev.dependencies.pytest = "*"
+urls.a = "b"
+%%% output long
+[tool.poetry.dependencies]
+python = "^3.9"
+[tool.poetry.group.dev.dependencies]
+pytest = "*"
+[tool.poetry.urls]
+a = "b"

@@ -1,0 +1,13 @@
+%%% case maturin_tests.rs::test_maturin_idempotent
+%%% input -
+[tool.maturin]
+bindings = "pyo3"
+features = [ "extension-module" ]
+%%% output short
+[tool.maturin]
+bindings = "pyo3"
+features = [ "extension-module" ]
+%%% output long
+[tool.maturin]
+bindings = "pyo3"
+features = [ "extension-module" ]

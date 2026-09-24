@@ -1,0 +1,40 @@
+%%% case project_tests.rs::test_project_entry_points_carry_their_comments_once
+%%% input -
+[project]
+name = "demo"
+# plugins
+entry-points.group = { a = "demo:a", b = "demo:b" } # beside
+%%% output short
+[project]
+name = "demo"
+# plugins
+entry-points.group.a = "demo:a"
+entry-points.group.b = "demo:b"  # beside
+%%% output long
+[project]
+name = "demo"
+[project.entry-points]
+# plugins
+group.a = "demo:a"
+group.b = "demo:b"  # beside
+%%% output keep-full-version
+[project]
+name = "demo"
+# plugins
+entry-points.group.a = "demo:a"
+entry-points.group.b = "demo:b"  # beside
+%%% output classifiers
+[project]
+name = "demo"
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]
+# plugins
+entry-points.group.a = "demo:a"
+entry-points.group.b = "demo:b"  # beside

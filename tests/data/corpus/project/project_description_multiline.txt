@@ -1,0 +1,33 @@
+%%% case project_tests.rs::test_project_description_multiline
+%%% input -
+[project]
+name = "test"
+description = """
+This is a   multiline
+description   with   extra   spaces
+"""
+%%% output short
+[project]
+name = "test"
+description = "This is a multiline description with extra spaces"
+%%% output long
+[project]
+name = "test"
+description = "This is a multiline description with extra spaces"
+%%% output keep-full-version
+[project]
+name = "test"
+description = "This is a multiline description with extra spaces"
+%%% output classifiers
+[project]
+name = "test"
+description = "This is a multiline description with extra spaces"
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]

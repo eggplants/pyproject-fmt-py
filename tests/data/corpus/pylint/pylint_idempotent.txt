@@ -1,0 +1,15 @@
+%%% case pylint_tests.rs::test_pylint_idempotent
+%%% input -
+[tool.pylint.main]
+jobs = 4
+[tool.pylint.messages_control]
+disable = [ "C0114", "C0115" ]
+%%% output short
+[tool.pylint]
+main.jobs = 4
+messages_control.disable = [ "C0114", "C0115" ]
+%%% output long
+[tool.pylint.main]
+jobs = 4
+[tool.pylint.messages_control]
+disable = [ "C0114", "C0115" ]

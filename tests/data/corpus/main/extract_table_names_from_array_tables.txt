@@ -1,0 +1,33 @@
+%%% case main_tests.rs::test_extract_table_names_from_array_tables
+%%% input -
+[project]
+name = "test"
+
+[[project.authors]]
+name = "John"
+%%% output short
+[project]
+name = "test"
+authors = [ { name = "John" } ]
+%%% output long
+[project]
+name = "test"
+[[project.authors]]
+name = "John"
+%%% output classifiers
+[project]
+name = "test"
+authors = [ { name = "John" } ]
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]
+%%% output narrow
+[project]
+name = "test"
+authors = [ { name = "John" } ]

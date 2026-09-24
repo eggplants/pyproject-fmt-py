@@ -1,0 +1,10 @@
+%%% case poetry_tests.rs::test_poetry_git_dependency_inline_key_order
+%%% input -
+[tool.poetry.dependencies]
+foo = { branch = "main", git = "https://github.com/example/foo", subdirectory = "pkg" }
+%%% output short
+[tool.poetry]
+dependencies.foo = { git = "https://github.com/example/foo", branch = "main", subdirectory = "pkg" }
+%%% output long
+[tool.poetry.dependencies]
+foo = { git = "https://github.com/example/foo", branch = "main", subdirectory = "pkg" }

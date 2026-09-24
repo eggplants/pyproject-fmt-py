@@ -1,0 +1,13 @@
+%%% case build_systems_tests.rs::test_format_build_systems_build_system_requires_keep
+%%% input -
+[build-system]
+requires=["a>=1.0.0", "b.c>=1.5.0"]
+%%% output short
+[build-system]
+requires = [ "a>=1", "b-c>=1.5" ]
+%%% output long
+[build-system]
+requires = [ "a>=1", "b-c>=1.5" ]
+%%% output keep-full-version
+[build-system]
+requires = [ "a>=1.0.0", "b-c>=1.5.0" ]

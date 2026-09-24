@@ -1,0 +1,33 @@
+%%% case coverage_tests.rs::test_coverage_grouped_options
+%%% input -
+[tool.coverage]
+run.branch = true
+run.omit = ["tests/*"]
+run.source = ["src"]
+run.include = ["**/*.py"]
+report.exclude_lines = ["pragma: no cover"]
+report.exclude_also = ["if TYPE_CHECKING:"]
+report.skip_empty = true
+report.skip_covered = true
+%%% output short
+[tool.coverage]
+run.source = [ "src" ]
+run.include = [ "**/*.py" ]
+run.omit = [ "tests/*" ]
+run.branch = true
+report.exclude_lines = [ "pragma: no cover" ]
+report.exclude_also = [ "if TYPE_CHECKING:" ]
+report.skip_covered = true
+report.skip_empty = true
+%%% output long
+[tool.coverage]
+[tool.coverage.run]
+source = [ "src" ]
+include = [ "**/*.py" ]
+omit = [ "tests/*" ]
+branch = true
+[tool.coverage.report]
+exclude_lines = [ "pragma: no cover" ]
+exclude_also = [ "if TYPE_CHECKING:" ]
+skip_covered = true
+skip_empty = true

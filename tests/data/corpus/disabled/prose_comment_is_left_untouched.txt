@@ -1,0 +1,16 @@
+%%% case disabled_tests.rs::test_prose_comment_is_left_untouched
+%%% input -
+[project]
+name = "foo"
+# this is just a note
+version = "1.0"
+%%% output short
+[project]
+name = "foo"
+# this is just a note
+version = "1.0"
+%%% output long
+[project]
+name = "foo"
+# this is just a note
+version = "1.0"

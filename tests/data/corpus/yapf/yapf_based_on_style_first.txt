@@ -1,0 +1,16 @@
+%%% case yapf_tests.rs::test_yapf_based_on_style_first
+%%% input -
+[tool.yapf]
+column_limit = 120
+indent_width = 4
+based_on_style = "google"
+%%% output short
+[tool.yapf]
+based_on_style = "google"
+column_limit = 120
+indent_width = 4
+%%% output long
+[tool.yapf]
+based_on_style = "google"
+column_limit = 120
+indent_width = 4

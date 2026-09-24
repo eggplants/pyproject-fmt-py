@@ -1,0 +1,11 @@
+%%% case scikit_build_tests.rs::test_scikit_build_args_preserved
+%%% input -
+[tool.scikit-build]
+cmake.args = ["-DZ=1", "-DA=2"]
+%%% output short
+[tool.scikit-build]
+cmake.args = [ "-DZ=1", "-DA=2" ]
+%%% output long
+[tool.scikit-build]
+[tool.scikit-build.cmake]
+args = [ "-DZ=1", "-DA=2" ]

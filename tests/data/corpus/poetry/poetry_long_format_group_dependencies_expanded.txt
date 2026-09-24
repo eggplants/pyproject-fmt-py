@@ -1,0 +1,16 @@
+%%% case poetry_tests.rs::test_poetry_long_format_group_dependencies_expanded
+%%% input -
+[tool.poetry.group.test.dependencies]
+zebra = "^1.0"
+python = "^3.11"
+alpha = "^2.0"
+%%% output short
+[tool.poetry]
+group.test.dependencies.python = "^3.11"
+group.test.dependencies.alpha = "^2.0"
+group.test.dependencies.zebra = "^1.0"
+%%% output long
+[tool.poetry.group.test.dependencies]
+python = "^3.11"
+alpha = "^2.0"
+zebra = "^1.0"

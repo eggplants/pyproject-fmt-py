@@ -1,0 +1,13 @@
+%%% case disabled_tests.rs::test_a_disabled_inline_table_is_not_split_into_keys
+%%% input -
+[project]
+name = "x"
+# entry-points.group = { first = "pkg:first", second = "pkg:second" }
+%%% output short
+[project]
+name = "x"
+# entry-points.group = { first = "pkg:first", second = "pkg:second" }
+%%% output long
+[project]
+name = "x"
+# entry-points.group = { first = "pkg:first", second = "pkg:second" }

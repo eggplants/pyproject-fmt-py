@@ -1,0 +1,14 @@
+%%% case mypy_tests.rs::test_mypy_overrides_aot_key_order
+%%% input -
+[[tool.mypy.overrides]]
+ignore_missing_imports = true
+disable_error_code = ["attr-defined"]
+module = "third_party.*"
+%%% output short
+[tool.mypy]
+overrides = [ { module = "third_party.*", ignore_missing_imports = true, disable_error_code = [ "attr-defined" ] } ]
+%%% output long
+[[tool.mypy.overrides]]
+module = "third_party.*"
+ignore_missing_imports = true
+disable_error_code = [ "attr-defined" ]

@@ -1,0 +1,16 @@
+%%% case setuptools_tests.rs::test_setuptools_package_data_values_sorted_per_key
+%%% input -
+[tool.setuptools.package-data]
+zeta = ["z.txt", "a.txt"]
+"*" = ["star2.txt", "star1.txt"]
+alpha = ["b.txt", "a.txt"]
+%%% output short
+[tool.setuptools]
+package-data."*" = [ "star1.txt", "star2.txt" ]
+package-data.alpha = [ "a.txt", "b.txt" ]
+package-data.zeta = [ "a.txt", "z.txt" ]
+%%% output long
+[tool.setuptools.package-data]
+"*" = [ "star1.txt", "star2.txt" ]
+alpha = [ "a.txt", "b.txt" ]
+zeta = [ "a.txt", "z.txt" ]

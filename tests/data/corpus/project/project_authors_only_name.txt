@@ -1,0 +1,26 @@
+%%% case project_tests.rs::test_project_authors_only_name
+%%% input -
+[project]
+authors = [{ name = "Developer Name" }]
+%%% output short
+[project]
+authors = [ { name = "Developer Name" } ]
+%%% output long
+[project]
+[[project.authors]]
+name = "Developer Name"
+%%% output keep-full-version
+[project]
+authors = [ { name = "Developer Name" } ]
+%%% output classifiers
+[project]
+authors = [ { name = "Developer Name" } ]
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]

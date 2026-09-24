@@ -1,0 +1,29 @@
+%%% case main_tests.rs::test_a_table_with_a_key_beside_the_commented_one_folds
+%%% input -
+[tool.hatch.envs.default]
+dependencies = ["a"]
+
+[tool.hatch.envs.default.scripts]
+# run = "x"
+test = "pytest"
+%%% output short
+[tool.hatch]
+envs.default.dependencies = [ "a" ]
+# envs.default.scripts.run = "x"
+envs.default.scripts.test = "pytest"
+%%% output long
+[tool.hatch.envs.default]
+dependencies = [ "a" ]
+[tool.hatch.envs.default.scripts]
+# run = "x"
+test = "pytest"
+%%% output classifiers
+[tool.hatch]
+envs.default.dependencies = [ "a" ]
+# envs.default.scripts.run = "x"
+envs.default.scripts.test = "pytest"
+%%% output narrow
+[tool.hatch]
+envs.default.dependencies = [ "a" ]
+# envs.default.scripts.run = "x"
+envs.default.scripts.test = "pytest"

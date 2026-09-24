@@ -1,0 +1,18 @@
+%%% case scikit_build_tests.rs::test_scikit_build_order
+%%% input -
+[tool.scikit-build]
+wheel.packages = ["src/foo"]
+cmake.version = ">=3.20"
+minimum-version = "0.9"
+%%% output short
+[tool.scikit-build]
+minimum-version = "0.9"
+cmake.version = ">=3.20"
+wheel.packages = [ "src/foo" ]
+%%% output long
+[tool.scikit-build]
+minimum-version = "0.9"
+[tool.scikit-build.cmake]
+version = ">=3.20"
+[tool.scikit-build.wheel]
+packages = [ "src/foo" ]

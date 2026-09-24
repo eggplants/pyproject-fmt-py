@@ -1,0 +1,37 @@
+%%% case project_tests.rs::test_project_gui_scripts_sorting
+%%% input -
+[project]
+name = "test"
+[project.gui-scripts]
+window_z = "pkg:z"
+window_a = "pkg:a"
+%%% output short
+[project]
+name = "test"
+gui-scripts.window_a = "pkg:a"
+gui-scripts.window_z = "pkg:z"
+%%% output long
+[project]
+name = "test"
+[project.gui-scripts]
+window_z = "pkg:z"
+window_a = "pkg:a"
+%%% output keep-full-version
+[project]
+name = "test"
+gui-scripts.window_a = "pkg:a"
+gui-scripts.window_z = "pkg:z"
+%%% output classifiers
+[project]
+name = "test"
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]
+gui-scripts.window_a = "pkg:a"
+gui-scripts.window_z = "pkg:z"

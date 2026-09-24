@@ -1,0 +1,25 @@
+%%% case project_tests.rs::test_project_dependencies_git_urls
+%%% input -
+[project]
+dependencies = ["pkg @ git+https://github.com/user/repo.git@main"]
+%%% output short
+[project]
+dependencies = [ "pkg @ git+https://github.com/user/repo.git@main" ]
+%%% output long
+[project]
+dependencies = [ "pkg @ git+https://github.com/user/repo.git@main" ]
+%%% output keep-full-version
+[project]
+dependencies = [ "pkg @ git+https://github.com/user/repo.git@main" ]
+%%% output classifiers
+[project]
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]
+dependencies = [ "pkg @ git+https://github.com/user/repo.git@main" ]

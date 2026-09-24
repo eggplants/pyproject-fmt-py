@@ -1,0 +1,16 @@
+%%% case isort_tests.rs::test_isort_section_headings_after_known_sources
+%%% input -
+[tool.isort]
+import_heading_stdlib = "Standard library"
+profile = "black"
+known_first_party = ["my_pkg"]
+%%% output short
+[tool.isort]
+profile = "black"
+known_first_party = [ "my_pkg" ]
+import_heading_stdlib = "Standard library"
+%%% output long
+[tool.isort]
+profile = "black"
+known_first_party = [ "my_pkg" ]
+import_heading_stdlib = "Standard library"

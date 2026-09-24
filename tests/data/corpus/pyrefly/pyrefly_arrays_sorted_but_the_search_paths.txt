@@ -1,0 +1,22 @@
+%%% case pyrefly_tests.rs::test_pyrefly_arrays_sorted_but_the_search_paths
+%%% input -
+[tool.pyrefly]
+project_includes = ["zeta/**", "alpha/**"]
+project_excludes = ["zbuild", "abuild"]
+search_path = ["z_path", "a_path"]
+site_package_path = ["z_site", "a_site"]
+replace_imports_with_any = ["z_pkg", "a_pkg"]
+%%% output short
+[tool.pyrefly]
+project_includes = [ "alpha/**", "zeta/**" ]
+project_excludes = [ "abuild", "zbuild" ]
+search_path = [ "z_path", "a_path" ]
+site_package_path = [ "z_site", "a_site" ]
+replace_imports_with_any = [ "z_pkg", "a_pkg" ]
+%%% output long
+[tool.pyrefly]
+project_includes = [ "alpha/**", "zeta/**" ]
+project_excludes = [ "abuild", "zbuild" ]
+search_path = [ "z_path", "a_path" ]
+site_package_path = [ "z_site", "a_site" ]
+replace_imports_with_any = [ "z_pkg", "a_pkg" ]

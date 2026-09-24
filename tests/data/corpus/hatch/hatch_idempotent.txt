@@ -1,0 +1,28 @@
+%%% case hatch_tests.rs::test_hatch_idempotent
+%%% input -
+[tool.hatch.version]
+path = "src/pkg/__init__.py"
+source = "regex"
+
+[tool.hatch.build]
+include = ["src/**"]
+packages = ["src/pkg"]
+
+[tool.hatch.envs.default]
+dependencies = ["pytest"]
+%%% output short
+[tool.hatch]
+version.source = "regex"
+version.path = "src/pkg/__init__.py"
+build.packages = [ "src/pkg" ]
+build.include = [ "src/**" ]
+envs.default.dependencies = [ "pytest" ]
+%%% output long
+[tool.hatch.version]
+source = "regex"
+path = "src/pkg/__init__.py"
+[tool.hatch.build]
+packages = [ "src/pkg" ]
+include = [ "src/**" ]
+[tool.hatch.envs.default]
+dependencies = [ "pytest" ]

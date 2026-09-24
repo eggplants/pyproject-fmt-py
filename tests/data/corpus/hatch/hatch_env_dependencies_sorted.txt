@@ -1,0 +1,10 @@
+%%% case hatch_tests.rs::test_hatch_env_dependencies_sorted
+%%% input -
+[tool.hatch.envs.default]
+dependencies = ["pytest", "black", "mypy", "ruff"]
+%%% output short
+[tool.hatch]
+envs.default.dependencies = [ "black", "mypy", "pytest", "ruff" ]
+%%% output long
+[tool.hatch.envs.default]
+dependencies = [ "black", "mypy", "pytest", "ruff" ]

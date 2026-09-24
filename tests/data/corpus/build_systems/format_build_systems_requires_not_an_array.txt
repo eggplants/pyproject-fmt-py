@@ -1,0 +1,17 @@
+%%% case build_systems_tests.rs::test_format_build_systems_requires_not_an_array
+%%% input -
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = "setuptools"
+%%% output short
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = "setuptools"
+%%% output long
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = "setuptools"
+%%% output keep-full-version
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = "setuptools"

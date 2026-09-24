@@ -1,0 +1,12 @@
+%%% case project_tests.rs::test_project_version_invalid
+%%% input -
+[project]
+version = "1.9.xyz"
+%%% error short
+project.version `1.9.xyz` is not a valid PEP 440 version
+%%% error long
+project.version `1.9.xyz` is not a valid PEP 440 version
+%%% error keep-full-version
+project.version `1.9.xyz` is not a valid PEP 440 version
+%%% error classifiers
+project.version `1.9.xyz` is not a valid PEP 440 version

@@ -1,0 +1,11 @@
+%%% case uv_tests.rs::test_uv_workspace_members
+%%% input -
+[tool.uv]
+workspace.members = ["packages/zebra", "packages/alpha", "packages/beta"]
+%%% output short
+[tool.uv]
+workspace.members = [ "packages/alpha", "packages/beta", "packages/zebra" ]
+%%% output long
+[tool.uv]
+[tool.uv.workspace]
+members = [ "packages/alpha", "packages/beta", "packages/zebra" ]

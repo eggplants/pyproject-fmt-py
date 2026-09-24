@@ -1,0 +1,25 @@
+%%% case project_tests.rs::test_a_project_written_only_below_its_own_header_is_still_read
+%%% input -
+[project.optional-dependencies]
+My_Extra = ["pytest>=7.0"]
+%%% output short
+[project]
+optional-dependencies.my-extra = [ "pytest>=7" ]
+%%% output long
+[project.optional-dependencies]
+my-extra = [ "pytest>=7" ]
+%%% output keep-full-version
+[project]
+optional-dependencies.my-extra = [ "pytest>=7.0" ]
+%%% output classifiers
+[project]
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]
+optional-dependencies.my-extra = [ "pytest>=7" ]

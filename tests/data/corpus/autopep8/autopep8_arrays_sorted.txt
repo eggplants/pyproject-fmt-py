@@ -1,0 +1,16 @@
+%%% case autopep8_tests.rs::test_autopep8_arrays_sorted
+%%% input -
+[tool.autopep8]
+select = ["E501", "E302", "E401"]
+ignore = ["W503", "E203"]
+exclude = ["build", "dist", "tests"]
+%%% output short
+[tool.autopep8]
+ignore = [ "E203", "W503" ]
+select = [ "E302", "E401", "E501" ]
+exclude = [ "build", "dist", "tests" ]
+%%% output long
+[tool.autopep8]
+ignore = [ "E203", "W503" ]
+select = [ "E302", "E401", "E501" ]
+exclude = [ "build", "dist", "tests" ]

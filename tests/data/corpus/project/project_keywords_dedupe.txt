@@ -1,0 +1,30 @@
+%%% case project_tests.rs::test_project_keywords_dedupe
+%%% input -
+[project]
+name = "test"
+keywords = ["python", "Python", "PYTHON", "rust", "Rust"]
+%%% output short
+[project]
+name = "test"
+keywords = [ "python", "rust" ]
+%%% output long
+[project]
+name = "test"
+keywords = [ "python", "rust" ]
+%%% output keep-full-version
+[project]
+name = "test"
+keywords = [ "python", "rust" ]
+%%% output classifiers
+[project]
+name = "test"
+keywords = [ "python", "rust" ]
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]

@@ -1,0 +1,13 @@
+%%% case mypy_tests.rs::test_mypy_always_true_false_sorted
+%%% input -
+[tool.mypy]
+always_true = ["FEATURE_Z", "FEATURE_A"]
+always_false = ["DEBUG", "BETA"]
+%%% output short
+[tool.mypy]
+always_true = [ "FEATURE_A", "FEATURE_Z" ]
+always_false = [ "BETA", "DEBUG" ]
+%%% output long
+[tool.mypy]
+always_true = [ "FEATURE_A", "FEATURE_Z" ]
+always_false = [ "BETA", "DEBUG" ]

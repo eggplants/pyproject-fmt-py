@@ -1,0 +1,23 @@
+%%% case coverage_tests.rs::test_coverage_comments_preserved
+%%% input -
+[tool.coverage]
+# Run configuration
+run.branch = true
+run.omit = [
+    "tests/*",  # Don't measure tests
+]
+%%% output short
+[tool.coverage]
+run.omit = [
+  "tests/*", # Don't measure tests
+]
+# Run configuration
+run.branch = true
+%%% output long
+[tool.coverage]
+[tool.coverage.run]
+omit = [
+  "tests/*", # Don't measure tests
+]
+# Run configuration
+branch = true

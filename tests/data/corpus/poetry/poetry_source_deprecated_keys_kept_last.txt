@@ -1,0 +1,14 @@
+%%% case poetry_tests.rs::test_poetry_source_deprecated_keys_kept_last
+%%% input -
+[[tool.poetry.source]]
+secondary = true
+name = "legacy"
+url = "https://legacy.example.com/simple"
+%%% output short
+[tool.poetry]
+source = [ { name = "legacy", url = "https://legacy.example.com/simple", secondary = true } ]
+%%% output long
+[[tool.poetry.source]]
+name = "legacy"
+url = "https://legacy.example.com/simple"
+secondary = true

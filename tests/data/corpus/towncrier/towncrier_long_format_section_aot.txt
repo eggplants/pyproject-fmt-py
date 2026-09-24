@@ -1,0 +1,20 @@
+%%% case towncrier_tests.rs::test_towncrier_long_format_section_aot
+%%% input -
+[tool.towncrier]
+package = "p"
+
+[[tool.towncrier.section]]
+showcontent = true
+name = "Core"
+path = "src/core"
+%%% output short
+[tool.towncrier]
+package = "p"
+section = [ { path = "src/core", name = "Core", showcontent = true } ]
+%%% output long
+[tool.towncrier]
+package = "p"
+[[tool.towncrier.section]]
+path = "src/core"
+name = "Core"
+showcontent = true

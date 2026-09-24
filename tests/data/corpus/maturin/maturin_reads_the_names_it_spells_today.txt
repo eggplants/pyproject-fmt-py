@@ -1,0 +1,19 @@
+%%% case maturin_tests.rs::test_maturin_reads_the_names_it_spells_today
+%%% input -
+[tool.maturin]
+use-base-python = true
+rustc-args = ["-C", "target-cpu=native"]
+include = [{ path = "z.txt", format = "sdist" }, "a.txt"]
+unstable-flags = ["-Zbuild-std"]
+%%% output short
+[tool.maturin]
+include = [ { path = "z.txt", format = "sdist" }, "a.txt" ]
+rustc-args = [ "-C", "target-cpu=native" ]
+unstable-flags = [ "-Zbuild-std" ]
+use-base-python = true
+%%% output long
+[tool.maturin]
+include = [ { path = "z.txt", format = "sdist" }, "a.txt" ]
+rustc-args = [ "-C", "target-cpu=native" ]
+unstable-flags = [ "-Zbuild-std" ]
+use-base-python = true

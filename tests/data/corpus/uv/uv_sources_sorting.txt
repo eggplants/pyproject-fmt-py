@@ -1,0 +1,16 @@
+%%% case uv_tests.rs::test_uv_sources_sorting
+%%% input -
+[tool.uv.sources]
+zebra = { git = "https://github.com/example/zebra" }
+alpha = { path = "../alpha" }
+mango = { workspace = true }
+%%% output short
+[tool.uv]
+sources.alpha = { path = "../alpha" }
+sources.mango = { workspace = true }
+sources.zebra = { git = "https://github.com/example/zebra" }
+%%% output long
+[tool.uv.sources]
+alpha = { path = "../alpha" }
+mango = { workspace = true }
+zebra = { git = "https://github.com/example/zebra" }

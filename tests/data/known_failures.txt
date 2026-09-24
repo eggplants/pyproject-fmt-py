@@ -1,0 +1,2 @@
+# Corpus cases the formatter does not write correctly yet, one <case>@<profile> per line.
+# Rewrite with `pytest --update-known-failures`.

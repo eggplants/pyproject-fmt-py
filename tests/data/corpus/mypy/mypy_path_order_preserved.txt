@@ -1,0 +1,10 @@
+%%% case mypy_tests.rs::test_mypy_path_order_preserved
+%%% input -
+[tool.mypy]
+mypy_path = ["./stubs", "./src", "./vendor"]
+%%% output short
+[tool.mypy]
+mypy_path = [ "./stubs", "./src", "./vendor" ]
+%%% output long
+[tool.mypy]
+mypy_path = [ "./stubs", "./src", "./vendor" ]

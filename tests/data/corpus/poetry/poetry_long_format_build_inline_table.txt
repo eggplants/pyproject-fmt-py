@@ -1,0 +1,13 @@
+%%% case poetry_tests.rs::test_poetry_long_format_build_inline_table
+%%% input -
+[tool.poetry.build]
+generate-setup-file = true
+script = "build.py"
+%%% output short
+[tool.poetry]
+build.script = "build.py"
+build.generate-setup-file = true
+%%% output long
+[tool.poetry.build]
+script = "build.py"
+generate-setup-file = true

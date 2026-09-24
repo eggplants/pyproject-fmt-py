@@ -1,0 +1,41 @@
+%%% case dependency_groups_tests.rs::test_format_dependency_groups_array_with_comments
+%%% input -
+[dependency-groups]
+test = [
+  "pytest>=7.0",
+  # This is a comment
+  "black>=23.0",
+  { include-group = "docs" },
+  # Another comment
+]
+docs = ["sphinx>=5.0"]
+%%% output short
+[dependency-groups]
+test = [
+  # This is a comment
+  "black>=23",
+  "pytest>=7",
+  { include-group = "docs" },
+  # Another comment
+]
+docs = [ "sphinx>=5" ]
+%%% output long
+[dependency-groups]
+test = [
+  # This is a comment
+  "black>=23",
+  "pytest>=7",
+  { include-group = "docs" },
+  # Another comment
+]
+docs = [ "sphinx>=5" ]
+%%% output keep-full-version
+[dependency-groups]
+test = [
+  # This is a comment
+  "black>=23.0",
+  "pytest>=7.0",
+  { include-group = "docs" },
+  # Another comment
+]
+docs = [ "sphinx>=5.0" ]

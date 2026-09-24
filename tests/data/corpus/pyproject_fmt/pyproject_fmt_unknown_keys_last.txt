@@ -1,0 +1,19 @@
+%%% case pyproject_fmt_tests.rs::test_pyproject_fmt_unknown_keys_last
+%%% input -
+[tool.pyproject-fmt]
+zzz = 1
+indent = 2
+aaa = 2
+column_width = 120
+%%% output short
+[tool.pyproject-fmt]
+column_width = 120
+indent = 2
+aaa = 2
+zzz = 1
+%%% output long
+[tool.pyproject-fmt]
+column_width = 120
+indent = 2
+aaa = 2
+zzz = 1

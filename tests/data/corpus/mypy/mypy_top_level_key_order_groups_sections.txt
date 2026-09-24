@@ -1,0 +1,28 @@
+%%% case mypy_tests.rs::test_mypy_top_level_key_order_groups_sections
+%%% input -
+[tool.mypy]
+warn_unused_configs = true
+strict = true
+cache_dir = ".mypy_cache"
+plugins = ["pydantic.mypy"]
+pretty = true
+python_version = "3.11"
+files = ["src"]
+%%% output short
+[tool.mypy]
+files = [ "src" ]
+python_version = "3.11"
+strict = true
+pretty = true
+cache_dir = ".mypy_cache"
+plugins = [ "pydantic.mypy" ]
+warn_unused_configs = true
+%%% output long
+[tool.mypy]
+files = [ "src" ]
+python_version = "3.11"
+strict = true
+pretty = true
+cache_dir = ".mypy_cache"
+plugins = [ "pydantic.mypy" ]
+warn_unused_configs = true

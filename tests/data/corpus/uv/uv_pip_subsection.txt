@@ -1,0 +1,16 @@
+%%% case uv_tests.rs::test_uv_pip_subsection
+%%% input -
+[tool.uv.pip]
+no-binary-package = ["scipy", "numpy"]
+extra = ["dev", "test", "docs"]
+index-url = "https://pypi.org/simple"
+%%% output short
+[tool.uv]
+pip.extra = [ "dev", "docs", "test" ]
+pip.index-url = "https://pypi.org/simple"
+pip.no-binary-package = [ "numpy", "scipy" ]
+%%% output long
+[tool.uv.pip]
+index-url = "https://pypi.org/simple"
+no-binary-package = [ "numpy", "scipy" ]
+extra = [ "dev", "docs", "test" ]

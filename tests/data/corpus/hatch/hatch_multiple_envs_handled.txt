@@ -1,0 +1,16 @@
+%%% case hatch_tests.rs::test_hatch_multiple_envs_handled
+%%% input -
+[tool.hatch.envs.lint]
+dependencies = ["ruff"]
+
+[tool.hatch.envs.test]
+dependencies = ["pytest"]
+%%% output short
+[tool.hatch]
+envs.lint.dependencies = [ "ruff" ]
+envs.test.dependencies = [ "pytest" ]
+%%% output long
+[tool.hatch.envs.lint]
+dependencies = [ "ruff" ]
+[tool.hatch.envs.test]
+dependencies = [ "pytest" ]

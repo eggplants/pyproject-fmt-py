@@ -1,0 +1,35 @@
+%%% case project_tests.rs::test_project_entry_points_inline_table_expansion
+%%% input -
+[project]
+name = "test"
+entry-points.console_scripts = {foo = "pkg:main", bar = "pkg:bar"}
+%%% output short
+[project]
+name = "test"
+entry-points.console_scripts.bar = "pkg:bar"
+entry-points.console_scripts.foo = "pkg:main"
+%%% output long
+[project]
+name = "test"
+[project.entry-points]
+console_scripts.foo = "pkg:main"
+console_scripts.bar = "pkg:bar"
+%%% output keep-full-version
+[project]
+name = "test"
+entry-points.console_scripts.bar = "pkg:bar"
+entry-points.console_scripts.foo = "pkg:main"
+%%% output classifiers
+[project]
+name = "test"
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]
+entry-points.console_scripts.bar = "pkg:bar"
+entry-points.console_scripts.foo = "pkg:main"

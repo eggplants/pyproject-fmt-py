@@ -1,0 +1,13 @@
+%%% case dependency_groups_tests.rs::test_format_dependency_groups_inline_table_without_include_group
+%%% input -
+[dependency-groups]
+test=["pkg>=1.0",{some-key="value"}]
+%%% output short
+[dependency-groups]
+test = [ "pkg>=1", { some-key = "value" } ]
+%%% output long
+[dependency-groups]
+test = [ "pkg>=1", { some-key = "value" } ]
+%%% output keep-full-version
+[dependency-groups]
+test = [ "pkg>=1.0", { some-key = "value" } ]

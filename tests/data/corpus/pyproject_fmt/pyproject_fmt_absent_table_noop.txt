@@ -1,0 +1,10 @@
+%%% case pyproject_fmt_tests.rs::test_pyproject_fmt_absent_table_noop
+%%% input -
+[project]
+name = "foo"
+%%% output short
+[project]
+name = "foo"
+%%% output long
+[project]
+name = "foo"

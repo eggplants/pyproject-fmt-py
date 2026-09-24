@@ -1,0 +1,10 @@
+%%% case pyproject_fmt_tests.rs::test_pyproject_fmt_dedup_case_sensitive
+%%% input -
+[tool.pyproject-fmt]
+expand_tables = ["tool.Ruff", "tool.ruff"]
+%%% output short
+[tool.pyproject-fmt]
+expand_tables = [ "tool.Ruff", "tool.ruff" ]
+%%% output long
+[tool.pyproject-fmt]
+expand_tables = [ "tool.Ruff", "tool.ruff" ]

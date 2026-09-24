@@ -1,0 +1,22 @@
+%%% case hatch_tests.rs::test_hatch_long_format_env_scripts_subtable
+%%% input -
+[tool.hatch.envs.default.scripts]
+test = "pytest"
+lint = "ruff check"
+
+[tool.hatch.envs.default.env-vars]
+FOO = "1"
+BAR = "2"
+%%% output short
+[tool.hatch]
+envs.default.env-vars.BAR = "2"
+envs.default.env-vars.FOO = "1"
+envs.default.scripts.lint = "ruff check"
+envs.default.scripts.test = "pytest"
+%%% output long
+[tool.hatch.envs.default.env-vars]
+BAR = "2"
+FOO = "1"
+[tool.hatch.envs.default.scripts]
+lint = "ruff check"
+test = "pytest"

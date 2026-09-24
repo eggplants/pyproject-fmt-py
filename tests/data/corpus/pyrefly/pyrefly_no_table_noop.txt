@@ -1,0 +1,10 @@
+%%% case pyrefly_tests.rs::test_pyrefly_no_table_noop
+%%% input -
+[project]
+name = "x"
+%%% output short
+[project]
+name = "x"
+%%% output long
+[project]
+name = "x"

@@ -1,0 +1,22 @@
+%%% case hatch_tests.rs::test_hatch_long_format_matrix_aot
+%%% input -
+[tool.hatch.envs.default]
+python = "3.12"
+
+[[tool.hatch.envs.default.matrix]]
+python = ["3.12", "3.11"]
+
+[[tool.hatch.envs.default.matrix]]
+python = ["3.10"]
+%%% output short
+[tool.hatch]
+envs.default.python = "3.12"
+envs.default.matrix = [ { python = [ "3.12", "3.11" ] }, { python = [ "3.10" ] } ]
+%%% output long
+[tool.hatch.envs.default]
+python = "3.12"
+[[tool.hatch.envs.default.matrix]]
+python = [ "3.12", "3.11" ]
+
+[[tool.hatch.envs.default.matrix]]
+python = [ "3.10" ]

@@ -1,0 +1,10 @@
+%%% case mypy_tests.rs::test_mypy_no_table_is_noop
+%%% input -
+[project]
+name = "demo"
+%%% output short
+[project]
+name = "demo"
+%%% output long
+[project]
+name = "demo"

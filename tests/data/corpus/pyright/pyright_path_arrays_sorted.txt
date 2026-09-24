@@ -1,0 +1,19 @@
+%%% case pyright_tests.rs::test_pyright_path_arrays_sorted
+%%% input -
+[tool.pyright]
+include = ["zebra", "alpha"]
+exclude = ["build", "dist", "**/.venv"]
+ignore = ["zeta/*.py", "alpha/*.py"]
+extraPaths = ["src", "stubs"]
+%%% output short
+[tool.pyright]
+include = [ "alpha", "zebra" ]
+exclude = [ "**/.venv", "build", "dist" ]
+ignore = [ "alpha/*.py", "zeta/*.py" ]
+extraPaths = [ "src", "stubs" ]
+%%% output long
+[tool.pyright]
+include = [ "alpha", "zebra" ]
+exclude = [ "**/.venv", "build", "dist" ]
+ignore = [ "alpha/*.py", "zeta/*.py" ]
+extraPaths = [ "src", "stubs" ]

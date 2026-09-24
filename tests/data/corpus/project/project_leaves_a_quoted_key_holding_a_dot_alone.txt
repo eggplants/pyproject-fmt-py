@@ -1,0 +1,35 @@
+%%% case project_tests.rs::test_project_leaves_a_quoted_key_holding_a_dot_alone
+%%% input -
+[project]
+name = "My_Project"
+"name.foo" = "My_Project"
+"version.bar" = "1.9.xyz"
+%%% output short
+[project]
+name = "my-project"
+"name.foo" = "My_Project"
+"version.bar" = "1.9.xyz"
+%%% output long
+[project]
+name = "my-project"
+"name.foo" = "My_Project"
+"version.bar" = "1.9.xyz"
+%%% output keep-full-version
+[project]
+name = "my-project"
+"name.foo" = "My_Project"
+"version.bar" = "1.9.xyz"
+%%% output classifiers
+[project]
+name = "my-project"
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]
+"name.foo" = "My_Project"
+"version.bar" = "1.9.xyz"

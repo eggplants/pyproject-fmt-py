@@ -1,0 +1,16 @@
+%%% case main_tests.rs::test_issue_146_deeply_nested_ruff_table
+%%% input -
+[tool.ruff.lint.flake8-tidy-imports.banned-api]
+"collections.namedtuple".msg = "Use typing.NamedTuple instead"
+%%% output short
+[tool.ruff]
+lint.flake8-tidy-imports.banned-api."collections.namedtuple".msg = "Use typing.NamedTuple instead"
+%%% output long
+[tool.ruff.lint.flake8-tidy-imports.banned-api]
+"collections.namedtuple".msg = "Use typing.NamedTuple instead"
+%%% output classifiers
+[tool.ruff]
+lint.flake8-tidy-imports.banned-api."collections.namedtuple".msg = "Use typing.NamedTuple instead"
+%%% output narrow
+[tool.ruff]
+lint.flake8-tidy-imports.banned-api."collections.namedtuple".msg = "Use typing.NamedTuple instead"

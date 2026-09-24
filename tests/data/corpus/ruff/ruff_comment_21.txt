@@ -1,0 +1,33 @@
+%%% case ruff_tests.rs::test_ruff_comment_21
+%%% input -
+[tool.ruff.lint]
+select = ["ALL"]
+
+ignore = [
+    # Missing type annotation for **{name}.
+    "ANN003",
+]
+
+# Keep commented-out code.
+# Developers use it during development, and VSCode auto-save can remove it.
+unfixable = ["ERA001"]
+%%% output short
+[tool.ruff]
+lint.select = [ "ALL" ]
+lint.ignore = [
+  # Missing type annotation for **{name}.
+  "ANN003",
+]
+# Keep commented-out code.
+# Developers use it during development, and VSCode auto-save can remove it.
+lint.unfixable = [ "ERA001" ]
+%%% output long
+[tool.ruff.lint]
+select = [ "ALL" ]
+ignore = [
+  # Missing type annotation for **{name}.
+  "ANN003",
+]
+# Keep commented-out code.
+# Developers use it during development, and VSCode auto-save can remove it.
+unfixable = [ "ERA001" ]

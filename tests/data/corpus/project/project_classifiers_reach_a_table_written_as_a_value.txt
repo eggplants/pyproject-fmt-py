@@ -1,0 +1,17 @@
+%%% case project_tests.rs::test_project_classifiers_reach_a_table_written_as_a_value
+%%% input -
+project = { name = "test", requires-python = ">=3.12" }
+%%% output short
+project = { name = "test", requires-python = ">=3.12" }
+%%% output long
+project = { name = "test", requires-python = ">=3.12" }
+%%% output keep-full-version
+project = { name = "test", requires-python = ">=3.12" }
+%%% output classifiers
+project = { name = "test", requires-python = ">=3.12", classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+] }

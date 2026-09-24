@@ -1,0 +1,25 @@
+%%% case pyright_tests.rs::test_pyright_idempotent
+%%% input -
+[tool.pyright]
+pythonVersion = "3.12"
+typeCheckingMode = "strict"
+include = [ "src" ]
+exclude = [ "build" ]
+reportMissingImports = "error"
+reportUnusedVariable = "warning"
+%%% output short
+[tool.pyright]
+pythonVersion = "3.12"
+typeCheckingMode = "strict"
+include = [ "src" ]
+exclude = [ "build" ]
+reportMissingImports = "error"
+reportUnusedVariable = "warning"
+%%% output long
+[tool.pyright]
+pythonVersion = "3.12"
+typeCheckingMode = "strict"
+include = [ "src" ]
+exclude = [ "build" ]
+reportMissingImports = "error"
+reportUnusedVariable = "warning"

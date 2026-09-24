@@ -1,0 +1,25 @@
+%%% case setuptools_tests.rs::test_setuptools_top_level_key_order
+%%% input -
+[tool.setuptools]
+zip-safe = false
+license-files = ["LICENSE"]
+platforms = ["any"]
+include-package-data = true
+packages = ["my_pkg"]
+py-modules = ["foo", "bar"]
+%%% output short
+[tool.setuptools]
+py-modules = [ "bar", "foo" ]
+packages = [ "my_pkg" ]
+include-package-data = true
+platforms = [ "any" ]
+license-files = [ "LICENSE" ]
+zip-safe = false
+%%% output long
+[tool.setuptools]
+py-modules = [ "bar", "foo" ]
+packages = [ "my_pkg" ]
+include-package-data = true
+platforms = [ "any" ]
+license-files = [ "LICENSE" ]
+zip-safe = false

@@ -1,0 +1,16 @@
+%%% case mypy_tests.rs::test_mypy_long_format_overrides_expanded
+%%% input -
+[[tool.mypy.overrides]]
+ignore_missing_imports = true
+disable_error_code = ["import-untyped", "attr-defined"]
+module = "third_party.*"
+%%% output short
+[[tool.mypy.overrides]]
+module = "third_party.*"
+ignore_missing_imports = true
+disable_error_code = [ "attr-defined", "import-untyped" ]
+%%% output long
+[[tool.mypy.overrides]]
+module = "third_party.*"
+ignore_missing_imports = true
+disable_error_code = [ "attr-defined", "import-untyped" ]

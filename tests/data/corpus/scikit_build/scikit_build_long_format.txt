@@ -1,0 +1,18 @@
+%%% case scikit_build_tests.rs::test_scikit_build_long_format
+%%% input -
+[tool.scikit-build]
+wheel.packages = ["src/zeta", "src/alpha"]
+cmake.args = ["-DZ=1", "-DA=2"]
+minimum-version = "0.9"
+%%% output short
+[tool.scikit-build]
+minimum-version = "0.9"
+cmake.args = [ "-DZ=1", "-DA=2" ]
+wheel.packages = [ "src/zeta", "src/alpha" ]
+%%% output long
+[tool.scikit-build]
+minimum-version = "0.9"
+[tool.scikit-build.cmake]
+args = [ "-DZ=1", "-DA=2" ]
+[tool.scikit-build.wheel]
+packages = [ "src/zeta", "src/alpha" ]

@@ -1,0 +1,48 @@
+%%% case project_tests.rs::test_project_authors_same_name_preserve_order
+%%% input -
+[project]
+name = "test"
+authors = [
+    {name = "Alice", email = "z@example.com"},
+    {name = "Alice", email = "a@example.com"},
+]
+%%% output short
+[project]
+name = "test"
+authors = [
+  { name = "Alice", email = "z@example.com" },
+  { name = "Alice", email = "a@example.com" },
+]
+%%% output long
+[project]
+name = "test"
+[[project.authors]]
+name = "Alice"
+email = "z@example.com"
+
+[[project.authors]]
+name = "Alice"
+email = "a@example.com"
+%%% output keep-full-version
+[project]
+name = "test"
+authors = [
+  { name = "Alice", email = "z@example.com" },
+  { name = "Alice", email = "a@example.com" },
+]
+%%% output classifiers
+[project]
+name = "test"
+authors = [
+  { name = "Alice", email = "z@example.com" },
+  { name = "Alice", email = "a@example.com" },
+]
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]

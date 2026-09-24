@@ -1,0 +1,30 @@
+%%% case project_tests.rs::test_project_import_namespaces
+%%% input -
+[project]
+name = "test"
+import-namespaces = ["z.namespace", "a.namespace ;  private"]
+%%% output short
+[project]
+name = "test"
+import-namespaces = [ "a.namespace; private", "z.namespace" ]
+%%% output long
+[project]
+name = "test"
+import-namespaces = [ "a.namespace; private", "z.namespace" ]
+%%% output keep-full-version
+[project]
+name = "test"
+import-namespaces = [ "a.namespace; private", "z.namespace" ]
+%%% output classifiers
+[project]
+name = "test"
+import-namespaces = [ "a.namespace; private", "z.namespace" ]
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]

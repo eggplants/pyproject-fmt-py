@@ -1,0 +1,11 @@
+%%% case coverage_tests.rs::test_coverage_paths_not_sorted
+%%% input -
+[tool.coverage]
+paths.source = ["src/mypackage", "/home/user/project/src/mypackage", "/build/src/mypackage"]
+%%% output short
+[tool.coverage]
+paths.source = [ "src/mypackage", "/home/user/project/src/mypackage", "/build/src/mypackage" ]
+%%% output long
+[tool.coverage]
+[tool.coverage.paths]
+source = [ "src/mypackage", "/home/user/project/src/mypackage", "/build/src/mypackage" ]

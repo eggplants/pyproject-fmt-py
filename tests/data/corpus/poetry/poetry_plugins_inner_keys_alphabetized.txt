@@ -1,0 +1,13 @@
+%%% case poetry_tests.rs::test_poetry_plugins_inner_keys_alphabetized
+%%% input -
+[tool.poetry.plugins."poetry.application.plugin"]
+zebra = "z_pkg:Z"
+alpha = "a_pkg:A"
+%%% output short
+[tool.poetry]
+plugins."poetry.application.plugin".alpha = "a_pkg:A"
+plugins."poetry.application.plugin".zebra = "z_pkg:Z"
+%%% output long
+[tool.poetry.plugins."poetry.application.plugin"]
+alpha = "a_pkg:A"
+zebra = "z_pkg:Z"

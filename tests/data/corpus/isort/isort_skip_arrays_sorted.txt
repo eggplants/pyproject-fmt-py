@@ -1,0 +1,13 @@
+%%% case isort_tests.rs::test_isort_skip_arrays_sorted
+%%% input -
+[tool.isort]
+skip = ["zebra.py", "alpha.py"]
+skip_glob = ["**/migrations/*", "**/vendor/*"]
+%%% output short
+[tool.isort]
+skip = [ "alpha.py", "zebra.py" ]
+skip_glob = [ "**/migrations/*", "**/vendor/*" ]
+%%% output long
+[tool.isort]
+skip = [ "alpha.py", "zebra.py" ]
+skip_glob = [ "**/migrations/*", "**/vendor/*" ]

@@ -1,0 +1,13 @@
+%%% case setuptools_tests.rs::test_setuptools_long_format_cmdclass_alphabetized
+%%% input -
+[tool.setuptools.cmdclass]
+zeta_cmd = "z:Z"
+alpha_cmd = "a:A"
+%%% output short
+[tool.setuptools]
+cmdclass.alpha_cmd = "a:A"
+cmdclass.zeta_cmd = "z:Z"
+%%% output long
+[tool.setuptools.cmdclass]
+alpha_cmd = "a:A"
+zeta_cmd = "z:Z"

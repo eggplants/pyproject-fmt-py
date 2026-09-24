@@ -1,0 +1,11 @@
+%%% case pixi_tests.rs::test_workspace_channels_keep_their_order
+%%% input -
+[tool.pixi]
+workspace.channels = ["pytorch", "conda-forge", "bioconda"]
+%%% output short
+[tool.pixi]
+workspace.channels = [ "pytorch", "conda-forge", "bioconda" ]
+%%% output long
+[tool.pixi]
+[tool.pixi.workspace]
+channels = [ "pytorch", "conda-forge", "bioconda" ]

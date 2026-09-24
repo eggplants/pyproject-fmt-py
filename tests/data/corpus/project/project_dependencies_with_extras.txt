@@ -1,0 +1,25 @@
+%%% case project_tests.rs::test_project_dependencies_with_extras
+%%% input -
+[project]
+dependencies = ["requests[security]>=2.28.0", "click[colorama]>=8.0"]
+%%% output short
+[project]
+dependencies = [ "click[colorama]>=8", "requests[security]>=2.28" ]
+%%% output long
+[project]
+dependencies = [ "click[colorama]>=8", "requests[security]>=2.28" ]
+%%% output keep-full-version
+[project]
+dependencies = [ "click[colorama]>=8.0", "requests[security]>=2.28.0" ]
+%%% output classifiers
+[project]
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]
+dependencies = [ "click[colorama]>=8", "requests[security]>=2.28" ]

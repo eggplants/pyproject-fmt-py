@@ -1,0 +1,10 @@
+%%% case poetry_tests.rs::test_poetry_keywords_sorted_and_deduped
+%%% input -
+[tool.poetry]
+keywords = ["zebra", "alpha", "Alpha", "mike", "alpha"]
+%%% output short
+[tool.poetry]
+keywords = [ "alpha", "mike", "zebra" ]
+%%% output long
+[tool.poetry]
+keywords = [ "alpha", "mike", "zebra" ]

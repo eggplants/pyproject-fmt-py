@@ -1,0 +1,18 @@
+%%% case hatch_tests.rs::test_hatch_quoted_environment_matrix_keys_keep_their_order
+%%% input -
+[tool.hatch.envs."a.b"]
+python = "3.12"
+
+[[tool.hatch.envs."a.b".matrix]]
+zzz = ["1"]
+aaa = ["2"]
+%%% output short
+[tool.hatch]
+envs."a.b".python = "3.12"
+envs."a.b".matrix = [ { zzz = [ "1" ], aaa = [ "2" ] } ]
+%%% output long
+[tool.hatch.envs."a.b"]
+python = "3.12"
+[[tool.hatch.envs."a.b".matrix]]
+zzz = [ "1" ]
+aaa = [ "2" ]

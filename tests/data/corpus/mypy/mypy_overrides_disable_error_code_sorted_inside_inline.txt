@@ -1,0 +1,12 @@
+%%% case mypy_tests.rs::test_mypy_overrides_disable_error_code_sorted_inside_inline
+%%% input -
+[[tool.mypy.overrides]]
+module = "tests.*"
+disable_error_code = ["no-untyped-def", "attr-defined", "import-untyped"]
+%%% output short
+[tool.mypy]
+overrides = [ { module = "tests.*", disable_error_code = [ "attr-defined", "import-untyped", "no-untyped-def" ] } ]
+%%% output long
+[[tool.mypy.overrides]]
+module = "tests.*"
+disable_error_code = [ "attr-defined", "import-untyped", "no-untyped-def" ]

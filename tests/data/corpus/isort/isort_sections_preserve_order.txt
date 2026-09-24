@@ -1,0 +1,10 @@
+%%% case isort_tests.rs::test_isort_sections_preserve_order
+%%% input -
+[tool.isort]
+sections = ["FUTURE", "STDLIB", "THIRDPARTY", "FIRSTPARTY", "LOCALFOLDER"]
+%%% output short
+[tool.isort]
+sections = [ "FUTURE", "STDLIB", "THIRDPARTY", "FIRSTPARTY", "LOCALFOLDER" ]
+%%% output long
+[tool.isort]
+sections = [ "FUTURE", "STDLIB", "THIRDPARTY", "FIRSTPARTY", "LOCALFOLDER" ]

@@ -1,0 +1,13 @@
+%%% case hatch_tests.rs::test_hatch_comments_preserved
+%%% input -
+[tool.hatch.version]
+# Read version from __init__.py
+path = "src/pkg/__init__.py"
+%%% output short
+[tool.hatch]
+# Read version from __init__.py
+version.path = "src/pkg/__init__.py"
+%%% output long
+[tool.hatch.version]
+# Read version from __init__.py
+path = "src/pkg/__init__.py"

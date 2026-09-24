@@ -1,0 +1,13 @@
+%%% case pylint_tests.rs::test_pylint_disable_enable_sorted
+%%% input -
+[tool.pylint.messages_control]
+disable = ["W0621", "C0114", "R0903", "C0115"]
+enable = ["W0612", "C0103"]
+%%% output short
+[tool.pylint]
+messages_control.disable = [ "C0114", "C0115", "R0903", "W0621" ]
+messages_control.enable = [ "C0103", "W0612" ]
+%%% output long
+[tool.pylint.messages_control]
+disable = [ "C0114", "C0115", "R0903", "W0621" ]
+enable = [ "C0103", "W0612" ]

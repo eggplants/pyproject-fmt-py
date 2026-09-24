@@ -1,0 +1,13 @@
+%%% case hatch_tests.rs::test_hatch_install_commands_keep_their_order
+%%% input -
+[tool.hatch.envs.test]
+pre-install-commands = ["python generate.py", "python check.py"]
+post-install-commands = ["python publish.py", "python archive.py"]
+%%% output short
+[tool.hatch]
+envs.test.pre-install-commands = [ "python generate.py", "python check.py" ]
+envs.test.post-install-commands = [ "python publish.py", "python archive.py" ]
+%%% output long
+[tool.hatch.envs.test]
+pre-install-commands = [ "python generate.py", "python check.py" ]
+post-install-commands = [ "python publish.py", "python archive.py" ]

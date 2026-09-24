@@ -1,0 +1,16 @@
+%%% case pytest_tests.rs::test_pytest_junit_keys_grouped
+%%% input -
+[tool.pytest.ini_options]
+junit_logging = "all"
+junit_family = "xunit2"
+junit_suite_name = "tests"
+%%% output short
+[tool.pytest]
+ini_options.junit_suite_name = "tests"
+ini_options.junit_family = "xunit2"
+ini_options.junit_logging = "all"
+%%% output long
+[tool.pytest.ini_options]
+junit_suite_name = "tests"
+junit_family = "xunit2"
+junit_logging = "all"

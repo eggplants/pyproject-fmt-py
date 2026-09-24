@@ -1,0 +1,19 @@
+%%% case hatch_tests.rs::test_hatch_version_first_then_build
+%%% input -
+[tool.hatch.build]
+include = ["src/**/*.py"]
+
+[tool.hatch.version]
+path = "src/my_pkg/__init__.py"
+source = "regex"
+%%% output short
+[tool.hatch]
+version.source = "regex"
+version.path = "src/my_pkg/__init__.py"
+build.include = [ "src/**/*.py" ]
+%%% output long
+[tool.hatch.version]
+source = "regex"
+path = "src/my_pkg/__init__.py"
+[tool.hatch.build]
+include = [ "src/**/*.py" ]

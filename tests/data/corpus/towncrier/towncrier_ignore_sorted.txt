@@ -1,0 +1,13 @@
+%%% case towncrier_tests.rs::test_towncrier_ignore_sorted
+%%% input -
+[tool.towncrier]
+package = "p"
+ignore = ["zeta.rst", "alpha.rst", "beta.rst"]
+%%% output short
+[tool.towncrier]
+package = "p"
+ignore = [ "alpha.rst", "beta.rst", "zeta.rst" ]
+%%% output long
+[tool.towncrier]
+package = "p"
+ignore = [ "alpha.rst", "beta.rst", "zeta.rst" ]

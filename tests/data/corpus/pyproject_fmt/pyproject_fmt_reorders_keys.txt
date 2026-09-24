@@ -1,0 +1,22 @@
+%%% case pyproject_fmt_tests.rs::test_pyproject_fmt_reorders_keys
+%%% input -
+[tool.pyproject-fmt]
+skip_wrap_for_keys = ["a"]
+keep_full_version = true
+table_format = "short"
+indent = 4
+column_width = 120
+%%% output short
+[tool.pyproject-fmt]
+column_width = 120
+indent = 4
+keep_full_version = true
+table_format = "short"
+skip_wrap_for_keys = [ "a" ]
+%%% output long
+[tool.pyproject-fmt]
+column_width = 120
+indent = 4
+keep_full_version = true
+table_format = "short"
+skip_wrap_for_keys = [ "a" ]

@@ -1,0 +1,19 @@
+%%% case disabled_tests.rs::test_a_disabled_alternative_beside_the_active_key
+%%% input -
+[project]
+name = "active"
+# name = "alternative"
+requires-python = ">=3.9"
+dependencies = ["B", "a"]
+%%% output short
+[project]
+name = "active"
+# name = "alternative"
+requires-python = ">=3.9"
+dependencies = [ "a", "b" ]
+%%% output long
+[project]
+name = "active"
+# name = "alternative"
+requires-python = ">=3.9"
+dependencies = [ "a", "b" ]

@@ -1,0 +1,25 @@
+%%% case project_tests.rs::test_project_scripts_inline_table
+%%% input -
+[project]
+scripts = { mytool = "mypackage:main", helper = "mypackage.cli:run" }
+%%% output short
+[project]
+scripts = { mytool = "mypackage:main", helper = "mypackage.cli:run" }
+%%% output long
+[project]
+scripts = { mytool = "mypackage:main", helper = "mypackage.cli:run" }
+%%% output keep-full-version
+[project]
+scripts = { mytool = "mypackage:main", helper = "mypackage.cli:run" }
+%%% output classifiers
+[project]
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]
+scripts = { mytool = "mypackage:main", helper = "mypackage.cli:run" }

@@ -1,0 +1,13 @@
+%%% case main_tests.rs::test_format_toml_rejects_invalid_project_version
+%%% input -
+[project]
+name = "alpha"
+version = "1.9.xyz"
+%%% error short
+project.version `1.9.xyz` is not a valid PEP 440 version
+%%% error long
+project.version `1.9.xyz` is not a valid PEP 440 version
+%%% error classifiers
+project.version `1.9.xyz` is not a valid PEP 440 version
+%%% error narrow
+project.version `1.9.xyz` is not a valid PEP 440 version

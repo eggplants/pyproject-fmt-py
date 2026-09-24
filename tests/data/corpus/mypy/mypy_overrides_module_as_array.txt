@@ -1,0 +1,12 @@
+%%% case mypy_tests.rs::test_mypy_overrides_module_as_array
+%%% input -
+[[tool.mypy.overrides]]
+ignore_missing_imports = true
+module = ["zlib_mod", "alpha_mod", "mike_mod"]
+%%% output short
+[tool.mypy]
+overrides = [ { module = [ "alpha_mod", "mike_mod", "zlib_mod" ], ignore_missing_imports = true } ]
+%%% output long
+[[tool.mypy.overrides]]
+module = [ "alpha_mod", "mike_mod", "zlib_mod" ]
+ignore_missing_imports = true

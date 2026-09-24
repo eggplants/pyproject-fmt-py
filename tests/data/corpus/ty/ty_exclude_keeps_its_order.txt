@@ -1,0 +1,11 @@
+%%% case ty_tests.rs::test_ty_exclude_keeps_its_order
+%%% input -
+[tool.ty]
+src.exclude = ["generated/**", "!generated/keep.py"]
+%%% output short
+[tool.ty]
+src.exclude = [ "generated/**", "!generated/keep.py" ]
+%%% output long
+[tool.ty]
+[tool.ty.src]
+exclude = [ "generated/**", "!generated/keep.py" ]

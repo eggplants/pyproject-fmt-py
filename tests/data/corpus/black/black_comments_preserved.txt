@@ -1,0 +1,13 @@
+%%% case black_tests.rs::test_black_comments_preserved
+%%% input -
+[tool.black]
+# Target older Pythons
+target-version = ["py39"]
+%%% output short
+[tool.black]
+# Target older Pythons
+target-version = [ "py39" ]
+%%% output long
+[tool.black]
+# Target older Pythons
+target-version = [ "py39" ]

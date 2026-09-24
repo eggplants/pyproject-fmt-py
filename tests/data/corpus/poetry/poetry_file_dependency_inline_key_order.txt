@@ -1,0 +1,10 @@
+%%% case poetry_tests.rs::test_poetry_file_dependency_inline_key_order
+%%% input -
+[tool.poetry.dependencies]
+foo = { python = ">=3.10", file = "./wheels/foo-1.0.whl" }
+%%% output short
+[tool.poetry]
+dependencies.foo = { file = "./wheels/foo-1.0.whl", python = ">=3.10" }
+%%% output long
+[tool.poetry.dependencies]
+foo = { file = "./wheels/foo-1.0.whl", python = ">=3.10" }

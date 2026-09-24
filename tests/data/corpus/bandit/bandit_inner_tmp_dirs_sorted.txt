@@ -1,0 +1,10 @@
+%%% case bandit_tests.rs::test_bandit_inner_tmp_dirs_sorted
+%%% input -
+[tool.bandit.hardcoded_tmp_directory]
+tmp_dirs = ["/var/tmp", "/tmp", "/dev/shm"]
+%%% output short
+[tool.bandit]
+hardcoded_tmp_directory.tmp_dirs = [ "/dev/shm", "/tmp", "/var/tmp" ]
+%%% output long
+[tool.bandit.hardcoded_tmp_directory]
+tmp_dirs = [ "/dev/shm", "/tmp", "/var/tmp" ]

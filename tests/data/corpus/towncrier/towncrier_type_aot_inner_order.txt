@@ -1,0 +1,14 @@
+%%% case towncrier_tests.rs::test_towncrier_type_aot_inner_order
+%%% input -
+[[tool.towncrier.type]]
+showcontent = true
+name = "Added"
+directory = "added"
+%%% output short
+[tool.towncrier]
+type = [ { directory = "added", name = "Added", showcontent = true } ]
+%%% output long
+[[tool.towncrier.type]]
+directory = "added"
+name = "Added"
+showcontent = true

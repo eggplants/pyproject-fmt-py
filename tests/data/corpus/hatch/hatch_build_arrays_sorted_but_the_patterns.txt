@@ -1,0 +1,16 @@
+%%% case hatch_tests.rs::test_hatch_build_arrays_sorted_but_the_patterns
+%%% input -
+[tool.hatch.build]
+include = ["zebra/**", "alpha/**", "beta/**"]
+exclude = ["zeta_tests/*", "alpha_tests/*"]
+packages = ["src/zebra_pkg", "src/alpha_pkg"]
+%%% output short
+[tool.hatch]
+build.packages = [ "src/alpha_pkg", "src/zebra_pkg" ]
+build.include = [ "zebra/**", "alpha/**", "beta/**" ]
+build.exclude = [ "zeta_tests/*", "alpha_tests/*" ]
+%%% output long
+[tool.hatch.build]
+packages = [ "src/alpha_pkg", "src/zebra_pkg" ]
+include = [ "zebra/**", "alpha/**", "beta/**" ]
+exclude = [ "zeta_tests/*", "alpha_tests/*" ]

@@ -1,0 +1,16 @@
+%%% case hatch_tests.rs::test_hatch_targets_wheel_after_build_top_level
+%%% input -
+[tool.hatch.build.targets.wheel]
+packages = ["src/my_pkg"]
+
+[tool.hatch.build]
+include = ["src/**"]
+%%% output short
+[tool.hatch]
+build.include = [ "src/**" ]
+build.targets.wheel.packages = [ "src/my_pkg" ]
+%%% output long
+[tool.hatch.build.targets.wheel]
+packages = [ "src/my_pkg" ]
+[tool.hatch.build]
+include = [ "src/**" ]

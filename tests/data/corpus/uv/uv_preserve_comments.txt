@@ -1,0 +1,22 @@
+%%% case uv_tests.rs::test_uv_preserve_comments
+%%% input -
+[tool.uv]
+dev-dependencies = [
+    # Testing tools
+    "pytest",
+    "coverage",
+]
+%%% output short
+[tool.uv]
+dev-dependencies = [
+  "coverage",
+  # Testing tools
+  "pytest",
+]
+%%% output long
+[tool.uv]
+dev-dependencies = [
+  "coverage",
+  # Testing tools
+  "pytest",
+]

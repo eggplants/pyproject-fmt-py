@@ -1,0 +1,22 @@
+%%% case poetry_tests.rs::test_poetry_collapsed_group_name_holding_a_dot_keeps_its_order
+%%% input -
+[tool.poetry.group."a.b".dependencies]
+zeta = "1"
+python = "3.12"
+alpha = "1"
+
+[tool.poetry.group."a.b"]
+optional = true
+%%% output short
+[tool.poetry]
+group."a.b".optional = true
+group."a.b".dependencies.python = "3.12"
+group."a.b".dependencies.alpha = "1"
+group."a.b".dependencies.zeta = "1"
+%%% output long
+[tool.poetry.group."a.b"]
+optional = true
+[tool.poetry.group."a.b".dependencies]
+python = "3.12"
+alpha = "1"
+zeta = "1"

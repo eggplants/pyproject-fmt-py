@@ -1,0 +1,14 @@
+%%% case scikit_build_tests.rs::test_scikit_build_exclude_keeps_its_order
+%%% input -
+[tool.scikit-build]
+sdist.exclude = ["zeta/**", "alpha/**"]
+sdist.include = ["zinc/*", "amber/*"]
+%%% output short
+[tool.scikit-build]
+sdist.exclude = [ "zeta/**", "alpha/**" ]
+sdist.include = [ "zinc/*", "amber/*" ]
+%%% output long
+[tool.scikit-build]
+[tool.scikit-build.sdist]
+exclude = [ "zeta/**", "alpha/**" ]
+include = [ "zinc/*", "amber/*" ]

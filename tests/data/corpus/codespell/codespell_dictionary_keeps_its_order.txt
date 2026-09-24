@@ -1,0 +1,13 @@
+%%% case codespell_tests.rs::test_codespell_dictionary_keeps_its_order
+%%% input -
+[tool.codespell]
+dictionary = ["z-shared.txt", "a-project.txt"]
+builtin = ["clear", "rare"]
+%%% output short
+[tool.codespell]
+builtin = [ "clear", "rare" ]
+dictionary = [ "z-shared.txt", "a-project.txt" ]
+%%% output long
+[tool.codespell]
+builtin = [ "clear", "rare" ]
+dictionary = [ "z-shared.txt", "a-project.txt" ]

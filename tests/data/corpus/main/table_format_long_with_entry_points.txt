@@ -1,0 +1,36 @@
+%%% case main_tests.rs::test_table_format_long_with_entry_points
+%%% input -
+[project]
+name = "example"
+entry-points."console_scripts".mycli = "pkg:main"
+entry-points."console_scripts".othercli = "pkg:other"
+%%% output short
+[project]
+name = "example"
+entry-points.console_scripts.mycli = "pkg:main"
+entry-points.console_scripts.othercli = "pkg:other"
+%%% output long
+[project]
+name = "example"
+[project.entry-points]
+console_scripts.mycli = "pkg:main"
+console_scripts.othercli = "pkg:other"
+%%% output classifiers
+[project]
+name = "example"
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]
+entry-points.console_scripts.mycli = "pkg:main"
+entry-points.console_scripts.othercli = "pkg:other"
+%%% output narrow
+[project]
+name = "example"
+entry-points.console_scripts.mycli = "pkg:main"
+entry-points.console_scripts.othercli = "pkg:other"

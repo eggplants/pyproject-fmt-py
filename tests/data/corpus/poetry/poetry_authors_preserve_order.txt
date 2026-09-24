@@ -1,0 +1,10 @@
+%%% case poetry_tests.rs::test_poetry_authors_preserve_order
+%%% input -
+[tool.poetry]
+authors = ["Bob <bob@example.com>", "Alice <alice@example.com>"]
+%%% output short
+[tool.poetry]
+authors = [ "Bob <bob@example.com>", "Alice <alice@example.com>" ]
+%%% output long
+[tool.poetry]
+authors = [ "Bob <bob@example.com>", "Alice <alice@example.com>" ]

@@ -1,0 +1,14 @@
+%%% case poetry_tests.rs::test_poetry_collapsed_quoted_group_arrays_sort
+%%% input -
+[tool.poetry]
+group."a.b".include-groups = ["zeta", "alpha"]
+group."a.b".dependencies.foo.extras = ["zeta", "alpha"]
+%%% output short
+[tool.poetry]
+group."a.b".include-groups = [ "alpha", "zeta" ]
+group."a.b".dependencies.foo.extras = [ "alpha", "zeta" ]
+%%% output long
+[tool.poetry]
+[tool.poetry.group]
+"a.b".include-groups = [ "alpha", "zeta" ]
+"a.b".dependencies.foo.extras = [ "alpha", "zeta" ]

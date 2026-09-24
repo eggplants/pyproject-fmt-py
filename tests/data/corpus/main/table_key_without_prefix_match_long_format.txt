@@ -1,0 +1,30 @@
+%%% case main_tests.rs::test_table_key_without_prefix_match_long_format
+%%% input -
+[custom]
+key = "value"
+
+[custom.nested]
+other = "data"
+%%% output short
+[custom]
+key = "value"
+
+[custom.nested]
+other = "data"
+%%% output long
+[custom]
+key = "value"
+[custom.nested]
+other = "data"
+%%% output classifiers
+[custom]
+key = "value"
+
+[custom.nested]
+other = "data"
+%%% output narrow
+[custom]
+key = "value"
+
+[custom.nested]
+other = "data"

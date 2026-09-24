@@ -1,0 +1,30 @@
+%%% case project_tests.rs::test_project_import_names_it_cannot_read
+%%% input -
+[project]
+name = "test"
+import-names = ["zebra;  extra", "9lives", "a..b", "held;private;private", "ok"]
+%%% output short
+[project]
+name = "test"
+import-names = [ "9lives", "a..b", "held;private;private", "ok", "zebra;  extra" ]
+%%% output long
+[project]
+name = "test"
+import-names = [ "9lives", "a..b", "held;private;private", "ok", "zebra;  extra" ]
+%%% output keep-full-version
+[project]
+name = "test"
+import-names = [ "9lives", "a..b", "held;private;private", "ok", "zebra;  extra" ]
+%%% output classifiers
+[project]
+name = "test"
+import-names = [ "9lives", "a..b", "held;private;private", "ok", "zebra;  extra" ]
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]

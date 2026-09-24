@@ -1,0 +1,23 @@
+%%% case pixi_tests.rs::test_order_pixi_workspace_collapsed
+%%% input -
+[tool.pixi]
+workspace.platforms = ["osx-arm64", "linux-64"]
+workspace.channels = ["conda-forge", "bioconda"]
+workspace.name = "my-project"
+workspace.requires-pixi = ">=0.30"
+workspace.version = "1.0.0"
+%%% output short
+[tool.pixi]
+workspace.name = "my-project"
+workspace.version = "1.0.0"
+workspace.channels = [ "conda-forge", "bioconda" ]
+workspace.platforms = [ "linux-64", "osx-arm64" ]
+workspace.requires-pixi = ">=0.30"
+%%% output long
+[tool.pixi]
+[tool.pixi.workspace]
+name = "my-project"
+version = "1.0.0"
+channels = [ "conda-forge", "bioconda" ]
+platforms = [ "linux-64", "osx-arm64" ]
+requires-pixi = ">=0.30"

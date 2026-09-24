@@ -1,0 +1,40 @@
+%%% case project_tests.rs::test_project_dependencies_complex_markers
+%%% input -
+[project]
+dependencies = [
+    "pkg>=1.0; python_version<'3.10' and platform_system=='Linux'",
+    "other>=2.0; (python_version>='3.10' or sys_platform!='win32')",
+]
+%%% output short
+[project]
+dependencies = [
+  "other>=2; (python_version>='3.10' or sys_platform!='win32')",
+  "pkg>=1; python_version<'3.10' and platform_system=='Linux'",
+]
+%%% output long
+[project]
+dependencies = [
+  "other>=2; (python_version>='3.10' or sys_platform!='win32')",
+  "pkg>=1; python_version<'3.10' and platform_system=='Linux'",
+]
+%%% output keep-full-version
+[project]
+dependencies = [
+  "other>=2.0; (python_version>='3.10' or sys_platform!='win32')",
+  "pkg>=1.0; python_version<'3.10' and platform_system=='Linux'",
+]
+%%% output classifiers
+[project]
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]
+dependencies = [
+  "other>=2; (python_version>='3.10' or sys_platform!='win32')",
+  "pkg>=1; python_version<'3.10' and platform_system=='Linux'",
+]

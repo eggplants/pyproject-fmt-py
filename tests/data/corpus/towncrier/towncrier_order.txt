@@ -1,0 +1,22 @@
+%%% case towncrier_tests.rs::test_towncrier_order
+%%% input -
+[tool.towncrier]
+wrap = true
+directory = "changes"
+filename = "CHANGELOG.md"
+package = "my_pkg"
+name = "My Project"
+%%% output short
+[tool.towncrier]
+name = "My Project"
+package = "my_pkg"
+directory = "changes"
+filename = "CHANGELOG.md"
+wrap = true
+%%% output long
+[tool.towncrier]
+name = "My Project"
+package = "my_pkg"
+directory = "changes"
+filename = "CHANGELOG.md"
+wrap = true

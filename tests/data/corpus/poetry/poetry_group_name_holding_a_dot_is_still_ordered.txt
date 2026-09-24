@@ -1,0 +1,10 @@
+%%% case poetry_tests.rs::test_poetry_group_name_holding_a_dot_is_still_ordered
+%%% input -
+[tool.poetry.group."a.b"]
+include-groups = ["zeta", "alpha"]
+%%% output short
+[tool.poetry]
+group."a.b".include-groups = [ "alpha", "zeta" ]
+%%% output long
+[tool.poetry.group."a.b"]
+include-groups = [ "alpha", "zeta" ]

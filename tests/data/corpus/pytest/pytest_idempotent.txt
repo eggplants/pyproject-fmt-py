@@ -1,0 +1,22 @@
+%%% case pytest_tests.rs::test_pytest_idempotent
+%%% input -
+[tool.pytest.ini_options]
+minversion = "8"
+testpaths = [ "tests" ]
+addopts = [ "-ra", "--strict-markers" ]
+markers = [ "fast", "slow" ]
+filterwarnings = [ "error", "ignore::DeprecationWarning" ]
+%%% output short
+[tool.pytest]
+ini_options.minversion = "8"
+ini_options.testpaths = [ "tests" ]
+ini_options.addopts = [ "-ra", "--strict-markers" ]
+ini_options.markers = [ "fast", "slow" ]
+ini_options.filterwarnings = [ "error", "ignore::DeprecationWarning" ]
+%%% output long
+[tool.pytest.ini_options]
+minversion = "8"
+testpaths = [ "tests" ]
+addopts = [ "-ra", "--strict-markers" ]
+markers = [ "fast", "slow" ]
+filterwarnings = [ "error", "ignore::DeprecationWarning" ]

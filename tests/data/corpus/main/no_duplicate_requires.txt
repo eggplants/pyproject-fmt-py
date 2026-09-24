@@ -1,0 +1,21 @@
+%%% case main_tests.rs::test_no_duplicate_requires
+%%% input -
+[build-system]
+build-backend = "backend"
+requires = ["c", "d"]
+%%% output short
+[build-system]
+build-backend = "backend"
+requires = [ "c", "d" ]
+%%% output long
+[build-system]
+build-backend = "backend"
+requires = [ "c", "d" ]
+%%% output classifiers
+[build-system]
+build-backend = "backend"
+requires = [ "c", "d" ]
+%%% output narrow
+[build-system]
+build-backend = "backend"
+requires = [ "c", "d" ]

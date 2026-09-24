@@ -1,0 +1,36 @@
+%%% case project_tests.rs::test_project_keeps_both_spellings_of_an_extra_that_would_collide
+%%% input -
+[project]
+name = "demo"
+optional-dependencies.My_Extra = ["a"]
+optional-dependencies.my-extra = ["b"]
+%%% output short
+[project]
+name = "demo"
+optional-dependencies.my-extra = [ "b" ]
+optional-dependencies.My_Extra = [ "a" ]
+%%% output long
+[project]
+name = "demo"
+[project.optional-dependencies]
+My_Extra = [ "a" ]
+my-extra = [ "b" ]
+%%% output keep-full-version
+[project]
+name = "demo"
+optional-dependencies.my-extra = [ "b" ]
+optional-dependencies.My_Extra = [ "a" ]
+%%% output classifiers
+[project]
+name = "demo"
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]
+optional-dependencies.my-extra = [ "b" ]
+optional-dependencies.My_Extra = [ "a" ]

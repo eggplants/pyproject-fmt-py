@@ -1,0 +1,16 @@
+%%% case pyrefly_tests.rs::test_pyrefly_non_sortable_preserved
+%%% input -
+[tool.pyrefly]
+python_interpreter = "/usr/bin/python3"
+use_untyped_imports = true
+python_version = "3.12"
+%%% output short
+[tool.pyrefly]
+python_version = "3.12"
+python_interpreter = "/usr/bin/python3"
+use_untyped_imports = true
+%%% output long
+[tool.pyrefly]
+python_version = "3.12"
+python_interpreter = "/usr/bin/python3"
+use_untyped_imports = true

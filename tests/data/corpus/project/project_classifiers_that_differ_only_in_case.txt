@@ -1,0 +1,42 @@
+%%% case project_tests.rs::test_project_classifiers_that_differ_only_in_case
+%%% input -
+[project]
+name = "test"
+requires-python = "==3.10"
+classifiers = [
+  "programming language :: python :: 3.10",
+  "Programming Language :: Python :: 3.10",
+]
+%%% output short
+[project]
+name = "test"
+requires-python = "==3.10"
+classifiers = [
+  "programming language :: python :: 3.10",
+  "Programming Language :: Python :: 3.10",
+]
+%%% output long
+[project]
+name = "test"
+requires-python = "==3.10"
+classifiers = [
+  "programming language :: python :: 3.10",
+  "Programming Language :: Python :: 3.10",
+]
+%%% output keep-full-version
+[project]
+name = "test"
+requires-python = "==3.10"
+classifiers = [
+  "programming language :: python :: 3.10",
+  "Programming Language :: Python :: 3.10",
+]
+%%% output classifiers
+[project]
+name = "test"
+requires-python = "==3.10"
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "programming language :: python :: 3.10",
+  "Programming Language :: Python :: 3.10",
+]

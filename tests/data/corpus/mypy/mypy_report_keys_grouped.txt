@@ -1,0 +1,19 @@
+%%% case mypy_tests.rs::test_mypy_report_keys_grouped
+%%% input -
+[tool.mypy]
+txt_report = "reports/txt"
+html_report = "reports/html"
+xml_report = "reports/xml"
+strict = true
+%%% output short
+[tool.mypy]
+strict = true
+html_report = "reports/html"
+txt_report = "reports/txt"
+xml_report = "reports/xml"
+%%% output long
+[tool.mypy]
+strict = true
+html_report = "reports/html"
+txt_report = "reports/txt"
+xml_report = "reports/xml"

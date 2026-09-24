@@ -1,0 +1,16 @@
+%%% case ty_tests.rs::test_ty_src_written_out_as_a_table
+%%% input -
+[tool.ty.src]
+exclude = ["generated/**"]
+include = ["src", "lib"]
+respect-ignore-files = true
+%%% output short
+[tool.ty]
+src.respect-ignore-files = true
+src.include = [ "lib", "src" ]
+src.exclude = [ "generated/**" ]
+%%% output long
+[tool.ty.src]
+respect-ignore-files = true
+include = [ "lib", "src" ]
+exclude = [ "generated/**" ]

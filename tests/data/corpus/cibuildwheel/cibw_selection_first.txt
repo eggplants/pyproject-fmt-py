@@ -1,0 +1,19 @@
+%%% case cibuildwheel_tests.rs::test_cibw_selection_first
+%%% input -
+[tool.cibuildwheel]
+test-command = "pytest {project}/tests"
+archs = ["x86_64", "arm64"]
+skip = ["pp*"]
+build = "cp3{10,11,12}-*"
+%%% output short
+[tool.cibuildwheel]
+build = "cp3{10,11,12}-*"
+skip = [ "pp*" ]
+archs = [ "x86_64", "arm64" ]
+test-command = "pytest {project}/tests"
+%%% output long
+[tool.cibuildwheel]
+build = "cp3{10,11,12}-*"
+skip = [ "pp*" ]
+archs = [ "x86_64", "arm64" ]
+test-command = "pytest {project}/tests"

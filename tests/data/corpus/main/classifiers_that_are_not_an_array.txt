@@ -1,0 +1,26 @@
+%%% case main_tests.rs::test_classifiers_that_are_not_an_array
+%%% input -
+[project]
+name = "example"
+requires-python = ">=3.10"
+classifiers = "none"
+%%% output short
+[project]
+name = "example"
+requires-python = ">=3.10"
+classifiers = "none"
+%%% output long
+[project]
+name = "example"
+requires-python = ">=3.10"
+classifiers = "none"
+%%% output classifiers
+[project]
+name = "example"
+requires-python = ">=3.10"
+classifiers = "none"
+%%% output narrow
+[project]
+name = "example"
+requires-python = ">=3.10"
+classifiers = "none"

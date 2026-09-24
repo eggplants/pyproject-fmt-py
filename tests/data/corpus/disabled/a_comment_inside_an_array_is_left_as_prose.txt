@@ -1,0 +1,22 @@
+%%% case disabled_tests.rs::test_a_comment_inside_an_array_is_left_as_prose
+%%% input -
+[project]
+name = "example"
+dependencies = [
+  # b = 1
+  "x",
+]
+%%% output short
+[project]
+name = "example"
+dependencies = [
+  # b = 1
+  "x",
+]
+%%% output long
+[project]
+name = "example"
+dependencies = [
+  # b = 1
+  "x",
+]

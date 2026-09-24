@@ -1,0 +1,40 @@
+%%% case setuptools_tests.rs::test_setuptools_idempotent
+%%% input -
+[tool.setuptools]
+py-modules = [ "alpha", "beta" ]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = [ "src" ]
+include = [ "pkg_*" ]
+
+[tool.setuptools.dynamic]
+version = { attr = "pkg.__version__" }
+readme = { file = "README.md", content-type = "text/markdown" }
+
+[tool.setuptools_scm]
+version_file = "src/pkg/_version.py"
+%%% output short
+[tool.setuptools]
+py-modules = [ "alpha", "beta" ]
+packages.find.where = [ "src" ]
+packages.find.include = [ "pkg_*" ]
+include-package-data = true
+dynamic.readme = { file = "README.md", content-type = "text/markdown" }
+dynamic.version = { attr = "pkg.__version__" }
+
+[tool.setuptools_scm]
+version_file = "src/pkg/_version.py"
+%%% output long
+[tool.setuptools]
+py-modules = [ "alpha", "beta" ]
+include-package-data = true
+[tool.setuptools.packages.find]
+where = [ "src" ]
+include = [ "pkg_*" ]
+[tool.setuptools.dynamic]
+readme = { file = "README.md", content-type = "text/markdown" }
+version = { attr = "pkg.__version__" }
+
+[tool.setuptools_scm]
+version_file = "src/pkg/_version.py"

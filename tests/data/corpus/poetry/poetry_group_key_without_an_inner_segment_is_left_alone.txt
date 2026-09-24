@@ -1,0 +1,11 @@
+%%% case poetry_tests.rs::test_poetry_group_key_without_an_inner_segment_is_left_alone
+%%% input -
+[tool.poetry]
+group.dev = "b"
+%%% output short
+[tool.poetry]
+group.dev = "b"
+%%% output long
+[tool.poetry]
+[tool.poetry.group]
+dev = "b"

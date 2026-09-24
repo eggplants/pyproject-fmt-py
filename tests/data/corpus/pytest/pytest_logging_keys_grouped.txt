@@ -1,0 +1,25 @@
+%%% case pytest_tests.rs::test_pytest_logging_keys_grouped
+%%% input -
+[tool.pytest.ini_options]
+log_file = "pytest.log"
+log_cli = true
+log_format = "%(asctime)s %(levelname)s %(message)s"
+log_cli_level = "INFO"
+log_level = "DEBUG"
+log_file_level = "DEBUG"
+%%% output short
+[tool.pytest]
+ini_options.log_format = "%(asctime)s %(levelname)s %(message)s"
+ini_options.log_level = "DEBUG"
+ini_options.log_cli = true
+ini_options.log_cli_level = "INFO"
+ini_options.log_file = "pytest.log"
+ini_options.log_file_level = "DEBUG"
+%%% output long
+[tool.pytest.ini_options]
+log_format = "%(asctime)s %(levelname)s %(message)s"
+log_level = "DEBUG"
+log_cli = true
+log_cli_level = "INFO"
+log_file = "pytest.log"
+log_file_level = "DEBUG"

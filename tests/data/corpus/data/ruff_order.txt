@@ -1,0 +1,320 @@
+%%% case data_tests.rs::test_ruff_order
+%%% input -
+[tool.ruff]
+builtins = ['Bar', 'ALPHA']
+cache-dir = '~/a'
+exclude = ['Bar', 'ALPHA']
+extend = '../pyproject.toml'
+extend-exclude = ['Bar', 'ALPHA']
+extend-include = ['Bar', 'ALPHA']
+fix = true
+fix-only = true
+force-exclude = true
+include = ['Bar', 'ALPHA']
+indent-width = 2
+line-length = 120
+namespace-packages = ['Bar', 'ALPHA']
+output-format = 'grouped'
+preview = true
+required-version = '>=0.0.193'
+respect-gitignore = false
+show-fixes = true
+show-source = true
+src = ['Bar', 'ALPHA']
+tab-size = 2
+target-version = 'py37'
+unsafe-fixes = true
+[tool.ruff.format]
+docstring-code-format = true
+docstring-code-line-length = 60
+exclude = ['Bar', 'ALPHA']
+indent-style = 'tab'
+line-ending = 'lf'
+preview = true
+more = true
+extra = true
+quote-style = 'single'
+skip-magic-trailing-comma = true
+[tool.ruff.lint]
+allowed-confusables = ['−', 'ρ', '∗']
+dummy-variable-rgx = '^_$'
+exclude = ['Bar', 'ALPHA']
+explicit-preview-rules = true
+extend-fixable = ['Bar', 'ALPHA']
+extend-ignore = ['Bar', 'ALPHA']
+extend-safe-fixes = ['Bar', 'ALPHA']
+extend-select = ['Bar', 'ALPHA']
+extend-unsafe-fixes = ['Bar', 'ALPHA']
+external = ['Bar', 'ALPHA']
+fixable = ['Bar', 'ALPHA']
+select = ['Bar', 'ALPHA']
+task-tags = ['Bar', 'ALPHA']
+typing-modules = ['Bar', 'ALPHA']
+unfixable = ['Bar', 'ALPHA']
+[tool.ruff.lint.extend-per-file-ignores]
+'Magic.py' = ['Bar', 'ALPHA']
+"alpha.py" = ['Bar', 'ALPHA']
+[tool.ruff.lint.per-file-ignores]
+'Magic.py' = ['Bar', 'ALPHA']
+"alpha.py" = ['Bar', 'ALPHA']
+[tool.ruff.lint.flake8-annotations]
+suppress-none-returning = true
+[tool.ruff.lint.flake8-bandit]
+hardcoded-tmp-directory = ['Bar', 'ALPHA']
+[tool.ruff.lint.flake8-boolean-trap]
+extend-allowed-calls = ['Bar', 'ALPHA']
+[tool.ruff.lint.flake8-bugbear]
+extend-immutable-calls = ['Bar', 'ALPHA']
+[tool.ruff.lint.flake8-builtins]
+builtins-ignorelist = ['Bar', 'ALPHA']
+[tool.ruff.lint.flake8-comprehensions]
+allow-dict-calls-with-keyword-arguments = true
+[tool.ruff.lint.flake8-copyright]
+author = 'Ruff'
+notice-rgx = '(?i)Copyright \(C\) \d{4}'
+[tool.ruff.lint.flake8-errmsg]
+max-string-length = 20
+[tool.ruff.lint.flake8-gettext]
+extend-function-names = ['Bar', 'ALPHA']
+[tool.ruff.lint.flake8-implicit-str-concat]
+allow-multiline = false
+[tool.ruff.lint.flake8-import-conventions.aliases]
+altair = "alt"
+numpy = "np"
+[tool.ruff.lint.flake8-pytest-style]
+parametrize-names-type = 'list'
+raises-extend-require-match-for = ['Bar', 'ALPHA']
+[tool.ruff.lint.flake8-quotes]
+docstring-quotes = 'single'
+[tool.ruff.lint.flake8-self]
+extend-ignore-names = ['Bar', 'ALPHA']
+[tool.ruff.lint.flake8-tidy-imports]
+banned-module-level-imports = ['Bar', 'ALPHA']
+[tool.ruff.lint.flake8-tidy-imports.banned-api]
+"foo".msg = "Use bar instead"
+[tool.ruff.lint.flake8-type-checking]
+exempt-modules = ['Bar', 'ALPHA']
+[tool.ruff.lint.flake8-unused-arguments]
+ignore-variadic-names = true
+[tool.ruff.lint.isort]
+section-order = ['Bar', 'ALPHA']
+[tool.ruff.lint.mccabe]
+max-complexity = 5
+[tool.ruff.lint.pep8-naming]
+classmethod-decorators = ['Bar', 'ALPHA']
+[tool.ruff.lint.pycodestyle]
+max-line-length = 100
+[tool.ruff.lint.pydocstyle]
+convention = 'google'
+[tool.ruff.lint.pyflakes]
+extend-generics = ['Bar', 'ALPHA']
+[tool.ruff.lint.pylint]
+allow-dunder-method-names = ['Bar', 'ALPHA']
+[tool.ruff.lint.more]
+ok = 1
+[tool.ruff.lint.extra]
+ok = 1
+[tool.ruff.lint.pyupgrade]
+keep-runtime-typing = true
+%%% output short
+[tool.ruff]
+required-version = ">=0.0.193"
+extend = "../pyproject.toml"
+target-version = "py37"
+line-length = 120
+indent-width = 2
+tab-size = 2
+builtins = [ "ALPHA", "Bar" ]
+namespace-packages = [ "ALPHA", "Bar" ]
+src = [ "ALPHA", "Bar" ]
+include = [ "ALPHA", "Bar" ]
+extend-include = [ "ALPHA", "Bar" ]
+exclude = [ "ALPHA", "Bar" ]
+extend-exclude = [ "ALPHA", "Bar" ]
+force-exclude = true
+respect-gitignore = false
+preview = true
+fix = true
+unsafe-fixes = true
+fix-only = true
+show-fixes = true
+show-source = true
+output-format = "grouped"
+cache-dir = "~/a"
+format.preview = true
+format.indent-style = "tab"
+format.quote-style = "single"
+format.line-ending = "lf"
+format.skip-magic-trailing-comma = true
+format.docstring-code-line-length = 60
+format.docstring-code-format = true
+format.exclude = [ "ALPHA", "Bar" ]
+format.extra = true
+format.more = true
+lint.select = [ "ALPHA", "Bar" ]
+lint.extend-select = [ "ALPHA", "Bar" ]
+lint.explicit-preview-rules = true
+lint.exclude = [ "ALPHA", "Bar" ]
+lint.extend-ignore = [ "ALPHA", "Bar" ]
+lint.per-file-ignores."alpha.py" = [ "ALPHA", "Bar" ]
+lint.per-file-ignores."Magic.py" = [ "ALPHA", "Bar" ]
+lint.extend-per-file-ignores."alpha.py" = [ "ALPHA", "Bar" ]
+lint.extend-per-file-ignores."Magic.py" = [ "ALPHA", "Bar" ]
+lint.fixable = [ "ALPHA", "Bar" ]
+lint.extend-fixable = [ "ALPHA", "Bar" ]
+lint.unfixable = [ "ALPHA", "Bar" ]
+lint.extend-safe-fixes = [ "ALPHA", "Bar" ]
+lint.extend-unsafe-fixes = [ "ALPHA", "Bar" ]
+lint.typing-modules = [ "ALPHA", "Bar" ]
+lint.allowed-confusables = [ "−", "∗", "ρ" ]
+lint.dummy-variable-rgx = "^_$"
+lint.external = [ "ALPHA", "Bar" ]
+lint.task-tags = [ "ALPHA", "Bar" ]
+lint.flake8-annotations.suppress-none-returning = true
+lint.flake8-bandit.hardcoded-tmp-directory = [ "ALPHA", "Bar" ]
+lint.flake8-boolean-trap.extend-allowed-calls = [ "ALPHA", "Bar" ]
+lint.flake8-bugbear.extend-immutable-calls = [ "ALPHA", "Bar" ]
+lint.flake8-builtins.builtins-ignorelist = [ "ALPHA", "Bar" ]
+lint.flake8-comprehensions.allow-dict-calls-with-keyword-arguments = true
+lint.flake8-copyright.author = "Ruff"
+lint.flake8-copyright.notice-rgx = '(?i)Copyright \(C\) \d{4}'
+lint.flake8-errmsg.max-string-length = 20
+lint.flake8-gettext.extend-function-names = [ "ALPHA", "Bar" ]
+lint.flake8-implicit-str-concat.allow-multiline = false
+lint.flake8-import-conventions.aliases.altair = "alt"
+lint.flake8-import-conventions.aliases.numpy = "np"
+lint.flake8-pytest-style.parametrize-names-type = "list"
+lint.flake8-pytest-style.raises-extend-require-match-for = [ "ALPHA", "Bar" ]
+lint.flake8-quotes.docstring-quotes = "single"
+lint.flake8-self.extend-ignore-names = [ "ALPHA", "Bar" ]
+lint.flake8-tidy-imports.banned-api.foo.msg = "Use bar instead"
+lint.flake8-tidy-imports.banned-module-level-imports = [ "ALPHA", "Bar" ]
+lint.flake8-type-checking.exempt-modules = [ "ALPHA", "Bar" ]
+lint.flake8-unused-arguments.ignore-variadic-names = true
+lint.isort.section-order = [ "Bar", "ALPHA" ]
+lint.mccabe.max-complexity = 5
+lint.pep8-naming.classmethod-decorators = [ "ALPHA", "Bar" ]
+lint.pycodestyle.max-line-length = 100
+lint.pydocstyle.convention = "google"
+lint.pyflakes.extend-generics = [ "ALPHA", "Bar" ]
+lint.pylint.allow-dunder-method-names = [ "ALPHA", "Bar" ]
+lint.pyupgrade.keep-runtime-typing = true
+lint.extra.ok = 1
+lint.more.ok = 1
+%%% output long
+[tool.ruff]
+required-version = ">=0.0.193"
+extend = "../pyproject.toml"
+target-version = "py37"
+line-length = 120
+indent-width = 2
+tab-size = 2
+builtins = [ "ALPHA", "Bar" ]
+namespace-packages = [ "ALPHA", "Bar" ]
+src = [ "ALPHA", "Bar" ]
+include = [ "ALPHA", "Bar" ]
+extend-include = [ "ALPHA", "Bar" ]
+exclude = [ "ALPHA", "Bar" ]
+extend-exclude = [ "ALPHA", "Bar" ]
+force-exclude = true
+respect-gitignore = false
+preview = true
+fix = true
+unsafe-fixes = true
+fix-only = true
+show-fixes = true
+show-source = true
+output-format = "grouped"
+cache-dir = "~/a"
+[tool.ruff.format]
+preview = true
+indent-style = "tab"
+quote-style = "single"
+line-ending = "lf"
+skip-magic-trailing-comma = true
+docstring-code-line-length = 60
+docstring-code-format = true
+exclude = [ "ALPHA", "Bar" ]
+extra = true
+more = true
+[tool.ruff.lint.per-file-ignores]
+"Magic.py" = [ "ALPHA", "Bar" ]
+"alpha.py" = [ "ALPHA", "Bar" ]
+[tool.ruff.lint.extend-per-file-ignores]
+"Magic.py" = [ "ALPHA", "Bar" ]
+"alpha.py" = [ "ALPHA", "Bar" ]
+[tool.ruff.lint.flake8-annotations]
+suppress-none-returning = true
+[tool.ruff.lint.flake8-bandit]
+hardcoded-tmp-directory = [ "ALPHA", "Bar" ]
+[tool.ruff.lint.flake8-boolean-trap]
+extend-allowed-calls = [ "ALPHA", "Bar" ]
+[tool.ruff.lint.flake8-bugbear]
+extend-immutable-calls = [ "ALPHA", "Bar" ]
+[tool.ruff.lint.flake8-builtins]
+builtins-ignorelist = [ "ALPHA", "Bar" ]
+[tool.ruff.lint.flake8-comprehensions]
+allow-dict-calls-with-keyword-arguments = true
+[tool.ruff.lint.flake8-copyright]
+author = "Ruff"
+notice-rgx = '(?i)Copyright \(C\) \d{4}'
+[tool.ruff.lint.flake8-errmsg]
+max-string-length = 20
+[tool.ruff.lint.flake8-gettext]
+extend-function-names = [ "ALPHA", "Bar" ]
+[tool.ruff.lint.flake8-implicit-str-concat]
+allow-multiline = false
+[tool.ruff.lint.flake8-import-conventions.aliases]
+altair = "alt"
+numpy = "np"
+[tool.ruff.lint.flake8-pytest-style]
+parametrize-names-type = "list"
+raises-extend-require-match-for = [ "ALPHA", "Bar" ]
+[tool.ruff.lint.flake8-quotes]
+docstring-quotes = "single"
+[tool.ruff.lint.flake8-self]
+extend-ignore-names = [ "ALPHA", "Bar" ]
+[tool.ruff.lint.flake8-tidy-imports]
+banned-module-level-imports = [ "ALPHA", "Bar" ]
+[tool.ruff.lint.flake8-tidy-imports.banned-api]
+foo.msg = "Use bar instead"
+[tool.ruff.lint.flake8-type-checking]
+exempt-modules = [ "ALPHA", "Bar" ]
+[tool.ruff.lint.flake8-unused-arguments]
+ignore-variadic-names = true
+[tool.ruff.lint.isort]
+section-order = [ "Bar", "ALPHA" ]
+[tool.ruff.lint.mccabe]
+max-complexity = 5
+[tool.ruff.lint.pep8-naming]
+classmethod-decorators = [ "ALPHA", "Bar" ]
+[tool.ruff.lint.pycodestyle]
+max-line-length = 100
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+[tool.ruff.lint.pyflakes]
+extend-generics = [ "ALPHA", "Bar" ]
+[tool.ruff.lint.pylint]
+allow-dunder-method-names = [ "ALPHA", "Bar" ]
+[tool.ruff.lint.pyupgrade]
+keep-runtime-typing = true
+[tool.ruff.lint]
+select = [ "ALPHA", "Bar" ]
+extend-select = [ "ALPHA", "Bar" ]
+explicit-preview-rules = true
+exclude = [ "ALPHA", "Bar" ]
+extend-ignore = [ "ALPHA", "Bar" ]
+fixable = [ "ALPHA", "Bar" ]
+extend-fixable = [ "ALPHA", "Bar" ]
+unfixable = [ "ALPHA", "Bar" ]
+extend-safe-fixes = [ "ALPHA", "Bar" ]
+extend-unsafe-fixes = [ "ALPHA", "Bar" ]
+typing-modules = [ "ALPHA", "Bar" ]
+allowed-confusables = [ "−", "∗", "ρ" ]
+dummy-variable-rgx = "^_$"
+external = [ "ALPHA", "Bar" ]
+task-tags = [ "ALPHA", "Bar" ]
+[tool.ruff.lint.extra]
+ok = 1
+[tool.ruff.lint.more]
+ok = 1

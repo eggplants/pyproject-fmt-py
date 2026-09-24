@@ -1,0 +1,16 @@
+%%% case vulture_tests.rs::test_vulture_order_and_sort
+%%% input -
+[tool.vulture]
+min_confidence = 80
+ignore_names = ["zlib", "alpha"]
+paths = ["src", "tests"]
+%%% output short
+[tool.vulture]
+paths = [ "src", "tests" ]
+ignore_names = [ "alpha", "zlib" ]
+min_confidence = 80
+%%% output long
+[tool.vulture]
+paths = [ "src", "tests" ]
+ignore_names = [ "alpha", "zlib" ]
+min_confidence = 80

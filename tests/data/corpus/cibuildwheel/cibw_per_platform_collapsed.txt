@@ -1,0 +1,19 @@
+%%% case cibuildwheel_tests.rs::test_cibw_per_platform_collapsed
+%%% input -
+[tool.cibuildwheel.linux]
+before-all = "yum install -y openssl"
+archs = ["x86_64"]
+
+[tool.cibuildwheel.macos]
+archs = ["x86_64", "arm64"]
+%%% output short
+[tool.cibuildwheel]
+linux.archs = [ "x86_64" ]
+linux.before-all = "yum install -y openssl"
+macos.archs = [ "x86_64", "arm64" ]
+%%% output long
+[tool.cibuildwheel.linux]
+archs = [ "x86_64" ]
+before-all = "yum install -y openssl"
+[tool.cibuildwheel.macos]
+archs = [ "x86_64", "arm64" ]

@@ -1,0 +1,23 @@
+%%% case dependency_groups_tests.rs::test_dependency_groups_issue_291_value_on_bracket_line
+%%% input -
+[dependency-groups]
+dev = ["foo",
+"bar",]
+%%% output short
+[dependency-groups]
+dev = [
+  "bar",
+  "foo",
+]
+%%% output long
+[dependency-groups]
+dev = [
+  "bar",
+  "foo",
+]
+%%% output keep-full-version
+[dependency-groups]
+dev = [
+  "bar",
+  "foo",
+]

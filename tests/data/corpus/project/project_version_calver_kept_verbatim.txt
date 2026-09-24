@@ -1,0 +1,25 @@
+%%% case project_tests.rs::test_project_version_calver_kept_verbatim
+%%% input -
+[project]
+version = "2026.08.10"
+%%% output short
+[project]
+version = "2026.08.10"
+%%% output long
+[project]
+version = "2026.08.10"
+%%% output keep-full-version
+[project]
+version = "2026.08.10"
+%%% output classifiers
+[project]
+version = "2026.08.10"
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]

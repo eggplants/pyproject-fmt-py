@@ -1,0 +1,27 @@
+%%% case poetry_tests.rs::test_poetry_source_aot_key_order_preserves_array_order
+%%% input -
+[[tool.poetry.source]]
+priority = "primary"
+url = "https://pypi.example.com/simple"
+name = "private"
+
+[[tool.poetry.source]]
+url = "https://pypi.org/simple"
+name = "PyPI"
+priority = "supplemental"
+%%% output short
+[tool.poetry]
+source = [
+  { name = "private", url = "https://pypi.example.com/simple", priority = "primary" },
+  { name = "PyPI", url = "https://pypi.org/simple", priority = "supplemental" },
+]
+%%% output long
+[[tool.poetry.source]]
+name = "private"
+url = "https://pypi.example.com/simple"
+priority = "primary"
+
+[[tool.poetry.source]]
+name = "PyPI"
+url = "https://pypi.org/simple"
+priority = "supplemental"

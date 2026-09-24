@@ -1,0 +1,16 @@
+%%% case pytest_tests.rs::test_pytest_python_files_sorted
+%%% input -
+[tool.pytest.ini_options]
+python_files = ["test_*.py", "*_test.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+%%% output short
+[tool.pytest]
+ini_options.python_files = [ "*_test.py", "test_*.py" ]
+ini_options.python_classes = [ "Test*" ]
+ini_options.python_functions = [ "test_*" ]
+%%% output long
+[tool.pytest.ini_options]
+python_files = [ "*_test.py", "test_*.py" ]
+python_classes = [ "Test*" ]
+python_functions = [ "test_*" ]

@@ -1,0 +1,31 @@
+%%% case main_tests.rs::test_a_name_that_only_starts_like_a_namespace_keeps_its_place
+%%% input -
+[aaa]
+z = 1
+
+[toolbox]
+y = 2
+%%% output short
+[aaa]
+z = 1
+
+[toolbox]
+y = 2
+%%% output long
+[aaa]
+z = 1
+
+[toolbox]
+y = 2
+%%% output classifiers
+[aaa]
+z = 1
+
+[toolbox]
+y = 2
+%%% output narrow
+[aaa]
+z = 1
+
+[toolbox]
+y = 2

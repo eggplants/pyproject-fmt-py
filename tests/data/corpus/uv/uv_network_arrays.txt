@@ -1,0 +1,13 @@
+%%% case uv_tests.rs::test_uv_network_arrays
+%%% input -
+[tool.uv]
+allow-insecure-host = ["internal.corp.com", "dev.local", "build.corp.com"]
+no-proxy = ["localhost", "*.internal.com", "127.0.0.1"]
+%%% output short
+[tool.uv]
+allow-insecure-host = [ "build.corp.com", "dev.local", "internal.corp.com" ]
+no-proxy = [ "*.internal.com", "127.0.0.1", "localhost" ]
+%%% output long
+[tool.uv]
+allow-insecure-host = [ "build.corp.com", "dev.local", "internal.corp.com" ]
+no-proxy = [ "*.internal.com", "127.0.0.1", "localhost" ]

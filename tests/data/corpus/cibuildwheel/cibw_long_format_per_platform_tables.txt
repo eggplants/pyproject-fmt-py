@@ -1,0 +1,25 @@
+%%% case cibuildwheel_tests.rs::test_cibw_long_format_per_platform_tables
+%%% input -
+[tool.cibuildwheel.linux]
+before-all = "yum install -y openssl"
+enable = ["pypy", "cpython-freethreading"]
+archs = ["x86_64"]
+
+[tool.cibuildwheel.macos]
+enable = ["pypy", "cpython-freethreading"]
+archs = ["x86_64", "arm64"]
+%%% output short
+[tool.cibuildwheel]
+linux.archs = [ "x86_64" ]
+linux.before-all = "yum install -y openssl"
+linux.enable = [ "cpython-freethreading", "pypy" ]
+macos.archs = [ "x86_64", "arm64" ]
+macos.enable = [ "cpython-freethreading", "pypy" ]
+%%% output long
+[tool.cibuildwheel.linux]
+archs = [ "x86_64" ]
+enable = [ "cpython-freethreading", "pypy" ]
+before-all = "yum install -y openssl"
+[tool.cibuildwheel.macos]
+archs = [ "x86_64", "arm64" ]
+enable = [ "cpython-freethreading", "pypy" ]

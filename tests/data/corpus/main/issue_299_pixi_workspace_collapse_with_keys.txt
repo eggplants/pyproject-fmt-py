@@ -1,0 +1,45 @@
+%%% case main_tests.rs::test_issue_299_pixi_workspace_collapse_with_keys
+%%% input -
+[project]
+name = "x"
+version = "0.1.0"
+
+[tool.pixi.workspace]
+name = "my-project"
+%%% output short
+[project]
+name = "x"
+version = "0.1.0"
+
+[tool.pixi]
+workspace.name = "my-project"
+%%% output long
+[project]
+name = "x"
+version = "0.1.0"
+
+[tool.pixi.workspace]
+name = "my-project"
+%%% output classifiers
+[project]
+name = "x"
+version = "0.1.0"
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]
+
+[tool.pixi]
+workspace.name = "my-project"
+%%% output narrow
+[project]
+name = "x"
+version = "0.1.0"
+
+[tool.pixi]
+workspace.name = "my-project"

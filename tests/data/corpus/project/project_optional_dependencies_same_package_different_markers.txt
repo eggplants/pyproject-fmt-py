@@ -1,0 +1,47 @@
+%%% case project_tests.rs::test_project_optional_dependencies_same_package_different_markers
+%%% input -
+[project]
+name = "test"
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0; python_version<'3.10'",
+    "pytest>=7.0; python_version>='3.10'",
+]
+%%% output short
+[project]
+name = "test"
+optional-dependencies.dev = [
+  "pytest>=6; python_version<'3.10'",
+  "pytest>=7; python_version>='3.10'",
+]
+%%% output long
+[project]
+name = "test"
+[project.optional-dependencies]
+dev = [
+  "pytest>=6; python_version<'3.10'",
+  "pytest>=7; python_version>='3.10'",
+]
+%%% output keep-full-version
+[project]
+name = "test"
+optional-dependencies.dev = [
+  "pytest>=6.0; python_version<'3.10'",
+  "pytest>=7.0; python_version>='3.10'",
+]
+%%% output classifiers
+[project]
+name = "test"
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]
+optional-dependencies.dev = [
+  "pytest>=6; python_version<'3.10'",
+  "pytest>=7; python_version>='3.10'",
+]

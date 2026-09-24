@@ -1,0 +1,16 @@
+%%% case isort_tests.rs::test_isort_known_arrays_sorted
+%%% input -
+[tool.isort]
+known_first_party = ["my_pkg", "another_pkg", "alpha"]
+known_third_party = ["zebra_lib", "alpha_lib"]
+known_standard_library = ["typing", "asyncio"]
+%%% output short
+[tool.isort]
+known_standard_library = [ "asyncio", "typing" ]
+known_third_party = [ "alpha_lib", "zebra_lib" ]
+known_first_party = [ "alpha", "another_pkg", "my_pkg" ]
+%%% output long
+[tool.isort]
+known_standard_library = [ "asyncio", "typing" ]
+known_third_party = [ "alpha_lib", "zebra_lib" ]
+known_first_party = [ "alpha", "another_pkg", "my_pkg" ]

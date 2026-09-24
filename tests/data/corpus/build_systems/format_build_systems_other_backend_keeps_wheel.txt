@@ -1,0 +1,17 @@
+%%% case build_systems_tests.rs::test_format_build_systems_other_backend_keeps_wheel
+%%% input -
+[build-system]
+requires = ["hatchling", "wheel"]
+build-backend = "hatchling.build"
+%%% output short
+[build-system]
+build-backend = "hatchling.build"
+requires = [ "hatchling", "wheel" ]
+%%% output long
+[build-system]
+build-backend = "hatchling.build"
+requires = [ "hatchling", "wheel" ]
+%%% output keep-full-version
+[build-system]
+build-backend = "hatchling.build"
+requires = [ "hatchling", "wheel" ]

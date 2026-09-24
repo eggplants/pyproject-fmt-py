@@ -1,0 +1,16 @@
+%%% case setuptools_tests.rs::test_setuptools_unknown_keys_alphabetized
+%%% input -
+[tool.setuptools]
+zzz_unknown = true
+aaa_unknown = false
+py-modules = ["foo"]
+%%% output short
+[tool.setuptools]
+py-modules = [ "foo" ]
+aaa_unknown = false
+zzz_unknown = true
+%%% output long
+[tool.setuptools]
+py-modules = [ "foo" ]
+aaa_unknown = false
+zzz_unknown = true

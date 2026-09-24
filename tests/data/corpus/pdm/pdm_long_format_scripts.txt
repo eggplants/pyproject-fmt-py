@@ -1,0 +1,13 @@
+%%% case pdm_tests.rs::test_pdm_long_format_scripts
+%%% input -
+[tool.pdm.scripts]
+test = "pytest"
+lint = "ruff check"
+%%% output short
+[tool.pdm]
+scripts.lint = "ruff check"
+scripts.test = "pytest"
+%%% output long
+[tool.pdm.scripts]
+lint = "ruff check"
+test = "pytest"

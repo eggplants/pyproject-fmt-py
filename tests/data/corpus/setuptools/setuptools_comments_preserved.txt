@@ -1,0 +1,19 @@
+%%% case setuptools_tests.rs::test_setuptools_comments_preserved
+%%% input -
+[tool.setuptools]
+# Top-level module list
+py-modules = ["foo"]
+# Include everything
+include-package-data = true
+%%% output short
+[tool.setuptools]
+# Top-level module list
+py-modules = [ "foo" ]
+# Include everything
+include-package-data = true
+%%% output long
+[tool.setuptools]
+# Top-level module list
+py-modules = [ "foo" ]
+# Include everything
+include-package-data = true

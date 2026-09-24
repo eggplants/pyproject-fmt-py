@@ -1,0 +1,19 @@
+%%% case mypy_tests.rs::test_mypy_import_discovery_arrays_sorted
+%%% input -
+[tool.mypy]
+packages = ["z_pkg", "a_pkg", "m_pkg"]
+modules = ["zebra", "alpha"]
+files = ["tests", "src", "examples"]
+exclude = ["build/", "dist/", "\\.tox/"]
+%%% output short
+[tool.mypy]
+files = [ "examples", "src", "tests" ]
+modules = [ "alpha", "zebra" ]
+packages = [ "a_pkg", "m_pkg", "z_pkg" ]
+exclude = [ "\\.tox/", "build/", "dist/" ]
+%%% output long
+[tool.mypy]
+files = [ "examples", "src", "tests" ]
+modules = [ "alpha", "zebra" ]
+packages = [ "a_pkg", "m_pkg", "z_pkg" ]
+exclude = [ "\\.tox/", "build/", "dist/" ]

@@ -1,0 +1,30 @@
+%%% case mypy_tests.rs::test_mypy_idempotent
+%%% input -
+[tool.mypy]
+python_version = "3.11"
+files = [ "src", "tests" ]
+strict = true
+disable_error_code = [ "attr-defined" ]
+plugins = [ "pydantic.mypy" ]
+
+[[tool.mypy.overrides]]
+module = "third_party.*"
+ignore_missing_imports = true
+%%% output short
+[tool.mypy]
+files = [ "src", "tests" ]
+python_version = "3.11"
+disable_error_code = [ "attr-defined" ]
+strict = true
+plugins = [ "pydantic.mypy" ]
+overrides = [ { module = "third_party.*", ignore_missing_imports = true } ]
+%%% output long
+[tool.mypy]
+files = [ "src", "tests" ]
+python_version = "3.11"
+disable_error_code = [ "attr-defined" ]
+strict = true
+plugins = [ "pydantic.mypy" ]
+[[tool.mypy.overrides]]
+module = "third_party.*"
+ignore_missing_imports = true

@@ -1,0 +1,19 @@
+%%% case cibuildwheel_tests.rs::test_cibw_overrides_inline_select_first
+%%% input -
+[tool.cibuildwheel]
+overrides = [
+  { test-extras = ["z", "a"], test-command = "pytest", select = "cp310-*" },
+  { before-all = "make", select = "cp311-*" },
+]
+%%% output short
+[tool.cibuildwheel]
+overrides = [
+  { select = "cp310-*", test-command = "pytest", test-extras = [ "a", "z" ] },
+  { select = "cp311-*", before-all = "make" },
+]
+%%% output long
+[tool.cibuildwheel]
+overrides = [
+  { select = "cp310-*", test-command = "pytest", test-extras = [ "a", "z" ] },
+  { select = "cp311-*", before-all = "make" },
+]

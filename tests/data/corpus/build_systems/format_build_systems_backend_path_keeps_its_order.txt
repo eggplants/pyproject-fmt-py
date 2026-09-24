@@ -1,0 +1,17 @@
+%%% case build_systems_tests.rs::test_format_build_systems_backend_path_keeps_its_order
+%%% input -
+[build-system]
+build-backend = "backend"
+backend-path = ["src", "lib", "another"]
+%%% output short
+[build-system]
+build-backend = "backend"
+backend-path = [ "src", "lib", "another" ]
+%%% output long
+[build-system]
+build-backend = "backend"
+backend-path = [ "src", "lib", "another" ]
+%%% output keep-full-version
+[build-system]
+build-backend = "backend"
+backend-path = [ "src", "lib", "another" ]

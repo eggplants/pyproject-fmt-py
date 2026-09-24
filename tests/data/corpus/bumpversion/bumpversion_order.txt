@@ -1,0 +1,16 @@
+%%% case bumpversion_tests.rs::test_bumpversion_order
+%%% input -
+[tool.bumpversion]
+commit = true
+tag = true
+current_version = "1.0.0"
+%%% output short
+[tool.bumpversion]
+current_version = "1.0.0"
+tag = true
+commit = true
+%%% output long
+[tool.bumpversion]
+current_version = "1.0.0"
+tag = true
+commit = true

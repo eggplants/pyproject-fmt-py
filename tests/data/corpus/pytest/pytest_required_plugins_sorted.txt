@@ -1,0 +1,10 @@
+%%% case pytest_tests.rs::test_pytest_required_plugins_sorted
+%%% input -
+[tool.pytest.ini_options]
+required_plugins = ["pytest-cov", "pytest-asyncio", "pytest-mock"]
+%%% output short
+[tool.pytest]
+ini_options.required_plugins = [ "pytest-asyncio", "pytest-cov", "pytest-mock" ]
+%%% output long
+[tool.pytest.ini_options]
+required_plugins = [ "pytest-asyncio", "pytest-cov", "pytest-mock" ]

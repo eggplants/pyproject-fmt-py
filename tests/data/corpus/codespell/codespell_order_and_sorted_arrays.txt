@@ -1,0 +1,19 @@
+%%% case codespell_tests.rs::test_codespell_order_and_sorted_arrays
+%%% input -
+[tool.codespell]
+write-changes = true
+skip = ["./vendor", "./build"]
+ignore-words-list = ["fo", "ba"]
+builtin = "clear,rare"
+%%% output short
+[tool.codespell]
+builtin = "clear,rare"
+ignore-words-list = [ "ba", "fo" ]
+skip = [ "./build", "./vendor" ]
+write-changes = true
+%%% output long
+[tool.codespell]
+builtin = "clear,rare"
+ignore-words-list = [ "ba", "fo" ]
+skip = [ "./build", "./vendor" ]
+write-changes = true

@@ -1,0 +1,11 @@
+%%% case ruff_tests.rs::test_ruff_per_file_ignores
+%%% input -
+[tool.ruff]
+lint.per-file-ignores."tests/**/*.py" = ["S101", "D103", "ARG001"]
+%%% output short
+[tool.ruff]
+lint.per-file-ignores."tests/**/*.py" = [ "ARG001", "D103", "S101" ]
+%%% output long
+[tool.ruff]
+[tool.ruff.lint]
+per-file-ignores."tests/**/*.py" = [ "ARG001", "D103", "S101" ]

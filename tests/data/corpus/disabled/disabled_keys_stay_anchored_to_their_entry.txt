@@ -1,0 +1,47 @@
+%%% case disabled_tests.rs::test_disabled_keys_stay_anchored_to_their_entry
+%%% input -
+[[tool.uv.index]]
+name = "pypi"
+url = "https://pypi.org/simple"
+authenticate = "never"
+# TODO: once ticket XYZ is complete
+#  to prioritize those over pypi
+# default = true
+
+# These definitions will be used as priority over the ones specified in uv.toml
+
+[[tool.uv.index]]
+name = "company-master"
+url = "https://dl.cloudsmith.io/basic/company/master/python/simple"
+authenticate = "always"
+# ignore-error-codes = [400, 401, 403]  # turn on for debugging
+%%% output short
+[[tool.uv.index]]
+name = "pypi"
+url = "https://pypi.org/simple"
+authenticate = "never"
+# TODO: once ticket XYZ is complete
+#  to prioritize those over pypi
+# default = true
+
+# These definitions will be used as priority over the ones specified in uv.toml
+[[tool.uv.index]]
+name = "company-master"
+url = "https://dl.cloudsmith.io/basic/company/master/python/simple"
+authenticate = "always"
+# ignore-error-codes = [ 400, 401, 403 ]  # turn on for debugging
+%%% output long
+[[tool.uv.index]]
+name = "pypi"
+url = "https://pypi.org/simple"
+authenticate = "never"
+# TODO: once ticket XYZ is complete
+#  to prioritize those over pypi
+# default = true
+
+# These definitions will be used as priority over the ones specified in uv.toml
+[[tool.uv.index]]
+name = "company-master"
+url = "https://dl.cloudsmith.io/basic/company/master/python/simple"
+authenticate = "always"
+# ignore-error-codes = [ 400, 401, 403 ]  # turn on for debugging

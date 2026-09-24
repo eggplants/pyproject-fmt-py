@@ -1,0 +1,30 @@
+%%% case project_tests.rs::test_project_version_field
+%%% input -
+[project]
+name = "test"
+version = "1.2.3"
+%%% output short
+[project]
+name = "test"
+version = "1.2.3"
+%%% output long
+[project]
+name = "test"
+version = "1.2.3"
+%%% output keep-full-version
+[project]
+name = "test"
+version = "1.2.3"
+%%% output classifiers
+[project]
+name = "test"
+version = "1.2.3"
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]

@@ -1,0 +1,13 @@
+%%% case interrogate_tests.rs::test_interrogate_order
+%%% input -
+[tool.interrogate]
+verbose = 2
+fail-under = 80
+%%% output short
+[tool.interrogate]
+fail-under = 80
+verbose = 2
+%%% output long
+[tool.interrogate]
+fail-under = 80
+verbose = 2

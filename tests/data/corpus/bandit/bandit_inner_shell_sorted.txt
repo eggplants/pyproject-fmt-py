@@ -1,0 +1,10 @@
+%%% case bandit_tests.rs::test_bandit_inner_shell_sorted
+%%% input -
+[tool.bandit.shell_injection]
+shell = ["zsh", "bash", "sh"]
+%%% output short
+[tool.bandit]
+shell_injection.shell = [ "bash", "sh", "zsh" ]
+%%% output long
+[tool.bandit.shell_injection]
+shell = [ "bash", "sh", "zsh" ]

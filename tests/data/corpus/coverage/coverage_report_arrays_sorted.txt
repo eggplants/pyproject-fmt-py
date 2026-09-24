@@ -1,0 +1,17 @@
+%%% case coverage_tests.rs::test_coverage_report_arrays_sorted
+%%% input -
+[tool.coverage]
+report.omit = ["tests/*", "fixtures/*", "conftest.py"]
+report.exclude_lines = ["pragma: no cover", "if TYPE_CHECKING:", "raise NotImplementedError"]
+report.partial_branches = ["pragma: no branch", "if DEBUG:"]
+%%% output short
+[tool.coverage]
+report.omit = [ "conftest.py", "fixtures/*", "tests/*" ]
+report.exclude_lines = [ "if TYPE_CHECKING:", "pragma: no cover", "raise NotImplementedError" ]
+report.partial_branches = [ "if DEBUG:", "pragma: no branch" ]
+%%% output long
+[tool.coverage]
+[tool.coverage.report]
+omit = [ "conftest.py", "fixtures/*", "tests/*" ]
+exclude_lines = [ "if TYPE_CHECKING:", "pragma: no cover", "raise NotImplementedError" ]
+partial_branches = [ "if DEBUG:", "pragma: no branch" ]

@@ -1,0 +1,22 @@
+%%% case maturin_tests.rs::test_maturin_top_level_order
+%%% input -
+[tool.maturin]
+compatibility = "manylinux2014"
+features = ["pyo3/extension-module"]
+python-source = "python"
+bindings = "pyo3"
+module-name = "my_pkg._lib"
+%%% output short
+[tool.maturin]
+module-name = "my_pkg._lib"
+bindings = "pyo3"
+python-source = "python"
+features = [ "pyo3/extension-module" ]
+compatibility = "manylinux2014"
+%%% output long
+[tool.maturin]
+module-name = "my_pkg._lib"
+bindings = "pyo3"
+python-source = "python"
+features = [ "pyo3/extension-module" ]
+compatibility = "manylinux2014"

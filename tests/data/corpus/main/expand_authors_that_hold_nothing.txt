@@ -1,0 +1,30 @@
+%%% case main_tests.rs::test_expand_authors_that_hold_nothing
+%%% input -
+[project]
+name = "example"
+authors = []
+%%% output short
+[project]
+name = "example"
+authors = []
+%%% output long
+[project]
+name = "example"
+authors = []
+%%% output classifiers
+[project]
+name = "example"
+authors = []
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]
+%%% output narrow
+[project]
+name = "example"
+authors = []

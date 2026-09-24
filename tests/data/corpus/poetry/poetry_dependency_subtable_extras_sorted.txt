@@ -1,0 +1,13 @@
+%%% case poetry_tests.rs::test_poetry_dependency_subtable_extras_sorted
+%%% input -
+[tool.poetry.dependencies.fastapi]
+extras = ["all", "standard"]
+version = "^0.110"
+%%% output short
+[tool.poetry]
+dependencies.fastapi.extras = [ "all", "standard" ]
+dependencies.fastapi.version = "^0.110"
+%%% output long
+[tool.poetry.dependencies.fastapi]
+extras = [ "all", "standard" ]
+version = "^0.110"

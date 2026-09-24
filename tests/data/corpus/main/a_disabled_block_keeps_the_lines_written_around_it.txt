@@ -1,0 +1,50 @@
+%%% case main_tests.rs::test_a_disabled_block_keeps_the_lines_written_around_it
+%%% input -
+[build-system]
+requires = [
+]
+
+# [tool.setuptools.packages.find]
+
+# namespaces = false
+
+[tool.ruff.lint.per-file-ignores]
+%%% output short
+[build-system]
+requires = []
+
+# [tool.setuptools.packages.find]
+
+# namespaces = false
+
+[tool.ruff]
+lint.per-file-ignores = {}
+%%% output long
+[build-system]
+requires = []
+
+# [tool.setuptools.packages.find]
+
+# namespaces = false
+
+[tool.ruff.lint.per-file-ignores]
+%%% output classifiers
+[build-system]
+requires = []
+
+# [tool.setuptools.packages.find]
+
+# namespaces = false
+
+[tool.ruff]
+lint.per-file-ignores = {}
+%%% output narrow
+[build-system]
+requires = []
+
+# [tool.setuptools.packages.find]
+
+# namespaces = false
+
+[tool.ruff]
+lint.per-file-ignores = {}

@@ -1,0 +1,10 @@
+%%% case bandit_tests.rs::test_bandit_long_format
+%%% input -
+[tool.bandit]
+skips = ["B311", "B101"]
+%%% output short
+[tool.bandit]
+skips = [ "B101", "B311" ]
+%%% output long
+[tool.bandit]
+skips = [ "B101", "B311" ]

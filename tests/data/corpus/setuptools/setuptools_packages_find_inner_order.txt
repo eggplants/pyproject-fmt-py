@@ -1,0 +1,19 @@
+%%% case setuptools_tests.rs::test_setuptools_packages_find_inner_order
+%%% input -
+[tool.setuptools.packages.find]
+namespaces = true
+exclude = ["tests*", "docs*"]
+include = ["my_pkg*"]
+where = ["src"]
+%%% output short
+[tool.setuptools]
+packages.find.where = [ "src" ]
+packages.find.include = [ "my_pkg*" ]
+packages.find.exclude = [ "docs*", "tests*" ]
+packages.find.namespaces = true
+%%% output long
+[tool.setuptools.packages.find]
+where = [ "src" ]
+include = [ "my_pkg*" ]
+exclude = [ "docs*", "tests*" ]
+namespaces = true

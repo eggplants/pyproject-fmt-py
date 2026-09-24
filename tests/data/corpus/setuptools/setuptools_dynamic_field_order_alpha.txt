@@ -1,0 +1,16 @@
+%%% case setuptools_tests.rs::test_setuptools_dynamic_field_order_alpha
+%%% input -
+[tool.setuptools.dynamic]
+version = { attr = "my_pkg.__version__" }
+readme = { file = "README.md" }
+dependencies = { file = "requirements.txt" }
+%%% output short
+[tool.setuptools]
+dynamic.dependencies = { file = "requirements.txt" }
+dynamic.readme = { file = "README.md" }
+dynamic.version = { attr = "my_pkg.__version__" }
+%%% output long
+[tool.setuptools.dynamic]
+dependencies = { file = "requirements.txt" }
+readme = { file = "README.md" }
+version = { attr = "my_pkg.__version__" }

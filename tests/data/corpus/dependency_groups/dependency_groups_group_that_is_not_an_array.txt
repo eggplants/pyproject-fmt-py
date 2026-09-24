@@ -1,0 +1,13 @@
+%%% case dependency_groups_tests.rs::test_dependency_groups_group_that_is_not_an_array
+%%% input -
+[dependency-groups]
+dev = "not-an-array"
+%%% output short
+[dependency-groups]
+dev = "not-an-array"
+%%% output long
+[dependency-groups]
+dev = "not-an-array"
+%%% output keep-full-version
+[dependency-groups]
+dev = "not-an-array"

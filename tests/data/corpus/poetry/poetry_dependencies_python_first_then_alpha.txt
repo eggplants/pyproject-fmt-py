@@ -1,0 +1,19 @@
+%%% case poetry_tests.rs::test_poetry_dependencies_python_first_then_alpha
+%%% input -
+[tool.poetry.dependencies]
+zebra = "^1.0"
+alpha = "^2.0"
+python = "^3.11"
+mike = "^1.5"
+%%% output short
+[tool.poetry]
+dependencies.python = "^3.11"
+dependencies.alpha = "^2.0"
+dependencies.mike = "^1.5"
+dependencies.zebra = "^1.0"
+%%% output long
+[tool.poetry.dependencies]
+python = "^3.11"
+alpha = "^2.0"
+mike = "^1.5"
+zebra = "^1.0"

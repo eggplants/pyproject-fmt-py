@@ -1,0 +1,33 @@
+%%% case build_systems_tests.rs::test_format_build_systems_issue_2_python_version_marker
+%%% input -
+[build-system]
+requires = [
+  "cython==3.0.11",
+  "numpy==1.22.2; python_version<'3.9'",
+  "numpy>=2; python_version>='3.9'",
+  "setuptools",
+]
+%%% output short
+[build-system]
+requires = [
+  "cython==3.0.11",
+  "numpy==1.22.2; python_version<'3.9'",
+  "numpy>=2; python_version>='3.9'",
+  "setuptools",
+]
+%%% output long
+[build-system]
+requires = [
+  "cython==3.0.11",
+  "numpy==1.22.2; python_version<'3.9'",
+  "numpy>=2; python_version>='3.9'",
+  "setuptools",
+]
+%%% output keep-full-version
+[build-system]
+requires = [
+  "cython==3.0.11",
+  "numpy==1.22.2; python_version<'3.9'",
+  "numpy>=2; python_version>='3.9'",
+  "setuptools",
+]

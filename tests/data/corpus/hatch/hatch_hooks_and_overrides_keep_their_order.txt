@@ -1,0 +1,28 @@
+%%% case hatch_tests.rs::test_hatch_hooks_and_overrides_keep_their_order
+%%% input -
+[tool.hatch.build.hooks.z-last]
+x = 1
+
+[tool.hatch.build.hooks.a-first]
+y = 2
+
+[tool.hatch.envs.demo.overrides.name."z.*"]
+set-dependencies = ["from-z"]
+
+[tool.hatch.envs.demo.overrides.name.".*"]
+set-dependencies = ["from-all"]
+%%% output short
+[tool.hatch]
+build.hooks.z-last.x = 1
+build.hooks.a-first.y = 2
+envs.demo.overrides.name."z.*".set-dependencies = [ "from-z" ]
+envs.demo.overrides.name.".*".set-dependencies = [ "from-all" ]
+%%% output long
+[tool.hatch.build.hooks.z-last]
+x = 1
+[tool.hatch.build.hooks.a-first]
+y = 2
+[tool.hatch.envs.demo.overrides.name."z.*"]
+set-dependencies = [ "from-z" ]
+[tool.hatch.envs.demo.overrides.name.".*"]
+set-dependencies = [ "from-all" ]

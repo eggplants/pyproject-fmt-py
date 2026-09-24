@@ -1,0 +1,21 @@
+%%% case main_tests.rs::test_requires_python_bound_beyond_a_minor_version
+%%% input -
+[project]
+name = "example"
+requires-python = ">=3.999"
+%%% output short
+[project]
+name = "example"
+requires-python = ">=3.999"
+%%% output long
+[project]
+name = "example"
+requires-python = ">=3.999"
+%%% output classifiers
+[project]
+name = "example"
+requires-python = ">=3.999"
+%%% output narrow
+[project]
+name = "example"
+requires-python = ">=3.999"

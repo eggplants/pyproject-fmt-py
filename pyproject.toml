@@ -1,0 +1,105 @@
+[build-system]
+build-backend = "hatchling.build"
+requires = [ "hatchling", "uv-dynamic-versioning" ]
+
+[project]
+name = "pyproject-fmt-py"
+description = "pyproject.toml formatter"
+readme = "README.md"
+keywords = [
+  "cli",
+  "formatter",
+  "pure-python",
+  "pyproject",
+]
+license = { text = "MIT" }
+authors = [ { name = "eggplants", email = "w10776e8w@yahoo.co.jp" } ]
+requires-python = ">=3.11"
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Typing :: Typed",
+]
+dynamic = [ "version" ]
+dependencies = [
+  "packaging>=24.2",
+  "tomlkit>=0.13",
+  "wcwidth>=0.2.13",
+]
+urls.Documentation = "https://eggplants.github.io/pyproject-fmt-py/"
+urls.Issues = "https://github.com/eggplants/pyproject-fmt-py/issues"
+urls.Repository = "https://github.com/eggplants/pyproject-fmt-py"
+scripts.pyproject-fmt = "pyproject_fmt_py.cli:main"
+
+[dependency-groups]
+dev = [
+  "pymarkdownlnt>=0.9.33",
+  "pytest>=9.0.2",
+  "pytest-cov>=7",
+]
+docs = [
+  "pdoc>=16",
+]
+
+[tool.hatch]
+version.source = "uv-dynamic-versioning"
+build.targets.wheel.packages = [ "pyproject_fmt_py" ]
+build.targets.sdist.packages = [ "pyproject_fmt_py" ]
+
+[tool.uv]
+python-downloads = "never"
+default-groups = [
+  "dev",
+  "docs",
+]
+exclude-newer = "P7D"
+preview = true
+
+[tool.ruff]
+line-length = 120
+format.indent-style = "space"
+format.quote-style = "double"
+lint.select = [ "ALL" ]
+lint.ignore = [
+  "COM812",
+  "CPY001", # Missing copyright notice (this project carries its licence in LICENSE.txt)
+  "D",
+]
+lint.per-file-ignores."packaging/entrypoint.py" = [
+  "INP001", # Implicit namespace package (frozen entry point, not importable content)
+]
+lint.per-file-ignores."pyproject_fmt_py/cli.py" = [
+  "T201", # `print` found
+]
+lint.per-file-ignores."pyproject_fmt_py/rules/**" = [
+  "TID252", # Relative import from a parent module (the rules read the engine they are rules for)
+]
+lint.per-file-ignores."tests/**" = [
+  "ANN",     # Missing type annotations (tests/fixtures)
+  "ARG",     # Unused arguments (pytest fixtures, lambda stubs)
+  "CPY001",  # Missing copyright notice
+  "INP001",  # Implicit namespace package (no __init__ in tests)
+  "PLR2004", # Magic value used in comparison
+  "S101",    # Use of assert detected
+]
+lint.per-file-ignores."tools/**" = [
+  "INP001", # Implicit namespace package (scripts, not importable content)
+  "T201",   # `print` found (these report to a terminal)
+]
+lint.pydocstyle.convention = "google"
+
+[tool.pyproject-fmt]
+max_supported_python = "3.14"
+
+[tool.uv-dynamic-versioning]
+vcs = "git"
+style = "semver"
+fallback-version = "0.0.0"

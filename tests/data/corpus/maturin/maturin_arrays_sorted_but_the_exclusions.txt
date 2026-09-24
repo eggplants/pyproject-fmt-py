@@ -1,0 +1,16 @@
+%%% case maturin_tests.rs::test_maturin_arrays_sorted_but_the_exclusions
+%%% input -
+[tool.maturin]
+features = ["zebra", "alpha", "mike"]
+include = ["src/**/*.rs", "*.toml"]
+exclude = ["zeta/*", "alpha/*"]
+%%% output short
+[tool.maturin]
+include = [ "*.toml", "src/**/*.rs" ]
+exclude = [ "zeta/*", "alpha/*" ]
+features = [ "alpha", "mike", "zebra" ]
+%%% output long
+[tool.maturin]
+include = [ "*.toml", "src/**/*.rs" ]
+exclude = [ "zeta/*", "alpha/*" ]
+features = [ "alpha", "mike", "zebra" ]

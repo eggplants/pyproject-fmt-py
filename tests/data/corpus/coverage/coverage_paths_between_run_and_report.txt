@@ -1,0 +1,19 @@
+%%% case coverage_tests.rs::test_coverage_paths_between_run_and_report
+%%% input -
+[tool.coverage]
+report.fail_under = 90
+paths.source = ["src/", "/build/src"]
+run.source = ["src"]
+%%% output short
+[tool.coverage]
+run.source = [ "src" ]
+paths.source = [ "src/", "/build/src" ]
+report.fail_under = 90
+%%% output long
+[tool.coverage]
+[tool.coverage.run]
+source = [ "src" ]
+[tool.coverage.paths]
+source = [ "src/", "/build/src" ]
+[tool.coverage.report]
+fail_under = 90

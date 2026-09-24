@@ -1,0 +1,13 @@
+%%% case codespell_tests.rs::test_codespell_idempotent
+%%% input -
+[tool.codespell]
+skip = [ "build", "dist" ]
+ignore-words-list = [ "fo", "ba" ]
+%%% output short
+[tool.codespell]
+ignore-words-list = [ "ba", "fo" ]
+skip = [ "build", "dist" ]
+%%% output long
+[tool.codespell]
+ignore-words-list = [ "ba", "fo" ]
+skip = [ "build", "dist" ]

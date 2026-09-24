@@ -1,0 +1,41 @@
+%%% case dependency_groups_tests.rs::test_dependency_groups_include_groups_keep_their_place
+%%% input -
+[dependency-groups]
+all = [
+  {include-group = "zebra"},
+  {include-group = "alpha"},
+  {include-group = "beta"},
+]
+alpha = ["a"]
+beta = ["b"]
+zebra = ["z"]
+%%% output short
+[dependency-groups]
+all = [
+  { include-group = "zebra" },
+  { include-group = "alpha" },
+  { include-group = "beta" },
+]
+alpha = [ "a" ]
+beta = [ "b" ]
+zebra = [ "z" ]
+%%% output long
+[dependency-groups]
+all = [
+  { include-group = "zebra" },
+  { include-group = "alpha" },
+  { include-group = "beta" },
+]
+alpha = [ "a" ]
+beta = [ "b" ]
+zebra = [ "z" ]
+%%% output keep-full-version
+[dependency-groups]
+all = [
+  { include-group = "zebra" },
+  { include-group = "alpha" },
+  { include-group = "beta" },
+]
+alpha = [ "a" ]
+beta = [ "b" ]
+zebra = [ "z" ]

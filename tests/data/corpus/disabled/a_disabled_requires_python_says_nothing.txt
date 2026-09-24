@@ -1,0 +1,16 @@
+%%% case disabled_tests.rs::test_a_disabled_requires_python_says_nothing
+%%% input -
+[project]
+name = "x"
+requires-python = ">=3.12"
+# requires-python = ">=3.9"
+%%% output short
+[project]
+name = "x"
+requires-python = ">=3.12"
+# requires-python = ">=3.9"
+%%% output long
+[project]
+name = "x"
+requires-python = ">=3.12"
+# requires-python = ">=3.9"

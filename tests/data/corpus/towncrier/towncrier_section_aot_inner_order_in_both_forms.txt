@@ -1,0 +1,14 @@
+%%% case towncrier_tests.rs::test_towncrier_section_aot_inner_order_in_both_forms
+%%% input -
+[[tool.towncrier.section]]
+showcontent = true
+name = "Core"
+path = "core"
+%%% output short
+[tool.towncrier]
+section = [ { path = "core", name = "Core", showcontent = true } ]
+%%% output long
+[[tool.towncrier.section]]
+path = "core"
+name = "Core"
+showcontent = true
