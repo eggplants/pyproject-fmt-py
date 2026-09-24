@@ -61,7 +61,7 @@ run = "uv run --isolated --no-project --with 'pyproject-fmt==2.29.4' python tool
 
 [tasks.compat]
 description = "Report where this formatter and the reference write different text"
-run = "uv run --with 'pyproject-fmt==2.29.4' python tools/compat_report.py"
+run = "uv run --isolated --no-project --with 'pyproject-fmt==2.29.4' --with . python tools/compat_report.py"
 
 [tasks.pre-commit]
 description = "Run checks on pre-commit"

@@ -40,6 +40,11 @@ mise run pinup                         # update the pinned action/image digests
 mise run build-binary                  # PyInstaller standalone binary into ./dist
 ```
 
+The reference ships a `pyproject-fmt` console script of the same name as this project's, so it is
+never installed into `.venv`: `mise run compat` and `mise run corpus` put it in a throwaway
+environment instead. If `uv run pyproject-fmt` ever reports `Failed to spawn`, the script was
+clobbered and `uv sync --all-groups --reinstall-package pyproject-fmt-py` puts it back.
+
 The venv is tied to the absolute repo path (`uv sync` bakes it into script shebangs). If the
 repo directory gets renamed or moved, delete `.venv/` and `uv sync` again rather than debugging
 "No such file or directory" / `ModuleNotFoundError` -- it is a stale interpreter path, not a
