@@ -1,0 +1,36 @@
+%%% case main_tests.rs::test_issue_186_single_quote_with_comments
+%%% input -
+[tool.something]
+items = [
+    'first',
+    # A comment
+    'second',
+]
+%%% output short
+[tool.something]
+items = [
+  "first",
+  # A comment
+  "second",
+]
+%%% output long
+[tool.something]
+items = [
+  "first",
+  # A comment
+  "second",
+]
+%%% output classifiers
+[tool.something]
+items = [
+  "first",
+  # A comment
+  "second",
+]
+%%% output narrow
+[tool.something]
+items = [
+  "first",
+  # A comment
+  "second",
+]

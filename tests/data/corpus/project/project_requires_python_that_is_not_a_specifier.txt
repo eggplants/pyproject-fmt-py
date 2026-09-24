@@ -1,0 +1,26 @@
+%%% case project_tests.rs::test_project_requires_python_that_is_not_a_specifier
+%%% input -
+[project]
+name = "test"
+requires-python = "three"
+classifiers = ["License :: OSI Approved :: MIT License"]
+%%% output short
+[project]
+name = "test"
+requires-python = "three"
+classifiers = [ "License :: OSI Approved :: MIT License" ]
+%%% output long
+[project]
+name = "test"
+requires-python = "three"
+classifiers = [ "License :: OSI Approved :: MIT License" ]
+%%% output keep-full-version
+[project]
+name = "test"
+requires-python = "three"
+classifiers = [ "License :: OSI Approved :: MIT License" ]
+%%% output classifiers
+[project]
+name = "test"
+requires-python = "three"
+classifiers = [ "License :: OSI Approved :: MIT License" ]

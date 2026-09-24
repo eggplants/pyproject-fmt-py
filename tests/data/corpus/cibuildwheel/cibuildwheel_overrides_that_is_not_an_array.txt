@@ -1,0 +1,10 @@
+%%% case cibuildwheel_tests.rs::test_cibuildwheel_overrides_that_is_not_an_array
+%%% input -
+[tool.cibuildwheel]
+overrides = "not-an-array"
+%%% output short
+[tool.cibuildwheel]
+overrides = "not-an-array"
+%%% output long
+[tool.cibuildwheel]
+overrides = "not-an-array"

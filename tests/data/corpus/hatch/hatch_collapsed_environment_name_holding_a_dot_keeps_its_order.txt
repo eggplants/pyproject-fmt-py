@@ -1,0 +1,16 @@
+%%% case hatch_tests.rs::test_hatch_collapsed_environment_name_holding_a_dot_keeps_its_order
+%%% input -
+[tool.hatch.envs."a.b"]
+dependencies = ["zeta", "alpha"]
+description = "d"
+python = "3.12"
+%%% output short
+[tool.hatch]
+envs."a.b".description = "d"
+envs."a.b".python = "3.12"
+envs."a.b".dependencies = [ "alpha", "zeta" ]
+%%% output long
+[tool.hatch.envs."a.b"]
+description = "d"
+python = "3.12"
+dependencies = [ "alpha", "zeta" ]

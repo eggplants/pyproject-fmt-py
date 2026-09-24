@@ -1,0 +1,12 @@
+%%% case poetry_tests.rs::test_poetry_source_folded_into_an_array_keeps_its_key_order
+%%% input -
+[[tool.poetry.source]]
+url = "https://example.com"
+name = "held"
+%%% output short
+[tool.poetry]
+source = [ { name = "held", url = "https://example.com" } ]
+%%% output long
+[[tool.poetry.source]]
+name = "held"
+url = "https://example.com"

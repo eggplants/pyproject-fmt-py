@@ -1,0 +1,39 @@
+%%% case main_tests.rs::test_sub_table_spacing_blank_line
+%%% input -
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "W"]
+
+[tool.mypy]
+strict = true
+%%% output short
+[tool.ruff]
+line-length = 120
+lint.select = [ "E", "W" ]
+
+[tool.mypy]
+strict = true
+%%% output long
+[tool.ruff]
+line-length = 120
+[tool.ruff.lint]
+select = [ "E", "W" ]
+
+[tool.mypy]
+strict = true
+%%% output classifiers
+[tool.ruff]
+line-length = 120
+lint.select = [ "E", "W" ]
+
+[tool.mypy]
+strict = true
+%%% output narrow
+[tool.ruff]
+line-length = 120
+lint.select = [ "E", "W" ]
+
+[tool.mypy]
+strict = true

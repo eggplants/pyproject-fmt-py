@@ -1,0 +1,22 @@
+%%% case scikit_build_tests.rs::test_scikit_build_files_sorted_but_the_ordered_lists
+%%% input -
+[tool.scikit-build]
+install.components = ["zlib", "alib"]
+wheel.exclude-fields = ["metadata.version", "metadata.author"]
+install.targets = ["zt", "at"]
+sdist.files = ["zf", "af"]
+%%% output short
+[tool.scikit-build]
+sdist.files = [ "af", "zf" ]
+wheel.exclude-fields = [ "metadata.author", "metadata.version" ]
+install.components = [ "zlib", "alib" ]
+install.targets = [ "zt", "at" ]
+%%% output long
+[tool.scikit-build]
+[tool.scikit-build.sdist]
+files = [ "af", "zf" ]
+[tool.scikit-build.wheel]
+exclude-fields = [ "metadata.author", "metadata.version" ]
+[tool.scikit-build.install]
+components = [ "zlib", "alib" ]
+targets = [ "zt", "at" ]

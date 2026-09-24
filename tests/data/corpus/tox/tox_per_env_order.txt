@@ -1,0 +1,16 @@
+%%% case tox_tests.rs::test_tox_per_env_order
+%%% input -
+[tool.tox.env.lint]
+commands = [["ruff", "check"]]
+deps = ["ruff"]
+runner = "uv-venv-lock-runner"
+%%% output short
+[tool.tox]
+env.lint.runner = "uv-venv-lock-runner"
+env.lint.deps = [ "ruff" ]
+env.lint.commands = [ [ "ruff", "check" ] ]
+%%% output long
+[tool.tox.env.lint]
+runner = "uv-venv-lock-runner"
+deps = [ "ruff" ]
+commands = [ [ "ruff", "check" ] ]

@@ -1,0 +1,16 @@
+%%% case poetry_tests.rs::test_poetry_group_dependencies_alphabetized
+%%% input -
+[tool.poetry.group.test.dependencies]
+pytest-cov = "^5.0"
+pytest = "^8.0"
+coverage = "^7.5"
+%%% output short
+[tool.poetry]
+group.test.dependencies.coverage = "^7.5"
+group.test.dependencies.pytest = "^8.0"
+group.test.dependencies.pytest-cov = "^5.0"
+%%% output long
+[tool.poetry.group.test.dependencies]
+coverage = "^7.5"
+pytest = "^8.0"
+pytest-cov = "^5.0"

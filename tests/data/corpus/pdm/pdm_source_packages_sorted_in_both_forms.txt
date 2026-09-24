@@ -1,0 +1,12 @@
+%%% case pdm_tests.rs::test_pdm_source_packages_sorted_in_both_forms
+%%% input -
+[[tool.pdm.source]]
+name = "internal"
+include_packages = ["zebra", "alpha"]
+%%% output short
+[tool.pdm]
+source = [ { name = "internal", include_packages = [ "alpha", "zebra" ] } ]
+%%% output long
+[[tool.pdm.source]]
+name = "internal"
+include_packages = [ "alpha", "zebra" ]

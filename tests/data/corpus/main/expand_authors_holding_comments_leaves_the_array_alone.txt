@@ -1,0 +1,50 @@
+%%% case main_tests.rs::test_expand_authors_holding_comments_leaves_the_array_alone
+%%% input -
+[project]
+name = "example"
+# people published in package metadata
+authors = [
+  # primary contact
+  { name = "Alice" }, # owns releases
+] # keep this provenance
+%%% output short
+[project]
+name = "example"
+# people published in package metadata
+authors = [
+  # primary contact
+  { name = "Alice" }, # owns releases
+]  # keep this provenance
+%%% output long
+[project]
+name = "example"
+# people published in package metadata
+authors = [
+  # primary contact
+  { name = "Alice" }, # owns releases
+]  # keep this provenance
+%%% output classifiers
+[project]
+name = "example"
+# people published in package metadata
+authors = [
+  # primary contact
+  { name = "Alice" }, # owns releases
+]  # keep this provenance
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]
+%%% output narrow
+[project]
+name = "example"
+# people published in package metadata
+authors = [
+  # primary contact
+  { name = "Alice" }, # owns releases
+]  # keep this provenance

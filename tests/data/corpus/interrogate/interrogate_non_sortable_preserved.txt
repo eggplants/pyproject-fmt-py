@@ -1,0 +1,19 @@
+%%% case interrogate_tests.rs::test_interrogate_non_sortable_preserved
+%%% input -
+[tool.interrogate]
+color = true
+badge-format = "svg"
+verbose = 2
+fail-under = 80
+%%% output short
+[tool.interrogate]
+fail-under = 80
+color = true
+verbose = 2
+badge-format = "svg"
+%%% output long
+[tool.interrogate]
+fail-under = 80
+color = true
+verbose = 2
+badge-format = "svg"

@@ -1,0 +1,10 @@
+%%% case pixi_tests.rs::test_no_pixi_section
+%%% input -
+[tool.ruff]
+line-length = 120
+%%% output short
+[tool.ruff]
+line-length = 120
+%%% output long
+[tool.ruff]
+line-length = 120

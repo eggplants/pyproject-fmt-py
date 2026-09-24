@@ -1,0 +1,19 @@
+%%% case main_tests.rs::test_issue_202_preserve_inline_comment_after_array
+%%% input -
+[tool.uv]
+lint.per-file-ignores."docs/**/*.py" = [ "INP001" ] # No __init__.py in docs
+%%% output short
+[tool.uv]
+lint.per-file-ignores."docs/**/*.py" = [ "INP001" ]  # No __init__.py in docs
+%%% output long
+[tool.uv]
+[tool.uv.lint]
+per-file-ignores."docs/**/*.py" = [ "INP001" ]  # No __init__.py in docs
+%%% output classifiers
+[tool.uv]
+lint.per-file-ignores."docs/**/*.py" = [ "INP001" ]  # No __init__.py in docs
+%%% output narrow
+[tool.uv]
+lint.per-file-ignores."docs/**/*.py" = [
+  "INP001"
+]  # No __init__.py in docs

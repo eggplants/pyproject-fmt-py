@@ -1,0 +1,33 @@
+%%% case main_tests.rs::test_expand_tables_reaches_a_table_below_a_folded_one
+%%% input -
+[project]
+name = "example"
+entry-points.special.example = "package:main"
+%%% output short
+[project]
+name = "example"
+entry-points.special.example = "package:main"
+%%% output long
+[project]
+name = "example"
+[project.entry-points]
+special.example = "package:main"
+%%% output classifiers
+[project]
+name = "example"
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]
+entry-points.special.example = "package:main"
+%%% output narrow
+[project]
+name = "example"
+entry-points.special.example = """\
+  package:main\
+  """

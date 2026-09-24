@@ -1,0 +1,43 @@
+%%% case coverage_tests.rs::test_coverage_trailing_comment_on_single_line_array
+%%% input -
+[tool.coverage.run]
+omit = [
+  "**/__main__.py",
+  "**/cli.py",
+]
+core = "sysmon" # default for 3.14+, available for 3.12+
+disable_warnings = [ "no-sysmon" ] # 3.11 and earlier
+
+[tool.coverage.report]
+# Regexes for lines to exclude from consideration
+exclude_also = [
+  # Don't complain if non-runnable code isn't run:
+  "if __name__ == .__main__.:",
+]
+%%% output short
+[tool.coverage]
+run.omit = [
+  "**/__main__.py",
+  "**/cli.py",
+]
+run.disable_warnings = [ "no-sysmon" ]  # 3.11 and earlier
+run.core = "sysmon"  # default for 3.14+, available for 3.12+
+# Regexes for lines to exclude from consideration
+report.exclude_also = [
+  # Don't complain if non-runnable code isn't run:
+  "if __name__ == .__main__.:",
+]
+%%% output long
+[tool.coverage.run]
+omit = [
+  "**/__main__.py",
+  "**/cli.py",
+]
+disable_warnings = [ "no-sysmon" ]  # 3.11 and earlier
+core = "sysmon"  # default for 3.14+, available for 3.12+
+[tool.coverage.report]
+# Regexes for lines to exclude from consideration
+exclude_also = [
+  # Don't complain if non-runnable code isn't run:
+  "if __name__ == .__main__.:",
+]

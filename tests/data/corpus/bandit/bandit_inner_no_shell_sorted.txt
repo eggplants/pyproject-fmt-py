@@ -1,0 +1,10 @@
+%%% case bandit_tests.rs::test_bandit_inner_no_shell_sorted
+%%% input -
+[tool.bandit.any_other_function_with_shell_equals_true]
+no_shell = ["os.system", "os.popen"]
+%%% output short
+[tool.bandit]
+any_other_function_with_shell_equals_true.no_shell = [ "os.popen", "os.system" ]
+%%% output long
+[tool.bandit.any_other_function_with_shell_equals_true]
+no_shell = [ "os.popen", "os.system" ]

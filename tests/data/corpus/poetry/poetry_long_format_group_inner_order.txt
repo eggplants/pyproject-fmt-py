@@ -1,0 +1,13 @@
+%%% case poetry_tests.rs::test_poetry_long_format_group_inner_order
+%%% input -
+[tool.poetry.group.dev]
+include-groups = ["test", "lint", "docs"]
+optional = true
+%%% output short
+[tool.poetry]
+group.dev.optional = true
+group.dev.include-groups = [ "docs", "lint", "test" ]
+%%% output long
+[tool.poetry.group.dev]
+optional = true
+include-groups = [ "docs", "lint", "test" ]

@@ -1,0 +1,16 @@
+%%% case uv_tests.rs::test_uv_dependency_arrays
+%%% input -
+[tool.uv]
+dev-dependencies = ["pytest", "black", "mypy"]
+constraint-dependencies = ["requests<3", "flask>=2"]
+override-dependencies = ["numpy==1.24", "pandas>=2"]
+%%% output short
+[tool.uv]
+dev-dependencies = [ "black", "mypy", "pytest" ]
+constraint-dependencies = [ "flask>=2", "requests<3" ]
+override-dependencies = [ "numpy==1.24", "pandas>=2" ]
+%%% output long
+[tool.uv]
+dev-dependencies = [ "black", "mypy", "pytest" ]
+constraint-dependencies = [ "flask>=2", "requests<3" ]
+override-dependencies = [ "numpy==1.24", "pandas>=2" ]

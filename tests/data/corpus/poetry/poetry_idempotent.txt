@@ -1,0 +1,28 @@
+%%% case poetry_tests.rs::test_poetry_idempotent
+%%% input -
+[tool.poetry]
+name = "example"
+version = "1.0.0"
+description = "Example package"
+license = "MIT"
+authors = [ "Alice <alice@example.com>" ]
+keywords = [ "format", "toml" ]
+classifiers = [ "License :: OSI Approved :: MIT License" ]
+%%% output short
+[tool.poetry]
+name = "example"
+version = "1.0.0"
+description = "Example package"
+license = "MIT"
+authors = [ "Alice <alice@example.com>" ]
+keywords = [ "format", "toml" ]
+classifiers = [ "License :: OSI Approved :: MIT License" ]
+%%% output long
+[tool.poetry]
+name = "example"
+version = "1.0.0"
+description = "Example package"
+license = "MIT"
+authors = [ "Alice <alice@example.com>" ]
+keywords = [ "format", "toml" ]
+classifiers = [ "License :: OSI Approved :: MIT License" ]

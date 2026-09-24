@@ -1,0 +1,22 @@
+%%% case mypy_tests.rs::test_mypy_warnings_group_together
+%%% input -
+[tool.mypy]
+warn_unreachable = true
+warn_redundant_casts = true
+warn_return_any = true
+warn_unused_ignores = true
+warn_no_return = true
+%%% output short
+[tool.mypy]
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_return_any = true
+warn_unreachable = true
+%%% output long
+[tool.mypy]
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_return_any = true
+warn_unreachable = true

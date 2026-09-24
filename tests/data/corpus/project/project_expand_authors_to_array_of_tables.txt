@@ -1,0 +1,35 @@
+%%% case project_tests.rs::test_project_expand_authors_to_array_of_tables
+%%% input -
+[project]
+name = "test"
+authors = [{ name = "Alice", email = "alice@example.com" }, { name = "Bob" }]
+%%% output short
+[project]
+name = "test"
+authors = [ { name = "Alice", email = "alice@example.com" }, { name = "Bob" } ]
+%%% output long
+[project]
+name = "test"
+[[project.authors]]
+name = "Alice"
+email = "alice@example.com"
+
+[[project.authors]]
+name = "Bob"
+%%% output keep-full-version
+[project]
+name = "test"
+authors = [ { name = "Alice", email = "alice@example.com" }, { name = "Bob" } ]
+%%% output classifiers
+[project]
+name = "test"
+authors = [ { name = "Alice", email = "alice@example.com" }, { name = "Bob" } ]
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]

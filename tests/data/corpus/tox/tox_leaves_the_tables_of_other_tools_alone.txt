@@ -1,0 +1,19 @@
+%%% case tox_tests.rs::test_tox_leaves_the_tables_of_other_tools_alone
+%%% input -
+[project]
+name = "example"
+
+[tool.tox.env.docs]
+description = "docs"
+%%% output short
+[project]
+name = "example"
+
+[tool.tox]
+env.docs.description = "docs"
+%%% output long
+[project]
+name = "example"
+
+[tool.tox.env.docs]
+description = "docs"

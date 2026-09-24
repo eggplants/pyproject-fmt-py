@@ -1,0 +1,34 @@
+%%% case global_tests.rs::test_reorder_bandit_as_linter
+%%% input -
+[tool.mypy]
+mk="mv"
+[tool.bandit]
+skips=["B101"]
+[tool.pytest]
+mk="mv"
+[tool.ruff]
+mr="vr"
+%%% output short
+[tool.ruff]
+mr = "vr"
+
+[tool.bandit]
+skips = [ "B101" ]
+
+[tool.mypy]
+mk = "mv"
+
+[tool.pytest]
+mk = "mv"
+%%% output long
+[tool.ruff]
+mr = "vr"
+
+[tool.bandit]
+skips = [ "B101" ]
+
+[tool.mypy]
+mk = "mv"
+
+[tool.pytest]
+mk = "mv"

@@ -1,0 +1,19 @@
+%%% case hatch_tests.rs::test_hatch_env_inner_key_order
+%%% input -
+[tool.hatch.envs.test]
+scripts.run = "pytest"
+dependencies = ["pytest", "coverage"]
+python = "3.11"
+detached = true
+%%% output short
+[tool.hatch]
+envs.test.detached = true
+envs.test.python = "3.11"
+envs.test.dependencies = [ "coverage", "pytest" ]
+envs.test.scripts.run = "pytest"
+%%% output long
+[tool.hatch.envs.test]
+detached = true
+python = "3.11"
+dependencies = [ "coverage", "pytest" ]
+scripts.run = "pytest"

@@ -1,0 +1,13 @@
+%%% case bandit_tests.rs::test_bandit_arrays_sorted
+%%% input -
+[tool.bandit]
+skips = ["B311", "B101", "B201"]
+tests = ["B999", "B101"]
+%%% output short
+[tool.bandit]
+tests = [ "B101", "B999" ]
+skips = [ "B101", "B201", "B311" ]
+%%% output long
+[tool.bandit]
+tests = [ "B101", "B999" ]
+skips = [ "B101", "B201", "B311" ]

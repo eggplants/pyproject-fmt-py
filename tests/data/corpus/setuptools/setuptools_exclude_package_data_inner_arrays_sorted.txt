@@ -1,0 +1,10 @@
+%%% case setuptools_tests.rs::test_setuptools_exclude_package_data_inner_arrays_sorted
+%%% input -
+[tool.setuptools.exclude-package-data]
+"*" = ["zebra.txt", "alpha.txt"]
+%%% output short
+[tool.setuptools]
+exclude-package-data."*" = [ "alpha.txt", "zebra.txt" ]
+%%% output long
+[tool.setuptools.exclude-package-data]
+"*" = [ "alpha.txt", "zebra.txt" ]

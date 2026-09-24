@@ -1,0 +1,37 @@
+%%% case dependency_groups_tests.rs::test_format_dependency_groups_mixed_packages_and_include_groups
+%%% input -
+[dependency-groups]
+base = ['requests>=2']
+extended = [
+  {include-group='base'},
+  'pytest>=7',
+  {include-group='base'},
+  'black>=23',
+]
+%%% output short
+[dependency-groups]
+base = [ "requests>=2" ]
+extended = [
+  { include-group = "base" },
+  "pytest>=7",
+  { include-group = "base" },
+  "black>=23",
+]
+%%% output long
+[dependency-groups]
+base = [ "requests>=2" ]
+extended = [
+  { include-group = "base" },
+  "pytest>=7",
+  { include-group = "base" },
+  "black>=23",
+]
+%%% output keep-full-version
+[dependency-groups]
+base = [ "requests>=2" ]
+extended = [
+  { include-group = "base" },
+  "pytest>=7",
+  { include-group = "base" },
+  "black>=23",
+]

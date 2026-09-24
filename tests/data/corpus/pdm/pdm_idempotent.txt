@@ -1,0 +1,18 @@
+%%% case pdm_tests.rs::test_pdm_idempotent
+%%% input -
+[tool.pdm]
+distribution = true
+version.source = "scm"
+build.includes = [ "src/**" ]
+%%% output short
+[tool.pdm]
+distribution = true
+version.source = "scm"
+build.includes = [ "src/**" ]
+%%% output long
+[tool.pdm]
+distribution = true
+[tool.pdm.version]
+source = "scm"
+[tool.pdm.build]
+includes = [ "src/**" ]

@@ -1,0 +1,103 @@
+%%% case project_tests.rs::test_project_all_fields
+%%% input -
+[project]
+name = "my-package"
+version = "1.0.0"
+description = "A comprehensive test"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Dev", email = "dev@example.com" }]
+maintainers = [{ name = "Maintainer" }]
+keywords = ["test", "example"]
+classifiers = ["Development Status :: 4 - Beta"]
+dependencies = ["requests>=2.28.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.urls]
+Homepage = "https://example.com"
+
+[project.scripts]
+mytool = "mypackage:main"
+%%% output short
+[project]
+name = "my-package"
+version = "1.0.0"
+description = "A comprehensive test"
+readme = "README.md"
+keywords = [ "example", "test" ]
+license = { text = "MIT" }
+maintainers = [ { name = "Maintainer" } ]
+authors = [ { name = "Dev", email = "dev@example.com" } ]
+requires-python = ">=3.9"
+classifiers = [ "Development Status :: 4 - Beta" ]
+dependencies = [ "requests>=2.28" ]
+optional-dependencies.dev = [ "pytest>=7" ]
+urls.Homepage = "https://example.com"
+scripts.mytool = "mypackage:main"
+%%% output long
+[project]
+name = "my-package"
+version = "1.0.0"
+description = "A comprehensive test"
+readme = "README.md"
+keywords = [ "example", "test" ]
+license = { text = "MIT" }
+requires-python = ">=3.9"
+classifiers = [ "Development Status :: 4 - Beta" ]
+dependencies = [ "requests>=2.28" ]
+[[project.maintainers]]
+name = "Maintainer"
+[[project.authors]]
+name = "Dev"
+email = "dev@example.com"
+[project.optional-dependencies]
+dev = [ "pytest>=7" ]
+[project.urls]
+Homepage = "https://example.com"
+[project.scripts]
+mytool = "mypackage:main"
+%%% output keep-full-version
+[project]
+name = "my-package"
+version = "1.0.0"
+description = "A comprehensive test"
+readme = "README.md"
+keywords = [ "example", "test" ]
+license = { text = "MIT" }
+maintainers = [ { name = "Maintainer" } ]
+authors = [ { name = "Dev", email = "dev@example.com" } ]
+requires-python = ">=3.9"
+classifiers = [ "Development Status :: 4 - Beta" ]
+dependencies = [ "requests>=2.28.0" ]
+optional-dependencies.dev = [ "pytest>=7.0" ]
+urls.Homepage = "https://example.com"
+scripts.mytool = "mypackage:main"
+%%% output classifiers
+[project]
+name = "my-package"
+version = "1.0.0"
+description = "A comprehensive test"
+readme = "README.md"
+keywords = [ "example", "test" ]
+license = { text = "MIT" }
+maintainers = [ { name = "Maintainer" } ]
+authors = [ { name = "Dev", email = "dev@example.com" } ]
+requires-python = ">=3.9"
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]
+dependencies = [ "requests>=2.28" ]
+optional-dependencies.dev = [ "pytest>=7" ]
+urls.Homepage = "https://example.com"
+scripts.mytool = "mypackage:main"

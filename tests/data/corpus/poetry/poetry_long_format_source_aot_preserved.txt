@@ -1,0 +1,14 @@
+%%% case poetry_tests.rs::test_poetry_long_format_source_aot_preserved
+%%% input -
+[[tool.poetry.source]]
+priority = "primary"
+url = "https://pypi.example.com/simple"
+name = "private"
+%%% output short
+[tool.poetry]
+source = [ { name = "private", url = "https://pypi.example.com/simple", priority = "primary" } ]
+%%% output long
+[[tool.poetry.source]]
+name = "private"
+url = "https://pypi.example.com/simple"
+priority = "primary"

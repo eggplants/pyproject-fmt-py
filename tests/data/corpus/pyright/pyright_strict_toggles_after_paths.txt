@@ -1,0 +1,19 @@
+%%% case pyright_tests.rs::test_pyright_strict_toggles_after_paths
+%%% input -
+[tool.pyright]
+strictListInference = true
+enableExperimentalFeatures = true
+include = ["src"]
+pythonVersion = "3.12"
+%%% output short
+[tool.pyright]
+pythonVersion = "3.12"
+include = [ "src" ]
+strictListInference = true
+enableExperimentalFeatures = true
+%%% output long
+[tool.pyright]
+pythonVersion = "3.12"
+include = [ "src" ]
+strictListInference = true
+enableExperimentalFeatures = true

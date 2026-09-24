@@ -1,0 +1,19 @@
+%%% case black_tests.rs::test_black_idempotent
+%%% input -
+[tool.black]
+target-version = [ "py310", "py311" ]
+line-length = 88
+extend-exclude = "/tests/"
+preview = true
+%%% output short
+[tool.black]
+target-version = [ "py310", "py311" ]
+line-length = 88
+extend-exclude = "/tests/"
+preview = true
+%%% output long
+[tool.black]
+target-version = [ "py310", "py311" ]
+line-length = 88
+extend-exclude = "/tests/"
+preview = true

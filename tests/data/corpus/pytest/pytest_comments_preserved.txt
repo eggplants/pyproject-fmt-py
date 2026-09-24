@@ -1,0 +1,13 @@
+%%% case pytest_tests.rs::test_pytest_comments_preserved
+%%% input -
+[tool.pytest.ini_options]
+# Strict marker validation
+addopts = ["--strict-markers"]
+%%% output short
+[tool.pytest]
+# Strict marker validation
+ini_options.addopts = [ "--strict-markers" ]
+%%% output long
+[tool.pytest.ini_options]
+# Strict marker validation
+addopts = [ "--strict-markers" ]

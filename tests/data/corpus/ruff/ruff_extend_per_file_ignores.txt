@@ -1,0 +1,11 @@
+%%% case ruff_tests.rs::test_ruff_extend_per_file_ignores
+%%% input -
+[tool.ruff]
+lint.extend-per-file-ignores."docs/*.py" = ["E501", "D100"]
+%%% output short
+[tool.ruff]
+lint.extend-per-file-ignores."docs/*.py" = [ "D100", "E501" ]
+%%% output long
+[tool.ruff]
+[tool.ruff.lint]
+extend-per-file-ignores."docs/*.py" = [ "D100", "E501" ]

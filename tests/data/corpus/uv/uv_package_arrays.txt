@@ -1,0 +1,19 @@
+%%% case uv_tests.rs::test_uv_package_arrays
+%%% input -
+[tool.uv]
+no-binary-package = ["scipy", "numpy", "pillow"]
+no-build-package = ["torch", "tensorflow"]
+reinstall-package = ["mypy", "black"]
+upgrade-package = ["requests", "flask"]
+%%% output short
+[tool.uv]
+no-binary-package = [ "numpy", "pillow", "scipy" ]
+no-build-package = [ "tensorflow", "torch" ]
+reinstall-package = [ "black", "mypy" ]
+upgrade-package = [ "flask", "requests" ]
+%%% output long
+[tool.uv]
+no-binary-package = [ "numpy", "pillow", "scipy" ]
+no-build-package = [ "tensorflow", "torch" ]
+reinstall-package = [ "black", "mypy" ]
+upgrade-package = [ "flask", "requests" ]

@@ -1,0 +1,25 @@
+%%% case dependency_groups_tests.rs::test_dependency_groups_same_package_different_markers
+%%% input -
+[dependency-groups]
+test = [
+  "pkg>=2.0; python_version>='3.10'",
+  "pkg>=1.0; python_version<'3.10'",
+]
+%%% output short
+[dependency-groups]
+test = [
+  "pkg>=1; python_version<'3.10'",
+  "pkg>=2; python_version>='3.10'",
+]
+%%% output long
+[dependency-groups]
+test = [
+  "pkg>=1; python_version<'3.10'",
+  "pkg>=2; python_version>='3.10'",
+]
+%%% output keep-full-version
+[dependency-groups]
+test = [
+  "pkg>=1.0; python_version<'3.10'",
+  "pkg>=2.0; python_version>='3.10'",
+]

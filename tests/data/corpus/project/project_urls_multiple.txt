@@ -1,0 +1,45 @@
+%%% case project_tests.rs::test_project_urls_multiple
+%%% input -
+[project.urls]
+Homepage = "https://example.com"
+Documentation = "https://docs.example.com"
+Repository = "https://github.com/example/repo"
+"Bug Tracker" = "https://github.com/example/repo/issues"
+Changelog = "https://github.com/example/repo/blob/main/CHANGELOG.md"
+%%% output short
+[project]
+urls."Bug Tracker" = "https://github.com/example/repo/issues"
+urls.Changelog = "https://github.com/example/repo/blob/main/CHANGELOG.md"
+urls.Documentation = "https://docs.example.com"
+urls.Homepage = "https://example.com"
+urls.Repository = "https://github.com/example/repo"
+%%% output long
+[project.urls]
+Homepage = "https://example.com"
+Documentation = "https://docs.example.com"
+Repository = "https://github.com/example/repo"
+"Bug Tracker" = "https://github.com/example/repo/issues"
+Changelog = "https://github.com/example/repo/blob/main/CHANGELOG.md"
+%%% output keep-full-version
+[project]
+urls."Bug Tracker" = "https://github.com/example/repo/issues"
+urls.Changelog = "https://github.com/example/repo/blob/main/CHANGELOG.md"
+urls.Documentation = "https://docs.example.com"
+urls.Homepage = "https://example.com"
+urls.Repository = "https://github.com/example/repo"
+%%% output classifiers
+[project]
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]
+urls."Bug Tracker" = "https://github.com/example/repo/issues"
+urls.Changelog = "https://github.com/example/repo/blob/main/CHANGELOG.md"
+urls.Documentation = "https://docs.example.com"
+urls.Homepage = "https://example.com"
+urls.Repository = "https://github.com/example/repo"

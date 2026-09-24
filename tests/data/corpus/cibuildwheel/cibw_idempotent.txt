@@ -1,0 +1,22 @@
+%%% case cibuildwheel_tests.rs::test_cibw_idempotent
+%%% input -
+[tool.cibuildwheel]
+build = "cp3{10,11,12}-*"
+skip = [ "pp*" ]
+archs = [ "x86_64" ]
+enable = [ "cpython-freethreading", "pypy" ]
+test-command = "pytest"
+%%% output short
+[tool.cibuildwheel]
+build = "cp3{10,11,12}-*"
+skip = [ "pp*" ]
+archs = [ "x86_64" ]
+enable = [ "cpython-freethreading", "pypy" ]
+test-command = "pytest"
+%%% output long
+[tool.cibuildwheel]
+build = "cp3{10,11,12}-*"
+skip = [ "pp*" ]
+archs = [ "x86_64" ]
+enable = [ "cpython-freethreading", "pypy" ]
+test-command = "pytest"

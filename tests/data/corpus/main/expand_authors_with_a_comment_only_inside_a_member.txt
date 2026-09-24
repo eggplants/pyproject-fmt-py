@@ -1,0 +1,52 @@
+%%% case main_tests.rs::test_expand_authors_with_a_comment_only_inside_a_member
+%%% input -
+[project]
+name = "example"
+authors = [ { name = "Alice" }, { name = "Bob" } ]
+maintainers = [
+  { name = "Carol" }, # release manager
+]
+%%% output short
+[project]
+name = "example"
+maintainers = [
+  { name = "Carol" }, # release manager
+]
+authors = [ { name = "Alice" }, { name = "Bob" } ]
+%%% output long
+[project]
+name = "example"
+maintainers = [
+  { name = "Carol" }, # release manager
+]
+[[project.authors]]
+name = "Alice"
+
+[[project.authors]]
+name = "Bob"
+%%% output classifiers
+[project]
+name = "example"
+maintainers = [
+  { name = "Carol" }, # release manager
+]
+authors = [ { name = "Alice" }, { name = "Bob" } ]
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]
+%%% output narrow
+[project]
+name = "example"
+maintainers = [
+  { name = "Carol" }, # release manager
+]
+authors = [
+  { name = "Alice" },
+  { name = "Bob" }
+]

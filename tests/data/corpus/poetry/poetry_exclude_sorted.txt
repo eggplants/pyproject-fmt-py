@@ -1,0 +1,10 @@
+%%% case poetry_tests.rs::test_poetry_exclude_sorted
+%%% input -
+[tool.poetry]
+exclude = ["tests/*", "docs/*", "build/*"]
+%%% output short
+[tool.poetry]
+exclude = [ "build/*", "docs/*", "tests/*" ]
+%%% output long
+[tool.poetry]
+exclude = [ "build/*", "docs/*", "tests/*" ]

@@ -1,0 +1,11 @@
+%%% case hatch_tests.rs::test_hatch_artifacts_keep_their_order
+%%% input -
+[tool.hatch]
+build.artifacts = ["*.so", "!/foo/*.so"]
+%%% output short
+[tool.hatch]
+build.artifacts = [ "*.so", "!/foo/*.so" ]
+%%% output long
+[tool.hatch]
+[tool.hatch.build]
+artifacts = [ "*.so", "!/foo/*.so" ]

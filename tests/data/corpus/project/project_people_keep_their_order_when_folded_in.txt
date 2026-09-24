@@ -1,0 +1,34 @@
+%%% case project_tests.rs::test_project_people_keep_their_order_when_folded_in
+%%% input -
+[project]
+authors = [{ email = "john@example.com", name = "John Doe" }]
+maintainers = [{ email = "maintain@example.com", name = "Jane Smith" }]
+%%% output short
+[project]
+maintainers = [ { name = "Jane Smith", email = "maintain@example.com" } ]
+authors = [ { name = "John Doe", email = "john@example.com" } ]
+%%% output long
+[project]
+[[project.maintainers]]
+name = "Jane Smith"
+email = "maintain@example.com"
+[[project.authors]]
+name = "John Doe"
+email = "john@example.com"
+%%% output keep-full-version
+[project]
+maintainers = [ { name = "Jane Smith", email = "maintain@example.com" } ]
+authors = [ { name = "John Doe", email = "john@example.com" } ]
+%%% output classifiers
+[project]
+maintainers = [ { name = "Jane Smith", email = "maintain@example.com" } ]
+authors = [ { name = "John Doe", email = "john@example.com" } ]
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]

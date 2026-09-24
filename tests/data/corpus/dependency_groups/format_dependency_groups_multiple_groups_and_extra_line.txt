@@ -1,0 +1,25 @@
+%%% case dependency_groups_tests.rs::test_format_dependency_groups_multiple_groups_and_extra_line
+%%% input -
+[dependency-groups]
+example = [ "c<1" ]
+coverage = ["b<2"]
+type = [ "a>1" ]
+
+%%% output short
+[dependency-groups]
+type = [ "a>1" ]
+coverage = [ "b<2" ]
+example = [ "c<1" ]
+
+%%% output long
+[dependency-groups]
+type = [ "a>1" ]
+coverage = [ "b<2" ]
+example = [ "c<1" ]
+
+%%% output keep-full-version
+[dependency-groups]
+type = [ "a>1" ]
+coverage = [ "b<2" ]
+example = [ "c<1" ]
+

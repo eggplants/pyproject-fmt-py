@@ -1,0 +1,28 @@
+%%% case pdm_tests.rs::test_pdm_long_format_source_aot
+%%% input -
+[[tool.pdm.source]]
+verify_ssl = false
+exclude_packages = ["zeta", "alpha"]
+type = "find_links"
+include_packages = ["zinc", "amber"]
+url = "https://example.com/links"
+name = "internal"
+extra = "value"
+%%% output short
+[[tool.pdm.source]]
+name = "internal"
+url = "https://example.com/links"
+type = "find_links"
+verify_ssl = false
+include_packages = [ "amber", "zinc" ]
+exclude_packages = [ "alpha", "zeta" ]
+extra = "value"
+%%% output long
+[[tool.pdm.source]]
+name = "internal"
+url = "https://example.com/links"
+type = "find_links"
+verify_ssl = false
+include_packages = [ "amber", "zinc" ]
+exclude_packages = [ "alpha", "zeta" ]
+extra = "value"

@@ -1,0 +1,22 @@
+%%% case pyright_tests.rs::test_pyright_top_level_key_order
+%%% input -
+[tool.pyright]
+strict = ["strict_file.py"]
+typeCheckingMode = "strict"
+pythonVersion = "3.12"
+exclude = ["build"]
+include = ["src"]
+%%% output short
+[tool.pyright]
+pythonVersion = "3.12"
+typeCheckingMode = "strict"
+strict = [ "strict_file.py" ]
+include = [ "src" ]
+exclude = [ "build" ]
+%%% output long
+[tool.pyright]
+pythonVersion = "3.12"
+typeCheckingMode = "strict"
+strict = [ "strict_file.py" ]
+include = [ "src" ]
+exclude = [ "build" ]

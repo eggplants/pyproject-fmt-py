@@ -1,0 +1,19 @@
+%%% case mypy_tests.rs::test_mypy_comments_preserved
+%%% input -
+[tool.mypy]
+# Python target version
+python_version = "3.12"
+# Be strict
+strict = true
+%%% output short
+[tool.mypy]
+# Python target version
+python_version = "3.12"
+# Be strict
+strict = true
+%%% output long
+[tool.mypy]
+# Python target version
+python_version = "3.12"
+# Be strict
+strict = true

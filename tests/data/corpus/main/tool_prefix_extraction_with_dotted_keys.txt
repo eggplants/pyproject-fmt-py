@@ -1,0 +1,24 @@
+%%% case main_tests.rs::test_tool_prefix_extraction_with_dotted_keys
+%%% input -
+[tool.coverage.run]
+branch = true
+
+[tool.coverage.report]
+precision = 2
+%%% output short
+[tool.coverage]
+run.branch = true
+report.precision = 2
+%%% output long
+[tool.coverage.run]
+branch = true
+[tool.coverage.report]
+precision = 2
+%%% output classifiers
+[tool.coverage]
+run.branch = true
+report.precision = 2
+%%% output narrow
+[tool.coverage]
+run.branch = true
+report.precision = 2

@@ -1,0 +1,16 @@
+%%% case deptry_tests.rs::test_deptry_non_sortable_entry_preserved
+%%% input -
+[tool.deptry]
+ignore_notebooks = true
+per_rule_ignores = { DEP001 = ["foo", "bar"] }
+exclude = ["zeta", "alpha"]
+%%% output short
+[tool.deptry]
+exclude = [ "alpha", "zeta" ]
+ignore_notebooks = true
+per_rule_ignores = { DEP001 = [ "foo", "bar" ] }
+%%% output long
+[tool.deptry]
+exclude = [ "alpha", "zeta" ]
+ignore_notebooks = true
+per_rule_ignores = { DEP001 = [ "foo", "bar" ] }

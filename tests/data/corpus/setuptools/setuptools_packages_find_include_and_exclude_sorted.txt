@@ -1,0 +1,16 @@
+%%% case setuptools_tests.rs::test_setuptools_packages_find_include_and_exclude_sorted
+%%% input -
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["zeta*", "alpha*"]
+exclude = ["zeta.tests*", "alpha.tests*"]
+%%% output short
+[tool.setuptools]
+packages.find.where = [ "src" ]
+packages.find.include = [ "alpha*", "zeta*" ]
+packages.find.exclude = [ "alpha.tests*", "zeta.tests*" ]
+%%% output long
+[tool.setuptools.packages.find]
+where = [ "src" ]
+include = [ "alpha*", "zeta*" ]
+exclude = [ "alpha.tests*", "zeta.tests*" ]

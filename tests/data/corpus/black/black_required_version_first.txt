@@ -1,0 +1,13 @@
+%%% case black_tests.rs::test_black_required_version_first
+%%% input -
+[tool.black]
+line-length = 88
+required-version = "24.10"
+%%% output short
+[tool.black]
+required-version = "24.10"
+line-length = 88
+%%% output long
+[tool.black]
+required-version = "24.10"
+line-length = 88

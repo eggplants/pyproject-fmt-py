@@ -1,0 +1,16 @@
+%%% case poetry_tests.rs::test_poetry_scripts_alphabetized
+%%% input -
+[tool.poetry.scripts]
+my-cli = "my_pkg.cli:main"
+my-server = "my_pkg.server:run"
+my-admin = "my_pkg.admin:run"
+%%% output short
+[tool.poetry]
+scripts.my-admin = "my_pkg.admin:run"
+scripts.my-cli = "my_pkg.cli:main"
+scripts.my-server = "my_pkg.server:run"
+%%% output long
+[tool.poetry.scripts]
+my-admin = "my_pkg.admin:run"
+my-cli = "my_pkg.cli:main"
+my-server = "my_pkg.server:run"

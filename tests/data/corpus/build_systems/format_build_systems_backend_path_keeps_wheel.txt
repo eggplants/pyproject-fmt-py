@@ -1,0 +1,21 @@
+%%% case build_systems_tests.rs::test_format_build_systems_backend_path_keeps_wheel
+%%% input -
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+backend-path = ["_custom"]
+%%% output short
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [ "setuptools", "wheel" ]
+backend-path = [ "_custom" ]
+%%% output long
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [ "setuptools", "wheel" ]
+backend-path = [ "_custom" ]
+%%% output keep-full-version
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [ "setuptools", "wheel" ]
+backend-path = [ "_custom" ]

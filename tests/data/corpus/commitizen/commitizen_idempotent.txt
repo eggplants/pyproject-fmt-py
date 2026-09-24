@@ -1,0 +1,13 @@
+%%% case commitizen_tests.rs::test_commitizen_idempotent
+%%% input -
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "1.0.0"
+%%% output short
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "1.0.0"
+%%% output long
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "1.0.0"

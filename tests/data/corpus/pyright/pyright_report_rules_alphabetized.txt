@@ -1,0 +1,19 @@
+%%% case pyright_tests.rs::test_pyright_report_rules_alphabetized
+%%% input -
+[tool.pyright]
+reportUnusedVariable = "warning"
+reportMissingImports = "error"
+reportGeneralTypeIssues = "error"
+pythonVersion = "3.11"
+%%% output short
+[tool.pyright]
+pythonVersion = "3.11"
+reportGeneralTypeIssues = "error"
+reportMissingImports = "error"
+reportUnusedVariable = "warning"
+%%% output long
+[tool.pyright]
+pythonVersion = "3.11"
+reportGeneralTypeIssues = "error"
+reportMissingImports = "error"
+reportUnusedVariable = "warning"

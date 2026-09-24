@@ -1,0 +1,17 @@
+%%% case dependency_groups_tests.rs::test_format_dependency_groups_include_single_group
+%%% input -
+[dependency-groups]
+docs=["b==1"]
+test=["a>1",{include-group="docs"}]
+%%% output short
+[dependency-groups]
+test = [ "a>1", { include-group = "docs" } ]
+docs = [ "b==1" ]
+%%% output long
+[dependency-groups]
+test = [ "a>1", { include-group = "docs" } ]
+docs = [ "b==1" ]
+%%% output keep-full-version
+[dependency-groups]
+test = [ "a>1", { include-group = "docs" } ]
+docs = [ "b==1" ]

@@ -1,0 +1,25 @@
+%%% case dependency_groups_tests.rs::test_format_dependency_groups_multiple_groups
+%%% input -
+[dependency-groups]
+example=["c<1"]
+docs=["b==1"]
+test=["a>1"]
+dev=["d>=2"]
+%%% output short
+[dependency-groups]
+dev = [ "d>=2" ]
+test = [ "a>1" ]
+docs = [ "b==1" ]
+example = [ "c<1" ]
+%%% output long
+[dependency-groups]
+dev = [ "d>=2" ]
+test = [ "a>1" ]
+docs = [ "b==1" ]
+example = [ "c<1" ]
+%%% output keep-full-version
+[dependency-groups]
+dev = [ "d>=2" ]
+test = [ "a>1" ]
+docs = [ "b==1" ]
+example = [ "c<1" ]

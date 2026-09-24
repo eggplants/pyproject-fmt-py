@@ -1,0 +1,42 @@
+%%% case project_tests.rs::test_project_scripts_multiple_sorting
+%%% input -
+[project]
+name = "test"
+[project.scripts]
+zzz = "pkg:zzz"
+aaa = "pkg:aaa"
+mmm = "pkg:mmm"
+%%% output short
+[project]
+name = "test"
+scripts.aaa = "pkg:aaa"
+scripts.mmm = "pkg:mmm"
+scripts.zzz = "pkg:zzz"
+%%% output long
+[project]
+name = "test"
+[project.scripts]
+zzz = "pkg:zzz"
+aaa = "pkg:aaa"
+mmm = "pkg:mmm"
+%%% output keep-full-version
+[project]
+name = "test"
+scripts.aaa = "pkg:aaa"
+scripts.mmm = "pkg:mmm"
+scripts.zzz = "pkg:zzz"
+%%% output classifiers
+[project]
+name = "test"
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]
+scripts.aaa = "pkg:aaa"
+scripts.mmm = "pkg:mmm"
+scripts.zzz = "pkg:zzz"

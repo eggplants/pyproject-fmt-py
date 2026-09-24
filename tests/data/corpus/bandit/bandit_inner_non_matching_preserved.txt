@@ -1,0 +1,10 @@
+%%% case bandit_tests.rs::test_bandit_inner_non_matching_preserved
+%%% input -
+[tool.bandit.assert_used]
+word_list = ["zeta", "alpha"]
+%%% output short
+[tool.bandit]
+assert_used.word_list = [ "zeta", "alpha" ]
+%%% output long
+[tool.bandit.assert_used]
+word_list = [ "zeta", "alpha" ]

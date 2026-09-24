@@ -1,0 +1,13 @@
+%%% case pdm_tests.rs::test_pdm_dev_dependencies_inner_arrays_sorted
+%%% input -
+[tool.pdm.dev-dependencies]
+test = ["pytest", "coverage"]
+lint = ["ruff", "black"]
+%%% output short
+[tool.pdm]
+dev-dependencies.lint = [ "black", "ruff" ]
+dev-dependencies.test = [ "coverage", "pytest" ]
+%%% output long
+[tool.pdm.dev-dependencies]
+lint = [ "black", "ruff" ]
+test = [ "coverage", "pytest" ]

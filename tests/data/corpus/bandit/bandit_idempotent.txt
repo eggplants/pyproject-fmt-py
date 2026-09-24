@@ -1,0 +1,13 @@
+%%% case bandit_tests.rs::test_bandit_idempotent
+%%% input -
+[tool.bandit]
+exclude_dirs = [ "tests" ]
+skips = [ "B101", "B201" ]
+%%% output short
+[tool.bandit]
+exclude_dirs = [ "tests" ]
+skips = [ "B101", "B201" ]
+%%% output long
+[tool.bandit]
+exclude_dirs = [ "tests" ]
+skips = [ "B101", "B201" ]

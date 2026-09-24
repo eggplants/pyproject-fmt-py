@@ -1,0 +1,16 @@
+%%% case isort_tests.rs::test_isort_unknown_keys_alphabetized
+%%% input -
+[tool.isort]
+zzz_unknown = true
+aaa_unknown = false
+profile = "black"
+%%% output short
+[tool.isort]
+profile = "black"
+aaa_unknown = false
+zzz_unknown = true
+%%% output long
+[tool.isort]
+profile = "black"
+aaa_unknown = false
+zzz_unknown = true

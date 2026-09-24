@@ -1,0 +1,10 @@
+%%% case uv_tests.rs::test_uv_no_uv_section
+%%% input -
+[tool.ruff]
+line-length = 120
+%%% output short
+[tool.ruff]
+line-length = 120
+%%% output long
+[tool.ruff]
+line-length = 120

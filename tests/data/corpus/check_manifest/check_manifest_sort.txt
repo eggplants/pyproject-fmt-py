@@ -1,0 +1,13 @@
+%%% case check_manifest_tests.rs::test_check_manifest_sort
+%%% input -
+[tool.check-manifest]
+ignore-default-rules = true
+ignore = ["zebra.txt", "alpha.txt"]
+%%% output short
+[tool.check-manifest]
+ignore = [ "alpha.txt", "zebra.txt" ]
+ignore-default-rules = true
+%%% output long
+[tool.check-manifest]
+ignore = [ "alpha.txt", "zebra.txt" ]
+ignore-default-rules = true

@@ -1,0 +1,38 @@
+%%% case main_tests.rs::test_format_with_non_table_lines_between_headers
+%%% input -
+[project]
+name = "test"
+version = "1.0"
+
+[project.urls]
+homepage = "https://example.com"
+%%% output short
+[project]
+name = "test"
+version = "1.0"
+urls.homepage = "https://example.com"
+%%% output long
+[project]
+name = "test"
+version = "1.0"
+[project.urls]
+homepage = "https://example.com"
+%%% output classifiers
+[project]
+name = "test"
+version = "1.0"
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]
+urls.homepage = "https://example.com"
+%%% output narrow
+[project]
+name = "test"
+version = "1.0"
+urls.homepage = "https://example.com"

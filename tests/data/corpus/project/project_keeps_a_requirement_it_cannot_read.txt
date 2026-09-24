@@ -1,0 +1,35 @@
+%%% case project_tests.rs::test_project_keeps_a_requirement_it_cannot_read
+%%% input -
+[project]
+name = "alpha"
+version = "1.0"
+dependencies = ["good >= 1.0.0", "!! not a requirement !!", "other"]
+%%% output short
+[project]
+name = "alpha"
+version = "1.0"
+dependencies = [ "!! not a requirement !!", "good>=1", "other" ]
+%%% output long
+[project]
+name = "alpha"
+version = "1.0"
+dependencies = [ "!! not a requirement !!", "good>=1", "other" ]
+%%% output keep-full-version
+[project]
+name = "alpha"
+version = "1.0"
+dependencies = [ "!! not a requirement !!", "good>=1.0.0", "other" ]
+%%% output classifiers
+[project]
+name = "alpha"
+version = "1.0"
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]
+dependencies = [ "!! not a requirement !!", "good>=1", "other" ]

@@ -1,0 +1,13 @@
+%%% case docformatter_tests.rs::test_docformatter_order
+%%% input -
+[tool.docformatter]
+line-length = 100
+in-place = true
+%%% output short
+[tool.docformatter]
+in-place = true
+line-length = 100
+%%% output long
+[tool.docformatter]
+in-place = true
+line-length = 100

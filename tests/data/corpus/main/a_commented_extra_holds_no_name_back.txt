@@ -1,0 +1,40 @@
+%%% case main_tests.rs::test_a_commented_extra_holds_no_name_back
+%%% input -
+[project]
+name = "demo"
+optional-dependencies.Dev_Test = ["pytest"]
+# optional-dependencies.dev-test = ["nose"]
+%%% output short
+[project]
+name = "demo"
+optional-dependencies.dev-test = [ "pytest" ]
+# optional-dependencies.dev-test = [ "nose" ]
+%%% output long
+[project]
+name = "demo"
+# optional-dependencies.dev-test = [ "nose" ]
+[project.optional-dependencies]
+dev-test = [ "pytest" ]
+%%% output classifiers
+[project]
+name = "demo"
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]
+optional-dependencies.dev-test = [ "pytest" ]
+# optional-dependencies.dev-test = [ "nose" ]
+%%% output narrow
+[project]
+name = "demo"
+optional-dependencies.dev-test = [
+  "pytest"
+]
+# optional-dependencies.dev-test = [
+#   "nose"
+# ]

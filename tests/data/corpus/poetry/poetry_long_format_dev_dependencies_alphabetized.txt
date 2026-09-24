@@ -1,0 +1,16 @@
+%%% case poetry_tests.rs::test_poetry_long_format_dev_dependencies_alphabetized
+%%% input -
+[tool.poetry.dev-dependencies]
+pytest = "^8.0"
+black = "^25.0"
+mypy = "^1.10"
+%%% output short
+[tool.poetry]
+dev-dependencies.black = "^25.0"
+dev-dependencies.mypy = "^1.10"
+dev-dependencies.pytest = "^8.0"
+%%% output long
+[tool.poetry.dev-dependencies]
+black = "^25.0"
+mypy = "^1.10"
+pytest = "^8.0"

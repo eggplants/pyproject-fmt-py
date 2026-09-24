@@ -1,0 +1,16 @@
+%%% case pyrefly_tests.rs::test_pyrefly_reads_the_names_it_spells_today
+%%% input -
+[tool.pyrefly]
+search-path = ["z_path", "a_path"]
+project-includes = ["zeta/**", "alpha/**"]
+python-version = "3.13"
+%%% output short
+[tool.pyrefly]
+python-version = "3.13"
+project-includes = [ "alpha/**", "zeta/**" ]
+search-path = [ "z_path", "a_path" ]
+%%% output long
+[tool.pyrefly]
+python-version = "3.13"
+project-includes = [ "alpha/**", "zeta/**" ]
+search-path = [ "z_path", "a_path" ]

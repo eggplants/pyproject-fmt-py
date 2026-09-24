@@ -1,0 +1,45 @@
+%%% case main_tests.rs::test_idempotent_formatting
+%%% input -
+[project]
+name = "test"
+description = "This is a long description string that needs to exceed the default column width of one hundred and twenty characters to trigger wrapping."
+%%% output short
+[project]
+name = "test"
+description = """\
+  This is a long description string that needs to exceed the default column width of one hundred and twenty characters \
+  to trigger wrapping.\
+  """
+%%% output long
+[project]
+name = "test"
+description = """\
+  This is a long description string that needs to exceed the default column width of one hundred and twenty characters \
+  to trigger wrapping.\
+  """
+%%% output classifiers
+[project]
+name = "test"
+description = """\
+  This is a long description string that needs to exceed the default column width of one hundred and twenty characters \
+  to trigger wrapping.\
+  """
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]
+%%% output narrow
+[project]
+name = "test"
+description = """\
+  This is a long description string \
+  that needs to exceed the default \
+  column width of one hundred and \
+  twenty characters to trigger \
+  wrapping.\
+  """

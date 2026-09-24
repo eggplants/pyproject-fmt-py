@@ -1,0 +1,30 @@
+%%% case main_tests.rs::test_format_toml_scripts
+%%% input -
+[project.scripts]
+c = "d"
+a = "b"
+%%% output short
+[project]
+scripts.a = "b"
+scripts.c = "d"
+%%% output long
+[project.scripts]
+c = "d"
+a = "b"
+%%% output classifiers
+[project]
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]
+scripts.a = "b"
+scripts.c = "d"
+%%% output narrow
+[project]
+scripts.a = "b"
+scripts.c = "d"

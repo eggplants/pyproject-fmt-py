@@ -1,0 +1,39 @@
+%%% case project_tests.rs::test_project_classifiers_preserve_existing
+%%% input -
+[project]
+requires-python = ">=3.9"
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+]
+%%% output short
+[project]
+requires-python = ">=3.9"
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+]
+%%% output long
+[project]
+requires-python = ">=3.9"
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+]
+%%% output keep-full-version
+[project]
+requires-python = ">=3.9"
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+]
+%%% output classifiers
+[project]
+requires-python = ">=3.9"
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]

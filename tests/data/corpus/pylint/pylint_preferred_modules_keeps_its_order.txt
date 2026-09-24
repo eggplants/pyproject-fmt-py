@@ -1,0 +1,11 @@
+%%% case pylint_tests.rs::test_pylint_preferred_modules_keeps_its_order
+%%% input -
+[tool.pylint]
+main.preferred-modules = ["json:z-last", "json:a-first"]
+%%% output short
+[tool.pylint]
+main.preferred-modules = [ "json:z-last", "json:a-first" ]
+%%% output long
+[tool.pylint]
+[tool.pylint.main]
+preferred-modules = [ "json:z-last", "json:a-first" ]

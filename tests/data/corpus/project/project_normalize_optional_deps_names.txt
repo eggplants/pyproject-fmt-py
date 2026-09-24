@@ -1,0 +1,32 @@
+%%% case project_tests.rs::test_project_normalize_optional_deps_names
+%%% input -
+[project]
+name = "test"
+[project.optional-dependencies]
+Dev_Test = ["pytest>=7"]
+%%% output short
+[project]
+name = "test"
+optional-dependencies.dev-test = [ "pytest>=7" ]
+%%% output long
+[project]
+name = "test"
+[project.optional-dependencies]
+dev-test = [ "pytest>=7" ]
+%%% output keep-full-version
+[project]
+name = "test"
+optional-dependencies.dev-test = [ "pytest>=7" ]
+%%% output classifiers
+[project]
+name = "test"
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]
+optional-dependencies.dev-test = [ "pytest>=7" ]

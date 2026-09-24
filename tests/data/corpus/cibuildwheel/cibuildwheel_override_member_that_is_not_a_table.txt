@@ -1,0 +1,10 @@
+%%% case cibuildwheel_tests.rs::test_cibuildwheel_override_member_that_is_not_a_table
+%%% input -
+[tool.cibuildwheel]
+overrides = [ "none" ]
+%%% output short
+[tool.cibuildwheel]
+overrides = [ "none" ]
+%%% output long
+[tool.cibuildwheel]
+overrides = [ "none" ]

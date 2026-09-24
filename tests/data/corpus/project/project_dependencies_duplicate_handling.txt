@@ -1,0 +1,25 @@
+%%% case project_tests.rs::test_project_dependencies_duplicate_handling
+%%% input -
+[project]
+dependencies = ["requests>=2.28", "requests>=2.30"]
+%%% output short
+[project]
+dependencies = [ "requests>=2.28", "requests>=2.30" ]
+%%% output long
+[project]
+dependencies = [ "requests>=2.28", "requests>=2.30" ]
+%%% output keep-full-version
+[project]
+dependencies = [ "requests>=2.28", "requests>=2.30" ]
+%%% output classifiers
+[project]
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]
+dependencies = [ "requests>=2.28", "requests>=2.30" ]

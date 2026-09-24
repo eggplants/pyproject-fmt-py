@@ -1,0 +1,31 @@
+%%% case global_tests.rs::test_reorder_pixi_as_build_backend
+%%% input -
+[tool.ruff]
+mr="vr"
+[tool.pixi.project]
+pk="pv"
+[tool.pixi]
+pk="pv"
+[tool.mypy]
+mk="mv"
+%%% output short
+[tool.pixi]
+pk = "pv"
+project.pk = "pv"
+
+[tool.ruff]
+mr = "vr"
+
+[tool.mypy]
+mk = "mv"
+%%% output long
+[tool.pixi]
+pk = "pv"
+[tool.pixi.project]
+pk = "pv"
+
+[tool.ruff]
+mr = "vr"
+
+[tool.mypy]
+mk = "mv"

@@ -1,0 +1,13 @@
+%%% case poetry_tests.rs::test_poetry_long_format_requires_plugins_expanded
+%%% input -
+[tool.poetry.requires-plugins]
+z-plug = ">=1"
+a-plug = ">=1"
+%%% output short
+[tool.poetry]
+requires-plugins.a-plug = ">=1"
+requires-plugins.z-plug = ">=1"
+%%% output long
+[tool.poetry.requires-plugins]
+a-plug = ">=1"
+z-plug = ">=1"

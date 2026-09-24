@@ -1,0 +1,35 @@
+%%% case project_tests.rs::test_project_urls_sorting
+%%% input -
+[project.urls]
+Repository = "https://github.com/example/repo"
+Documentation = "https://docs.example.com"
+Homepage = "https://example.com"
+%%% output short
+[project]
+urls.Documentation = "https://docs.example.com"
+urls.Homepage = "https://example.com"
+urls.Repository = "https://github.com/example/repo"
+%%% output long
+[project.urls]
+Repository = "https://github.com/example/repo"
+Documentation = "https://docs.example.com"
+Homepage = "https://example.com"
+%%% output keep-full-version
+[project]
+urls.Documentation = "https://docs.example.com"
+urls.Homepage = "https://example.com"
+urls.Repository = "https://github.com/example/repo"
+%%% output classifiers
+[project]
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]
+urls.Documentation = "https://docs.example.com"
+urls.Homepage = "https://example.com"
+urls.Repository = "https://github.com/example/repo"

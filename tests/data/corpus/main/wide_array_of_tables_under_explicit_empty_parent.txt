@@ -1,0 +1,49 @@
+%%% case main_tests.rs::test_wide_array_of_tables_under_explicit_empty_parent
+%%% input -
+[tool.demo.labels]
+[[tool.demo.labels.file-rules]]
+any-glob-to-any-file = ["src/managers/apt*", "src/managers/dpkg*", "src/managers/opkg*", "tests/*apt*", "tests/*dpkg*", "tests/*opkg*"]
+%%% output short
+[tool.demo.labels]
+[[tool.demo.labels.file-rules]]
+any-glob-to-any-file = [
+  "src/managers/apt*",
+  "src/managers/dpkg*",
+  "src/managers/opkg*",
+  "tests/*apt*",
+  "tests/*dpkg*",
+  "tests/*opkg*"
+]
+%%% output long
+[tool.demo.labels]
+[[tool.demo.labels.file-rules]]
+any-glob-to-any-file = [
+  "src/managers/apt*",
+  "src/managers/dpkg*",
+  "src/managers/opkg*",
+  "tests/*apt*",
+  "tests/*dpkg*",
+  "tests/*opkg*"
+]
+%%% output classifiers
+[tool.demo.labels]
+[[tool.demo.labels.file-rules]]
+any-glob-to-any-file = [
+  "src/managers/apt*",
+  "src/managers/dpkg*",
+  "src/managers/opkg*",
+  "tests/*apt*",
+  "tests/*dpkg*",
+  "tests/*opkg*"
+]
+%%% output narrow
+[tool.demo.labels]
+[[tool.demo.labels.file-rules]]
+any-glob-to-any-file = [
+  "src/managers/apt*",
+  "src/managers/dpkg*",
+  "src/managers/opkg*",
+  "tests/*apt*",
+  "tests/*dpkg*",
+  "tests/*opkg*",
+]

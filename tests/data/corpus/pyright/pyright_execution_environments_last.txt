@@ -1,0 +1,16 @@
+%%% case pyright_tests.rs::test_pyright_execution_environments_last
+%%% input -
+[tool.pyright]
+executionEnvironments = [{ root = "src" }]
+pythonVersion = "3.12"
+reportMissingImports = "error"
+%%% output short
+[tool.pyright]
+pythonVersion = "3.12"
+reportMissingImports = "error"
+executionEnvironments = [ { root = "src" } ]
+%%% output long
+[tool.pyright]
+pythonVersion = "3.12"
+reportMissingImports = "error"
+executionEnvironments = [ { root = "src" } ]

@@ -1,0 +1,48 @@
+%%% case main_tests.rs::test_expand_project_authors
+%%% input -
+[project]
+name = "example"
+authors = [
+  { name = "John Doe", email = "john@example.com" },
+  { name = "Jane Doe", email = "jane@example.com" },
+]
+%%% output short
+[project]
+name = "example"
+authors = [
+  { name = "John Doe", email = "john@example.com" },
+  { name = "Jane Doe", email = "jane@example.com" },
+]
+%%% output long
+[project]
+name = "example"
+[[project.authors]]
+name = "John Doe"
+email = "john@example.com"
+
+[[project.authors]]
+name = "Jane Doe"
+email = "jane@example.com"
+%%% output classifiers
+[project]
+name = "example"
+authors = [
+  { name = "John Doe", email = "john@example.com" },
+  { name = "Jane Doe", email = "jane@example.com" },
+]
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]
+%%% output narrow
+[project]
+name = "example"
+authors = [
+  { name = "John Doe", email = "john@example.com" },
+  { name = "Jane Doe", email = "jane@example.com" },
+]

@@ -1,0 +1,10 @@
+%%% case black_tests.rs::test_black_target_version_sorted
+%%% input -
+[tool.black]
+target-version = ["py313", "py39", "py312", "py310", "py311"]
+%%% output short
+[tool.black]
+target-version = [ "py39", "py310", "py311", "py312", "py313" ]
+%%% output long
+[tool.black]
+target-version = [ "py39", "py310", "py311", "py312", "py313" ]

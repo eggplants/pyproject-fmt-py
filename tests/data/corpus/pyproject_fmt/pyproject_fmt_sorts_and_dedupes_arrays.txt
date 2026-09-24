@@ -1,0 +1,16 @@
+%%% case pyproject_fmt_tests.rs::test_pyproject_fmt_sorts_and_dedupes_arrays
+%%% input -
+[tool.pyproject-fmt]
+expand_tables = ["tool.ruff", "tool.black", "tool.ruff"]
+collapse_tables = ["b", "a"]
+skip_wrap_for_keys = ["z.parse", "a.parse", "z.parse"]
+%%% output short
+[tool.pyproject-fmt]
+expand_tables = [ "tool.black", "tool.ruff" ]
+collapse_tables = [ "a", "b" ]
+skip_wrap_for_keys = [ "a.parse", "z.parse" ]
+%%% output long
+[tool.pyproject-fmt]
+expand_tables = [ "tool.black", "tool.ruff" ]
+collapse_tables = [ "a", "b" ]
+skip_wrap_for_keys = [ "a.parse", "z.parse" ]

@@ -1,0 +1,22 @@
+%%% case hatch_tests.rs::test_hatch_environment_name_holding_a_dot_is_still_ordered
+%%% input -
+[tool.hatch.envs."a.b"]
+dependencies = ["zeta", "alpha"]
+python = "3.12"
+
+[tool.hatch.envs."a.b".scripts]
+zzz = "z"
+aaa = "a"
+%%% output short
+[tool.hatch]
+envs."a.b".python = "3.12"
+envs."a.b".dependencies = [ "alpha", "zeta" ]
+envs."a.b".scripts.aaa = "a"
+envs."a.b".scripts.zzz = "z"
+%%% output long
+[tool.hatch.envs."a.b"]
+python = "3.12"
+dependencies = [ "alpha", "zeta" ]
+[tool.hatch.envs."a.b".scripts]
+aaa = "a"
+zzz = "z"

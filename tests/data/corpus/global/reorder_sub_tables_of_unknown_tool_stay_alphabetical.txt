@@ -1,0 +1,15 @@
+%%% case global_tests.rs::test_reorder_sub_tables_of_unknown_tool_stay_alphabetical
+%%% input -
+[tool.unknown.zzz]
+a = 1
+[tool.unknown.aaa]
+b = 2
+%%% output short
+[tool.unknown]
+zzz.a = 1
+aaa.b = 2
+%%% output long
+[tool.unknown.aaa]
+b = 2
+[tool.unknown.zzz]
+a = 1

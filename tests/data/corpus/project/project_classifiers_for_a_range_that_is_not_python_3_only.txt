@@ -1,0 +1,44 @@
+%%% case project_tests.rs::test_project_classifiers_for_a_range_that_is_not_python_3_only
+%%% input -
+[project]
+name = "test"
+requires-python = ">=2.7"
+classifiers = ["Programming Language :: Python :: 2.7"]
+%%% output short
+[project]
+name = "test"
+requires-python = ">=2.7"
+classifiers = [ "Programming Language :: Python :: 2.7" ]
+%%% output long
+[project]
+name = "test"
+requires-python = ">=2.7"
+classifiers = [ "Programming Language :: Python :: 2.7" ]
+%%% output keep-full-version
+[project]
+name = "test"
+requires-python = ">=2.7"
+classifiers = [ "Programming Language :: Python :: 2.7" ]
+%%% output classifiers
+[project]
+name = "test"
+requires-python = ">=2.7"
+classifiers = [
+  "Programming Language :: Python :: 2.7",
+  "Programming Language :: Python :: 3.0",
+  "Programming Language :: Python :: 3.1",
+  "Programming Language :: Python :: 3.2",
+  "Programming Language :: Python :: 3.3",
+  "Programming Language :: Python :: 3.4",
+  "Programming Language :: Python :: 3.5",
+  "Programming Language :: Python :: 3.6",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]

@@ -1,0 +1,10 @@
+%%% case setuptools_tests.rs::test_setuptools_packages_preserve_order
+%%% input -
+[tool.setuptools]
+packages = ["main_pkg", "alpha_pkg", "zebra_pkg"]
+%%% output short
+[tool.setuptools]
+packages = [ "main_pkg", "alpha_pkg", "zebra_pkg" ]
+%%% output long
+[tool.setuptools]
+packages = [ "main_pkg", "alpha_pkg", "zebra_pkg" ]

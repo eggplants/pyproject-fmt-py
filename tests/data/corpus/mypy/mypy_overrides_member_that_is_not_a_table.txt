@@ -1,0 +1,10 @@
+%%% case mypy_tests.rs::test_mypy_overrides_member_that_is_not_a_table
+%%% input -
+[tool.mypy]
+overrides = [ "none" ]
+%%% output short
+[tool.mypy]
+overrides = [ "none" ]
+%%% output long
+[tool.mypy]
+overrides = [ "none" ]

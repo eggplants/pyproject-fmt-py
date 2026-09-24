@@ -1,0 +1,13 @@
+%%% case setuptools_tests.rs::test_setuptools_scm_git_sub_table
+%%% input -
+[tool.setuptools_scm.scm.git]
+describe_command = "git describe --dirty --tags --long --match *.*.*"
+pre_parse = "warn_on_shallow"
+%%% output short
+[tool.setuptools_scm]
+scm.git.pre_parse = "warn_on_shallow"
+scm.git.describe_command = "git describe --dirty --tags --long --match *.*.*"
+%%% output long
+[tool.setuptools_scm.scm.git]
+describe_command = "git describe --dirty --tags --long --match *.*.*"
+pre_parse = "warn_on_shallow"

@@ -1,0 +1,21 @@
+%%% case disabled_tests.rs::test_a_disabled_key_holds_an_array_of_tables_open
+%%% input -
+[project]
+name = "x"
+
+[[project.authors]]
+# name = "Alice"
+email = "a@example.com"
+%%% output short
+[project]
+name = "x"
+
+[[project.authors]]
+# name = "Alice"
+email = "a@example.com"
+%%% output long
+[project]
+name = "x"
+[[project.authors]]
+# name = "Alice"
+email = "a@example.com"

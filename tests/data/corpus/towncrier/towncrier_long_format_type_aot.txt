@@ -1,0 +1,33 @@
+%%% case towncrier_tests.rs::test_towncrier_long_format_type_aot
+%%% input -
+[tool.towncrier]
+package = "p"
+
+[[tool.towncrier.type]]
+showcontent = true
+name = "Added"
+directory = "added"
+
+[[tool.towncrier.type]]
+showcontent = false
+name = "Removed"
+directory = "removed"
+%%% output short
+[tool.towncrier]
+package = "p"
+type = [
+  { directory = "added", name = "Added", showcontent = true },
+  { directory = "removed", name = "Removed", showcontent = false },
+]
+%%% output long
+[tool.towncrier]
+package = "p"
+[[tool.towncrier.type]]
+directory = "added"
+name = "Added"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "removed"
+name = "Removed"
+showcontent = false

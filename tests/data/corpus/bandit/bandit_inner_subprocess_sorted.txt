@@ -1,0 +1,10 @@
+%%% case bandit_tests.rs::test_bandit_inner_subprocess_sorted
+%%% input -
+[tool.bandit.shell_injection]
+subprocess = ["subprocess.run", "subprocess.Popen"]
+%%% output short
+[tool.bandit]
+shell_injection.subprocess = [ "subprocess.Popen", "subprocess.run" ]
+%%% output long
+[tool.bandit.shell_injection]
+subprocess = [ "subprocess.Popen", "subprocess.run" ]

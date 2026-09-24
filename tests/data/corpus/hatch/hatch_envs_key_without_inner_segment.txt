@@ -1,0 +1,11 @@
+%%% case hatch_tests.rs::test_hatch_envs_key_without_inner_segment
+%%% input -
+[tool.hatch]
+envs.bare = "value"
+%%% output short
+[tool.hatch]
+envs.bare = "value"
+%%% output long
+[tool.hatch]
+[tool.hatch.envs]
+bare = "value"

@@ -1,0 +1,25 @@
+%%% case poetry_tests.rs::test_poetry_comments_preserved_around_reordered_keys
+%%% input -
+[tool.poetry]
+# Package name
+name = "example"
+# License
+license = "MIT"
+# Version
+version = "1.0.0"
+%%% output short
+[tool.poetry]
+# Package name
+name = "example"
+# Version
+version = "1.0.0"
+# License
+license = "MIT"
+%%% output long
+[tool.poetry]
+# Package name
+name = "example"
+# Version
+version = "1.0.0"
+# License
+license = "MIT"

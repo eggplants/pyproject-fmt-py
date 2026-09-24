@@ -1,0 +1,10 @@
+%%% case scikit_build_tests.rs::test_scikit_build_define_preserved
+%%% input -
+[tool.scikit-build.cmake]
+define = { Z_FLAG = "z", A_FLAG = "a" }
+%%% output short
+[tool.scikit-build]
+cmake.define = { Z_FLAG = "z", A_FLAG = "a" }
+%%% output long
+[tool.scikit-build.cmake]
+define = { Z_FLAG = "z", A_FLAG = "a" }

@@ -1,0 +1,16 @@
+%%% case pdm_tests.rs::test_pdm_source_aot_key_order
+%%% input -
+[[tool.pdm.source]]
+verify_ssl = false
+type = "find_links"
+url = "https://example.com/links"
+name = "internal"
+%%% output short
+[tool.pdm]
+source = [ { name = "internal", url = "https://example.com/links", type = "find_links", verify_ssl = false } ]
+%%% output long
+[[tool.pdm.source]]
+name = "internal"
+url = "https://example.com/links"
+type = "find_links"
+verify_ssl = false

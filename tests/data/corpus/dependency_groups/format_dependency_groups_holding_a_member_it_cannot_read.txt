@@ -1,0 +1,13 @@
+%%% case dependency_groups_tests.rs::test_format_dependency_groups_holding_a_member_it_cannot_read
+%%% input -
+[dependency-groups]
+test = [ "b", [ "nested" ], "a" ]
+%%% output short
+[dependency-groups]
+test = [ "b", [ "nested" ], "a" ]
+%%% output long
+[dependency-groups]
+test = [ "b", [ "nested" ], "a" ]
+%%% output keep-full-version
+[dependency-groups]
+test = [ "b", [ "nested" ], "a" ]

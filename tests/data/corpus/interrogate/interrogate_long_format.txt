@@ -1,0 +1,13 @@
+%%% case interrogate_tests.rs::test_interrogate_long_format
+%%% input -
+[tool.interrogate]
+exclude = ["zeta", "alpha"]
+fail-under = 80
+%%% output short
+[tool.interrogate]
+fail-under = 80
+exclude = [ "alpha", "zeta" ]
+%%% output long
+[tool.interrogate]
+fail-under = 80
+exclude = [ "alpha", "zeta" ]

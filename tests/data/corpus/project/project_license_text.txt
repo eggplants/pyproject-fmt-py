@@ -1,0 +1,25 @@
+%%% case project_tests.rs::test_project_license_text
+%%% input -
+[project]
+license = { text = "MIT" }
+%%% output short
+[project]
+license = { text = "MIT" }
+%%% output long
+[project]
+license = { text = "MIT" }
+%%% output keep-full-version
+[project]
+license = { text = "MIT" }
+%%% output classifiers
+[project]
+license = { text = "MIT" }
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]

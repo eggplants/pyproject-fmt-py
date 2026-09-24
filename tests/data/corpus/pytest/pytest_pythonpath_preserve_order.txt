@@ -1,0 +1,10 @@
+%%% case pytest_tests.rs::test_pytest_pythonpath_preserve_order
+%%% input -
+[tool.pytest.ini_options]
+pythonpath = ["src", "vendor"]
+%%% output short
+[tool.pytest]
+ini_options.pythonpath = [ "src", "vendor" ]
+%%% output long
+[tool.pytest.ini_options]
+pythonpath = [ "src", "vendor" ]

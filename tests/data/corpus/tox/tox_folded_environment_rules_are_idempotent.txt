@@ -1,0 +1,13 @@
+%%% case tox_tests.rs::test_tox_folded_environment_rules_are_idempotent
+%%% input -
+[tool.tox.env.test]
+deps = ["zebra", "alpha"]
+runner = "uv-venv-lock-runner"
+%%% output short
+[tool.tox]
+env.test.runner = "uv-venv-lock-runner"
+env.test.deps = [ "alpha", "zebra" ]
+%%% output long
+[tool.tox.env.test]
+runner = "uv-venv-lock-runner"
+deps = [ "alpha", "zebra" ]

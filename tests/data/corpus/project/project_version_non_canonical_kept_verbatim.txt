@@ -1,0 +1,25 @@
+%%% case project_tests.rs::test_project_version_non_canonical_kept_verbatim
+%%% input -
+[project]
+version = "V1.0-Alpha.2-1.DEV+Ubuntu_01"
+%%% output short
+[project]
+version = "V1.0-Alpha.2-1.DEV+Ubuntu_01"
+%%% output long
+[project]
+version = "V1.0-Alpha.2-1.DEV+Ubuntu_01"
+%%% output keep-full-version
+[project]
+version = "V1.0-Alpha.2-1.DEV+Ubuntu_01"
+%%% output classifiers
+[project]
+version = "V1.0-Alpha.2-1.DEV+Ubuntu_01"
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]

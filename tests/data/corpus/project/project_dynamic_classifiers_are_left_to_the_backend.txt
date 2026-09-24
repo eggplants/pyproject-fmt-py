@@ -1,0 +1,21 @@
+%%% case project_tests.rs::test_project_dynamic_classifiers_are_left_to_the_backend
+%%% input -
+[project]
+name = "demo"
+dynamic = ["classifiers"]
+%%% output short
+[project]
+name = "demo"
+dynamic = [ "classifiers" ]
+%%% output long
+[project]
+name = "demo"
+dynamic = [ "classifiers" ]
+%%% output keep-full-version
+[project]
+name = "demo"
+dynamic = [ "classifiers" ]
+%%% output classifiers
+[project]
+name = "demo"
+dynamic = [ "classifiers" ]

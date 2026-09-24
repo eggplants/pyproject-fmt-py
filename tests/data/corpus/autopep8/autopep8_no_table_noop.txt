@@ -1,0 +1,10 @@
+%%% case autopep8_tests.rs::test_autopep8_no_table_noop
+%%% input -
+[project]
+name = "x"
+%%% output short
+[project]
+name = "x"
+%%% output long
+[project]
+name = "x"

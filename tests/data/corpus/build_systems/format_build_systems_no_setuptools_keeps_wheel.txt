@@ -1,0 +1,17 @@
+%%% case build_systems_tests.rs::test_format_build_systems_no_setuptools_keeps_wheel
+%%% input -
+[build-system]
+requires = ["wheel"]
+build-backend = "setuptools.build_meta"
+%%% output short
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [ "wheel" ]
+%%% output long
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [ "wheel" ]
+%%% output keep-full-version
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [ "wheel" ]

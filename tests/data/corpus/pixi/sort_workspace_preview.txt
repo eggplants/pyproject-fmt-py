@@ -1,0 +1,11 @@
+%%% case pixi_tests.rs::test_sort_workspace_preview
+%%% input -
+[tool.pixi]
+workspace.preview = ["pixi-build", "conda-build"]
+%%% output short
+[tool.pixi]
+workspace.preview = [ "conda-build", "pixi-build" ]
+%%% output long
+[tool.pixi]
+[tool.pixi.workspace]
+preview = [ "conda-build", "pixi-build" ]

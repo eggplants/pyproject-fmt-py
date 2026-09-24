@@ -1,0 +1,35 @@
+%%% case main_tests.rs::test_overrides_under_another_tool_keep_their_order
+%%% input -
+[tool.other]
+overrides = [{ module = ["z", "a"] }]
+
+[tool.mypy]
+overrides = [{ module = ["z", "a"] }]
+%%% output short
+[tool.mypy]
+overrides = [ { module = [ "a", "z" ] } ]
+
+[tool.other]
+overrides = [ { module = [ "z", "a" ] } ]
+%%% output long
+[tool.mypy]
+overrides = [ { module = [ "a", "z" ] } ]
+
+[tool.other]
+overrides = [ { module = [ "z", "a" ] } ]
+%%% output classifiers
+[tool.mypy]
+overrides = [ { module = [ "a", "z" ] } ]
+
+[tool.other]
+overrides = [ { module = [ "z", "a" ] } ]
+%%% output narrow
+[tool.mypy]
+overrides = [
+  { module = [ "a", "z" ] }
+]
+
+[tool.other]
+overrides = [
+  { module = [ "z", "a" ] }
+]

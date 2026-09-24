@@ -1,0 +1,22 @@
+%%% case tox_tests.rs::test_tox_env_run_base_inner_order
+%%% input -
+[tool.tox.env_run_base]
+commands = [["pytest"]]
+extras = ["test", "all"]
+deps = ["pytest>=7", "coverage"]
+runner = "uv-venv-lock-runner"
+package = "wheel"
+%%% output short
+[tool.tox]
+env_run_base.runner = "uv-venv-lock-runner"
+env_run_base.package = "wheel"
+env_run_base.deps = [ "coverage", "pytest>=7" ]
+env_run_base.extras = [ "all", "test" ]
+env_run_base.commands = [ [ "pytest" ] ]
+%%% output long
+[tool.tox.env_run_base]
+runner = "uv-venv-lock-runner"
+package = "wheel"
+deps = [ "coverage", "pytest>=7" ]
+extras = [ "all", "test" ]
+commands = [ [ "pytest" ] ]

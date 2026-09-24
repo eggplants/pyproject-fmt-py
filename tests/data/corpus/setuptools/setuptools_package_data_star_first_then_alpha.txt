@@ -1,0 +1,16 @@
+%%% case setuptools_tests.rs::test_setuptools_package_data_star_first_then_alpha
+%%% input -
+[tool.setuptools.package-data]
+"zebra_pkg" = ["*.txt", "*.md"]
+"alpha_pkg" = ["*.json"]
+"*" = ["*.cfg"]
+%%% output short
+[tool.setuptools]
+package-data."*" = [ "*.cfg" ]
+package-data.alpha_pkg = [ "*.json" ]
+package-data.zebra_pkg = [ "*.md", "*.txt" ]
+%%% output long
+[tool.setuptools.package-data]
+"*" = [ "*.cfg" ]
+alpha_pkg = [ "*.json" ]
+zebra_pkg = [ "*.md", "*.txt" ]

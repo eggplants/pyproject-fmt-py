@@ -1,0 +1,41 @@
+%%% case project_tests.rs::test_project_authors_maintainers
+%%% input -
+[project]
+authors = [
+    { name = "John Doe", email = "john@example.com" },
+    { name = "Jane Smith" }
+]
+maintainers = [
+    { email = "maintain@example.com" }
+]
+%%% output short
+[project]
+maintainers = [ { email = "maintain@example.com" } ]
+authors = [ { name = "John Doe", email = "john@example.com" }, { name = "Jane Smith" } ]
+%%% output long
+[project]
+[[project.maintainers]]
+email = "maintain@example.com"
+[[project.authors]]
+name = "John Doe"
+email = "john@example.com"
+
+[[project.authors]]
+name = "Jane Smith"
+%%% output keep-full-version
+[project]
+maintainers = [ { email = "maintain@example.com" } ]
+authors = [ { name = "John Doe", email = "john@example.com" }, { name = "Jane Smith" } ]
+%%% output classifiers
+[project]
+maintainers = [ { email = "maintain@example.com" } ]
+authors = [ { name = "John Doe", email = "john@example.com" }, { name = "Jane Smith" } ]
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]

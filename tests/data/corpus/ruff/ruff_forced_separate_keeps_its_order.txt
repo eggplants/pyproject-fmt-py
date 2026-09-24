@@ -1,0 +1,14 @@
+%%% case ruff_tests.rs::test_ruff_forced_separate_keeps_its_order
+%%% input -
+[tool.ruff]
+lint.isort.forced-separate = ["vendor_z", "vendor_a"]
+lint.isort.extra-standard-library = ["zeta", "alpha"]
+%%% output short
+[tool.ruff]
+lint.isort.extra-standard-library = [ "alpha", "zeta" ]
+lint.isort.forced-separate = [ "vendor_z", "vendor_a" ]
+%%% output long
+[tool.ruff]
+[tool.ruff.lint]
+isort.extra-standard-library = [ "alpha", "zeta" ]
+isort.forced-separate = [ "vendor_z", "vendor_a" ]

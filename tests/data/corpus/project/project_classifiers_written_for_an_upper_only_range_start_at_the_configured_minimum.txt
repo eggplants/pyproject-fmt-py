@@ -1,0 +1,25 @@
+%%% case project_tests.rs::test_project_classifiers_written_for_an_upper_only_range_start_at_the_configured_minimum
+%%% input -
+[project]
+name = "test"
+requires-python = "<=3.11"
+%%% output short
+[project]
+name = "test"
+requires-python = "<=3.11"
+%%% output long
+[project]
+name = "test"
+requires-python = "<=3.11"
+%%% output keep-full-version
+[project]
+name = "test"
+requires-python = "<=3.11"
+%%% output classifiers
+[project]
+name = "test"
+requires-python = "<=3.11"
+classifiers = [
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+]

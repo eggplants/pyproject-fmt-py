@@ -1,0 +1,11 @@
+%%% case scikit_build_tests.rs::test_scikit_build_packages_keep_their_order
+%%% input -
+[tool.scikit-build]
+wheel.packages = ["src/zeta", "src/alpha", "src/beta"]
+%%% output short
+[tool.scikit-build]
+wheel.packages = [ "src/zeta", "src/alpha", "src/beta" ]
+%%% output long
+[tool.scikit-build]
+[tool.scikit-build.wheel]
+packages = [ "src/zeta", "src/alpha", "src/beta" ]

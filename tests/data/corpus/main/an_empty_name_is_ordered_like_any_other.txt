@@ -1,0 +1,51 @@
+%%% case main_tests.rs::test_an_empty_name_is_ordered_like_any_other
+%%% input -
+[aaa]
+z = 1
+
+[""]
+e = 1
+
+[tool.black]
+line-length = 1
+"" = 2
+%%% output short
+[tool.black]
+line-length = 1
+"" = 2
+
+[aaa]
+z = 1
+
+[""]
+e = 1
+%%% output long
+[tool.black]
+line-length = 1
+"" = 2
+
+[aaa]
+z = 1
+
+[""]
+e = 1
+%%% output classifiers
+[tool.black]
+line-length = 1
+"" = 2
+
+[aaa]
+z = 1
+
+[""]
+e = 1
+%%% output narrow
+[tool.black]
+line-length = 1
+"" = 2
+
+[aaa]
+z = 1
+
+[""]
+e = 1

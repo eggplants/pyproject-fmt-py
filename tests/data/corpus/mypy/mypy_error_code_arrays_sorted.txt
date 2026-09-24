@@ -1,0 +1,13 @@
+%%% case mypy_tests.rs::test_mypy_error_code_arrays_sorted
+%%% input -
+[tool.mypy]
+disable_error_code = ["import-untyped", "attr-defined", "no-untyped-def"]
+enable_error_code = ["truthy-bool", "redundant-expr"]
+%%% output short
+[tool.mypy]
+disable_error_code = [ "attr-defined", "import-untyped", "no-untyped-def" ]
+enable_error_code = [ "redundant-expr", "truthy-bool" ]
+%%% output long
+[tool.mypy]
+disable_error_code = [ "attr-defined", "import-untyped", "no-untyped-def" ]
+enable_error_code = [ "redundant-expr", "truthy-bool" ]

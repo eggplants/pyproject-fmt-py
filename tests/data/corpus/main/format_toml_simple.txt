@@ -1,0 +1,91 @@
+%%% case main_tests.rs::test_format_toml_simple
+%%% input -
+# comment
+a= "b"
+[project]
+name="alpha"
+dependencies=[" e >= 1.5.0"]
+[build-system]
+build-backend="backend"
+requires=[" c >= 1.5.0", "d == 2.0.0"]
+[dependency-groups]
+test=["p>1.0.0"]
+[tool.mypy]
+mk="mv"
+%%% output short
+# comment
+a = "b"
+
+[build-system]
+build-backend = "backend"
+requires = [ "c>=1.5", "d==2" ]
+
+[project]
+name = "alpha"
+dependencies = [ "e>=1.5" ]
+
+[dependency-groups]
+test = [ "p>1" ]
+
+[tool.mypy]
+mk = "mv"
+%%% output long
+# comment
+a = "b"
+
+[build-system]
+build-backend = "backend"
+requires = [ "c>=1.5", "d==2" ]
+
+[project]
+name = "alpha"
+dependencies = [ "e>=1.5" ]
+
+[dependency-groups]
+test = [ "p>1" ]
+
+[tool.mypy]
+mk = "mv"
+%%% output classifiers
+# comment
+a = "b"
+
+[build-system]
+build-backend = "backend"
+requires = [ "c>=1.5", "d==2" ]
+
+[project]
+name = "alpha"
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]
+dependencies = [ "e>=1.5" ]
+
+[dependency-groups]
+test = [ "p>1" ]
+
+[tool.mypy]
+mk = "mv"
+%%% output narrow
+# comment
+a = "b"
+
+[build-system]
+build-backend = "backend"
+requires = [ "c>=1.5", "d==2" ]
+
+[project]
+name = "alpha"
+dependencies = [ "e>=1.5" ]
+
+[dependency-groups]
+test = [ "p>1" ]
+
+[tool.mypy]
+mk = "mv"

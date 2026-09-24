@@ -1,0 +1,35 @@
+%%% case global_tests.rs::test_reorder_sub_tables_follow_key_order
+%%% input -
+[tool.hatch.build]
+a = 1
+[tool.hatch.metadata]
+b = 2
+[tool.hatch.zzz]
+c = 3
+[tool.hatch.version]
+d = 4
+[tool.hatch.aaa]
+e = 5
+[tool.hatch]
+f = 6
+%%% output short
+[tool.hatch]
+version.d = 4
+metadata.b = 2
+build.a = 1
+aaa.e = 5
+f = 6
+zzz.c = 3
+%%% output long
+[tool.hatch]
+f = 6
+[tool.hatch.version]
+d = 4
+[tool.hatch.metadata]
+b = 2
+[tool.hatch.build]
+a = 1
+[tool.hatch.aaa]
+e = 5
+[tool.hatch.zzz]
+c = 3

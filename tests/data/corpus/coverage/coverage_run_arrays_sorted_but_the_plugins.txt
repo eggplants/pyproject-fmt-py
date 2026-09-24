@@ -1,0 +1,23 @@
+%%% case coverage_tests.rs::test_coverage_run_arrays_sorted_but_the_plugins
+%%% input -
+[tool.coverage]
+run.omit = ["z_tests/*", "a_fixtures/*", "m_mocks/*"]
+run.source = ["zulu", "alpha", "bravo"]
+run.concurrency = ["multiprocessing", "gevent", "thread"]
+run.plugins = ["coverage_plugin", "another_plugin"]
+run.debug = ["trace", "config", "sys"]
+%%% output short
+[tool.coverage]
+run.source = [ "alpha", "bravo", "zulu" ]
+run.omit = [ "a_fixtures/*", "m_mocks/*", "z_tests/*" ]
+run.concurrency = [ "gevent", "multiprocessing", "thread" ]
+run.debug = [ "config", "sys", "trace" ]
+run.plugins = [ "coverage_plugin", "another_plugin" ]
+%%% output long
+[tool.coverage]
+[tool.coverage.run]
+source = [ "alpha", "bravo", "zulu" ]
+omit = [ "a_fixtures/*", "m_mocks/*", "z_tests/*" ]
+concurrency = [ "gevent", "multiprocessing", "thread" ]
+debug = [ "config", "sys", "trace" ]
+plugins = [ "coverage_plugin", "another_plugin" ]

@@ -1,0 +1,22 @@
+%%% case pytest_tests.rs::test_pytest_markers_sorted
+%%% input -
+[tool.pytest.ini_options]
+markers = [
+  "slow: marks tests as slow",
+  "integration: integration tests",
+  "fast: marks tests as fast",
+]
+%%% output short
+[tool.pytest]
+ini_options.markers = [
+  "fast: marks tests as fast",
+  "integration: integration tests",
+  "slow: marks tests as slow",
+]
+%%% output long
+[tool.pytest.ini_options]
+markers = [
+  "fast: marks tests as fast",
+  "integration: integration tests",
+  "slow: marks tests as slow",
+]

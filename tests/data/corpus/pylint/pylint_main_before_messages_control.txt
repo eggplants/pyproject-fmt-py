@@ -1,0 +1,22 @@
+%%% case pylint_tests.rs::test_pylint_main_before_messages_control
+%%% input -
+[tool.pylint.format]
+max-line-length = 120
+
+[tool.pylint.messages_control]
+disable = ["C0114", "C0115"]
+
+[tool.pylint.main]
+jobs = 4
+%%% output short
+[tool.pylint]
+main.jobs = 4
+messages_control.disable = [ "C0114", "C0115" ]
+format.max-line-length = 120
+%%% output long
+[tool.pylint.main]
+jobs = 4
+[tool.pylint.messages_control]
+disable = [ "C0114", "C0115" ]
+[tool.pylint.format]
+max-line-length = 120

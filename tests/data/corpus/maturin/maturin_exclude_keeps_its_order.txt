@@ -1,0 +1,10 @@
+%%% case maturin_tests.rs::test_maturin_exclude_keeps_its_order
+%%% input -
+[tool.maturin]
+exclude = ["*", "!keep.so"]
+%%% output short
+[tool.maturin]
+exclude = [ "*", "!keep.so" ]
+%%% output long
+[tool.maturin]
+exclude = [ "*", "!keep.so" ]

@@ -1,0 +1,5 @@
+%%% case dependency_groups_tests.rs::test_format_dependency_groups_no_groups
+%%% input -
+%%% output short
+%%% output long
+%%% output keep-full-version

@@ -1,0 +1,13 @@
+%%% case pyproject_fmt_tests.rs::test_pyproject_fmt_preserves_escape_strings
+%%% input -
+[tool.pyproject-fmt]
+separate_root_table = "\n"
+sub_table_spacing = ""
+%%% output short
+[tool.pyproject-fmt]
+sub_table_spacing = ""
+separate_root_table = "\n"
+%%% output long
+[tool.pyproject-fmt]
+sub_table_spacing = ""
+separate_root_table = "\n"

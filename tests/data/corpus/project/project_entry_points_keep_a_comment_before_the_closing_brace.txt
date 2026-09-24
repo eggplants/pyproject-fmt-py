@@ -1,0 +1,46 @@
+%%% case project_tests.rs::test_project_entry_points_keep_a_comment_before_the_closing_brace
+%%% input -
+[project]
+name = "demo"
+entry-points.console = {
+  command = "package:main",
+  # explains the complete entry-point group
+}
+%%% output short
+[project]
+name = "demo"
+entry-points.console = {
+  command = "package:main",
+  # explains the complete entry-point group
+}
+%%% output long
+[project]
+name = "demo"
+[project.entry-points]
+console = {
+  command = "package:main",
+  # explains the complete entry-point group
+}
+%%% output keep-full-version
+[project]
+name = "demo"
+entry-points.console = {
+  command = "package:main",
+  # explains the complete entry-point group
+}
+%%% output classifiers
+[project]
+name = "demo"
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]
+entry-points.console = {
+  command = "package:main",
+  # explains the complete entry-point group
+}

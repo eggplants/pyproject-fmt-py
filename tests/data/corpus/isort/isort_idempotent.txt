@@ -1,0 +1,19 @@
+%%% case isort_tests.rs::test_isort_idempotent
+%%% input -
+[tool.isort]
+profile = "black"
+line_length = 88
+known_first_party = [ "my_pkg", "another_pkg" ]
+skip = [ "build", "dist" ]
+%%% output short
+[tool.isort]
+profile = "black"
+line_length = 88
+known_first_party = [ "another_pkg", "my_pkg" ]
+skip = [ "build", "dist" ]
+%%% output long
+[tool.isort]
+profile = "black"
+line_length = 88
+known_first_party = [ "another_pkg", "my_pkg" ]
+skip = [ "build", "dist" ]

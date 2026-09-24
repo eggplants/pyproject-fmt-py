@@ -1,0 +1,19 @@
+%%% case cibuildwheel_tests.rs::test_cibw_long_format_overrides_aot
+%%% input -
+[[tool.cibuildwheel.overrides]]
+test-command = "pytest {project}/tests/cpython"
+select = "cp3{10,11}-*"
+enable = ["pypy", "cpython-freethreading"]
+build = "cp3*-*"
+%%% output short
+[[tool.cibuildwheel.overrides]]
+select = "cp3{10,11}-*"
+build = "cp3*-*"
+enable = [ "cpython-freethreading", "pypy" ]
+test-command = "pytest {project}/tests/cpython"
+%%% output long
+[[tool.cibuildwheel.overrides]]
+select = "cp3{10,11}-*"
+build = "cp3*-*"
+enable = [ "cpython-freethreading", "pypy" ]
+test-command = "pytest {project}/tests/cpython"

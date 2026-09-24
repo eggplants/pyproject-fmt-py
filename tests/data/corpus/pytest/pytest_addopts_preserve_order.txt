@@ -1,0 +1,10 @@
+%%% case pytest_tests.rs::test_pytest_addopts_preserve_order
+%%% input -
+[tool.pytest.ini_options]
+addopts = ["-ra", "--strict-markers", "--strict-config"]
+%%% output short
+[tool.pytest]
+ini_options.addopts = [ "-ra", "--strict-markers", "--strict-config" ]
+%%% output long
+[tool.pytest.ini_options]
+addopts = [ "-ra", "--strict-markers", "--strict-config" ]

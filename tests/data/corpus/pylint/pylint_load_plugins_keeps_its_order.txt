@@ -1,0 +1,14 @@
+%%% case pylint_tests.rs::test_pylint_load_plugins_keeps_its_order
+%%% input -
+[tool.pylint]
+main.load-plugins = ["project.patches", "base.plugin"]
+main.ignore = ["zeta", "alpha"]
+%%% output short
+[tool.pylint]
+main.ignore = [ "alpha", "zeta" ]
+main.load-plugins = [ "project.patches", "base.plugin" ]
+%%% output long
+[tool.pylint]
+[tool.pylint.main]
+load-plugins = [ "project.patches", "base.plugin" ]
+ignore = [ "alpha", "zeta" ]

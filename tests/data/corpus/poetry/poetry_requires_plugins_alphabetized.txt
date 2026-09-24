@@ -1,0 +1,13 @@
+%%% case poetry_tests.rs::test_poetry_requires_plugins_alphabetized
+%%% input -
+[tool.poetry.requires-plugins]
+poetry-plugin-export = ">=1.8"
+poetry-dynamic-versioning = ">=1.0"
+%%% output short
+[tool.poetry]
+requires-plugins.poetry-dynamic-versioning = ">=1.0"
+requires-plugins.poetry-plugin-export = ">=1.8"
+%%% output long
+[tool.poetry.requires-plugins]
+poetry-dynamic-versioning = ">=1.0"
+poetry-plugin-export = ">=1.8"

@@ -1,0 +1,32 @@
+%%% case project_tests.rs::test_project_expand_maintainers_to_array_of_tables
+%%% input -
+[project]
+name = "test"
+maintainers = [{ name = "Charlie", email = "charlie@example.com" }]
+%%% output short
+[project]
+name = "test"
+maintainers = [ { name = "Charlie", email = "charlie@example.com" } ]
+%%% output long
+[project]
+name = "test"
+[[project.maintainers]]
+name = "Charlie"
+email = "charlie@example.com"
+%%% output keep-full-version
+[project]
+name = "test"
+maintainers = [ { name = "Charlie", email = "charlie@example.com" } ]
+%%% output classifiers
+[project]
+name = "test"
+maintainers = [ { name = "Charlie", email = "charlie@example.com" } ]
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]

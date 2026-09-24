@@ -1,0 +1,13 @@
+%%% case poetry_tests.rs::test_poetry_long_format_plugins_top_alphabetized
+%%% input -
+[tool.poetry.plugins]
+zeta = "z:Z"
+alpha = "a:A"
+%%% output short
+[tool.poetry]
+plugins.alpha = "a:A"
+plugins.zeta = "z:Z"
+%%% output long
+[tool.poetry.plugins]
+alpha = "a:A"
+zeta = "z:Z"

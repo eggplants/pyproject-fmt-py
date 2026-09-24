@@ -1,0 +1,10 @@
+%%% case semantic_release_tests.rs::test_semantic_release_exclude_commit_patterns_sort
+%%% input -
+[tool.semantic_release]
+exclude_commit_patterns = ["^zeta", "^alpha"]
+%%% output short
+[tool.semantic_release]
+exclude_commit_patterns = [ "^alpha", "^zeta" ]
+%%% output long
+[tool.semantic_release]
+exclude_commit_patterns = [ "^alpha", "^zeta" ]

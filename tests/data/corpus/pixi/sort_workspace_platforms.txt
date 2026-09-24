@@ -1,0 +1,11 @@
+%%% case pixi_tests.rs::test_sort_workspace_platforms
+%%% input -
+[tool.pixi]
+workspace.platforms = ["win-64", "linux-64", "osx-arm64", "osx-64"]
+%%% output short
+[tool.pixi]
+workspace.platforms = [ "linux-64", "osx-64", "osx-arm64", "win-64" ]
+%%% output long
+[tool.pixi]
+[tool.pixi.workspace]
+platforms = [ "linux-64", "osx-64", "osx-arm64", "win-64" ]

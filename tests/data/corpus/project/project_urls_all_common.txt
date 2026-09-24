@@ -1,0 +1,52 @@
+%%% case project_tests.rs::test_project_urls_all_common
+%%% input -
+[project]
+name = "test"
+[project.urls]
+Changelog = "https://example.com/changelog"
+Documentation = "https://example.com/docs"
+Homepage = "https://example.com"
+Repository = "https://github.com/user/repo"
+"Bug Tracker" = "https://github.com/user/repo/issues"
+%%% output short
+[project]
+name = "test"
+urls."Bug Tracker" = "https://github.com/user/repo/issues"
+urls.Changelog = "https://example.com/changelog"
+urls.Documentation = "https://example.com/docs"
+urls.Homepage = "https://example.com"
+urls.Repository = "https://github.com/user/repo"
+%%% output long
+[project]
+name = "test"
+[project.urls]
+Changelog = "https://example.com/changelog"
+Documentation = "https://example.com/docs"
+Homepage = "https://example.com"
+Repository = "https://github.com/user/repo"
+"Bug Tracker" = "https://github.com/user/repo/issues"
+%%% output keep-full-version
+[project]
+name = "test"
+urls."Bug Tracker" = "https://github.com/user/repo/issues"
+urls.Changelog = "https://example.com/changelog"
+urls.Documentation = "https://example.com/docs"
+urls.Homepage = "https://example.com"
+urls.Repository = "https://github.com/user/repo"
+%%% output classifiers
+[project]
+name = "test"
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]
+urls."Bug Tracker" = "https://github.com/user/repo/issues"
+urls.Changelog = "https://example.com/changelog"
+urls.Documentation = "https://example.com/docs"
+urls.Homepage = "https://example.com"
+urls.Repository = "https://github.com/user/repo"

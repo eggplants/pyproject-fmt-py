@@ -1,0 +1,13 @@
+%%% case coverage_tests.rs::test_coverage_path_groups_keep_their_order
+%%% input -
+[tool.coverage.paths]
+z_specific = ["src", "/build/project/src"]
+a_fallback = ["other", "/build/*/src"]
+%%% output short
+[tool.coverage]
+paths.z_specific = [ "src", "/build/project/src" ]
+paths.a_fallback = [ "other", "/build/*/src" ]
+%%% output long
+[tool.coverage.paths]
+z_specific = [ "src", "/build/project/src" ]
+a_fallback = [ "other", "/build/*/src" ]

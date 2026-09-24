@@ -1,0 +1,22 @@
+%%% case ruff_tests.rs::test_ruff_inline_comments_preserved
+%%% input -
+[tool.ruff.lint]
+ignore = [
+  "COM812",  # Conflict with formatter
+  "CPY",  # No copyright statements
+  "D203",  # Blank line before class
+]
+%%% output short
+[tool.ruff]
+lint.ignore = [
+  "COM812", # Conflict with formatter
+  "CPY",    # No copyright statements
+  "D203",   # Blank line before class
+]
+%%% output long
+[tool.ruff.lint]
+ignore = [
+  "COM812", # Conflict with formatter
+  "CPY",    # No copyright statements
+  "D203",   # Blank line before class
+]

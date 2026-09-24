@@ -1,0 +1,13 @@
+%%% case poetry_tests.rs::test_poetry_long_format_scripts_alphabetized
+%%% input -
+[tool.poetry.scripts]
+z-cli = "z:main"
+a-cli = "a:main"
+%%% output short
+[tool.poetry]
+scripts.a-cli = "a:main"
+scripts.z-cli = "z:main"
+%%% output long
+[tool.poetry.scripts]
+a-cli = "a:main"
+z-cli = "z:main"

@@ -1,0 +1,25 @@
+%%% case project_tests.rs::test_project_entry_points
+%%% input -
+[project.entry-points."console_scripts"]
+mytool = "mypackage:main"
+%%% output short
+[project]
+entry-points.console_scripts.mytool = "mypackage:main"
+%%% output long
+[project.entry-points.console_scripts]
+mytool = "mypackage:main"
+%%% output keep-full-version
+[project]
+entry-points.console_scripts.mytool = "mypackage:main"
+%%% output classifiers
+[project]
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]
+entry-points.console_scripts.mytool = "mypackage:main"

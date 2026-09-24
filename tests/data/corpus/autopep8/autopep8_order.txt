@@ -1,0 +1,13 @@
+%%% case autopep8_tests.rs::test_autopep8_order
+%%% input -
+[tool.autopep8]
+recursive = true
+max_line_length = 100
+%%% output short
+[tool.autopep8]
+max_line_length = 100
+recursive = true
+%%% output long
+[tool.autopep8]
+max_line_length = 100
+recursive = true

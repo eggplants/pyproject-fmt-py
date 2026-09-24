@@ -1,0 +1,41 @@
+%%% case project_tests.rs::test_project_extra_names_outside_the_grammar
+%%% input -
+[project]
+name = "x"
+optional-dependencies."FOO🔥" = []
+optional-dependencies.".FOO" = []
+optional-dependencies.Dev_Tools = []
+%%% output short
+[project]
+name = "x"
+optional-dependencies.".FOO" = []
+optional-dependencies."FOO🔥" = []
+optional-dependencies.dev-tools = []
+%%% output long
+[project]
+name = "x"
+[project.optional-dependencies]
+"FOO🔥" = []
+".FOO" = []
+dev-tools = []
+%%% output keep-full-version
+[project]
+name = "x"
+optional-dependencies.".FOO" = []
+optional-dependencies."FOO🔥" = []
+optional-dependencies.dev-tools = []
+%%% output classifiers
+[project]
+name = "x"
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]
+optional-dependencies.".FOO" = []
+optional-dependencies."FOO🔥" = []
+optional-dependencies.dev-tools = []

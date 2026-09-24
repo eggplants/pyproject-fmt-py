@@ -1,0 +1,37 @@
+%%% case dependency_groups_tests.rs::test_dependency_groups_with_nested_inline_table
+%%% input -
+[dependency-groups]
+test = [
+  "pkg>=1",
+  {include-group = "base"},
+  {include-group = "docs"},
+]
+base = ["base-pkg"]
+docs = ["sphinx"]
+%%% output short
+[dependency-groups]
+test = [
+  "pkg>=1",
+  { include-group = "base" },
+  { include-group = "docs" },
+]
+docs = [ "sphinx" ]
+base = [ "base-pkg" ]
+%%% output long
+[dependency-groups]
+test = [
+  "pkg>=1",
+  { include-group = "base" },
+  { include-group = "docs" },
+]
+docs = [ "sphinx" ]
+base = [ "base-pkg" ]
+%%% output keep-full-version
+[dependency-groups]
+test = [
+  "pkg>=1",
+  { include-group = "base" },
+  { include-group = "docs" },
+]
+docs = [ "sphinx" ]
+base = [ "base-pkg" ]

@@ -1,0 +1,13 @@
+%%% case isort_tests.rs::test_isort_forced_separate_keeps_its_order
+%%% input -
+[tool.isort]
+forced_separate = ["vendor_z", "vendor_a"]
+known_first_party = ["zeta", "alpha"]
+%%% output short
+[tool.isort]
+known_first_party = [ "alpha", "zeta" ]
+forced_separate = [ "vendor_z", "vendor_a" ]
+%%% output long
+[tool.isort]
+known_first_party = [ "alpha", "zeta" ]
+forced_separate = [ "vendor_z", "vendor_a" ]

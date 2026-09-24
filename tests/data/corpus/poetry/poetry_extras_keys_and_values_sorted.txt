@@ -1,0 +1,13 @@
+%%% case poetry_tests.rs::test_poetry_extras_keys_and_values_sorted
+%%% input -
+[tool.poetry.extras]
+web = ["uvicorn", "starlette", "fastapi"]
+cli = ["typer", "rich"]
+%%% output short
+[tool.poetry]
+extras.cli = [ "rich", "typer" ]
+extras.web = [ "fastapi", "starlette", "uvicorn" ]
+%%% output long
+[tool.poetry.extras]
+cli = [ "rich", "typer" ]
+web = [ "fastapi", "starlette", "uvicorn" ]

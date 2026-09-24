@@ -1,0 +1,14 @@
+%%% case setuptools_tests.rs::test_setuptools_file_lists_keep_their_order
+%%% input -
+[tool.setuptools]
+script-files = ["z/run", "a/run"]
+data-files.share = ["z/value.txt", "a/value.txt"]
+%%% output short
+[tool.setuptools]
+data-files.share = [ "z/value.txt", "a/value.txt" ]
+script-files = [ "z/run", "a/run" ]
+%%% output long
+[tool.setuptools]
+script-files = [ "z/run", "a/run" ]
+[tool.setuptools.data-files]
+share = [ "z/value.txt", "a/value.txt" ]

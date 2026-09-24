@@ -1,0 +1,25 @@
+%%% case project_tests.rs::test_project_name_that_is_not_a_name_is_left_alone
+%%% input -
+[project]
+name = "pkg[feature]"
+%%% output short
+[project]
+name = "pkg[feature]"
+%%% output long
+[project]
+name = "pkg[feature]"
+%%% output keep-full-version
+[project]
+name = "pkg[feature]"
+%%% output classifiers
+[project]
+name = "pkg[feature]"
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]

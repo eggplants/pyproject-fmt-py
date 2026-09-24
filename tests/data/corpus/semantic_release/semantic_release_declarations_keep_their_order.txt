@@ -1,0 +1,13 @@
+%%% case semantic_release_tests.rs::test_semantic_release_declarations_keep_their_order
+%%% input -
+[tool.semantic_release]
+version_variables = ["version.txt:*:tf", "version.txt:*:nf"]
+assets = ["z/dist.whl", "a/dist.whl"]
+%%% output short
+[tool.semantic_release]
+version_variables = [ "version.txt:*:tf", "version.txt:*:nf" ]
+assets = [ "z/dist.whl", "a/dist.whl" ]
+%%% output long
+[tool.semantic_release]
+version_variables = [ "version.txt:*:tf", "version.txt:*:nf" ]
+assets = [ "z/dist.whl", "a/dist.whl" ]

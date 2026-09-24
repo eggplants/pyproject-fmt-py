@@ -1,0 +1,21 @@
+%%% case project_tests.rs::test_project_dynamic_classifiers_are_left_to_the_backend_2
+%%% input -
+[project]
+name = "demo"
+dynamic = ["requires-python"]
+%%% output short
+[project]
+name = "demo"
+dynamic = [ "requires-python" ]
+%%% output long
+[project]
+name = "demo"
+dynamic = [ "requires-python" ]
+%%% output keep-full-version
+[project]
+name = "demo"
+dynamic = [ "requires-python" ]
+%%% output classifiers
+[project]
+name = "demo"
+dynamic = [ "requires-python" ]

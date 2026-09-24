@@ -1,0 +1,19 @@
+%%% case isort_tests.rs::test_isort_profile_first
+%%% input -
+[tool.isort]
+line_length = 100
+multi_line_output = 3
+profile = "black"
+include_trailing_comma = true
+%%% output short
+[tool.isort]
+profile = "black"
+line_length = 100
+multi_line_output = 3
+include_trailing_comma = true
+%%% output long
+[tool.isort]
+profile = "black"
+line_length = 100
+multi_line_output = 3
+include_trailing_comma = true

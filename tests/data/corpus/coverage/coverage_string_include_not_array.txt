@@ -1,0 +1,13 @@
+%%% case coverage_tests.rs::test_coverage_string_include_not_array
+%%% input -
+[tool.coverage.run]
+branch = true
+include = "src"
+%%% output short
+[tool.coverage]
+run.include = "src"
+run.branch = true
+%%% output long
+[tool.coverage.run]
+include = "src"
+branch = true

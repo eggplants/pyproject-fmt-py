@@ -1,0 +1,13 @@
+%%% case isort_tests.rs::test_isort_comments_preserved
+%%% input -
+[tool.isort]
+# Match black
+profile = "black"
+%%% output short
+[tool.isort]
+# Match black
+profile = "black"
+%%% output long
+[tool.isort]
+# Match black
+profile = "black"

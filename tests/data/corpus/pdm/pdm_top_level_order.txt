@@ -1,0 +1,22 @@
+%%% case pdm_tests.rs::test_pdm_top_level_order
+%%% input -
+[tool.pdm.build]
+includes = ["src/**"]
+
+[tool.pdm.version]
+source = "scm"
+
+[tool.pdm]
+distribution = true
+%%% output short
+[tool.pdm]
+distribution = true
+version.source = "scm"
+build.includes = [ "src/**" ]
+%%% output long
+[tool.pdm]
+distribution = true
+[tool.pdm.version]
+source = "scm"
+[tool.pdm.build]
+includes = [ "src/**" ]

@@ -1,0 +1,13 @@
+%%% case pdm_tests.rs::test_pdm_build_arrays_sorted
+%%% input -
+[tool.pdm.build]
+includes = ["zebra/**", "alpha/**"]
+excludes = ["tests/*"]
+%%% output short
+[tool.pdm]
+build.includes = [ "alpha/**", "zebra/**" ]
+build.excludes = [ "tests/*" ]
+%%% output long
+[tool.pdm.build]
+includes = [ "alpha/**", "zebra/**" ]
+excludes = [ "tests/*" ]

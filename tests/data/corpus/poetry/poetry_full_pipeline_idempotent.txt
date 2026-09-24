@@ -1,0 +1,38 @@
+%%% case poetry_tests.rs::test_poetry_full_pipeline_idempotent
+%%% input -
+[tool.poetry]
+name = "example"
+version = "1.0.0"
+description = "Example package"
+keywords = ["b", "a"]
+
+[[tool.poetry.source]]
+priority = "primary"
+name = "private"
+url = "https://pypi.example.com/simple"
+
+[tool.poetry.dependencies]
+requests = { extras = ["socks"], version = "^2.31" }
+foo = { git = "https://github.com/example/foo", branch = "main" }
+%%% output short
+[tool.poetry]
+name = "example"
+version = "1.0.0"
+description = "Example package"
+keywords = [ "a", "b" ]
+dependencies.foo = { git = "https://github.com/example/foo", branch = "main" }
+dependencies.requests = { extras = [ "socks" ], version = "^2.31" }
+source = [ { name = "private", url = "https://pypi.example.com/simple", priority = "primary" } ]
+%%% output long
+[tool.poetry]
+name = "example"
+version = "1.0.0"
+description = "Example package"
+keywords = [ "a", "b" ]
+[tool.poetry.dependencies]
+foo = { git = "https://github.com/example/foo", branch = "main" }
+requests = { extras = [ "socks" ], version = "^2.31" }
+[[tool.poetry.source]]
+name = "private"
+url = "https://pypi.example.com/simple"
+priority = "primary"

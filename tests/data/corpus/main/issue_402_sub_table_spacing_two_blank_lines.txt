@@ -1,0 +1,39 @@
+%%% case main_tests.rs::test_issue_402_sub_table_spacing_two_blank_lines
+%%% input -
+[tool.uv.sources]
+pkg = { workspace = true }
+
+[tool.uv.workspace]
+members = ["a", "b"]
+
+[tool.pyproject-fmt]
+indent = 4
+%%% output short
+[tool.uv]
+sources.pkg = { workspace = true }
+workspace.members = [ "a", "b" ]
+
+[tool.pyproject-fmt]
+indent = 4
+%%% output long
+[tool.uv.sources]
+pkg = { workspace = true }
+[tool.uv.workspace]
+members = [ "a", "b" ]
+
+[tool.pyproject-fmt]
+indent = 4
+%%% output classifiers
+[tool.uv]
+sources.pkg = { workspace = true }
+workspace.members = [ "a", "b" ]
+
+[tool.pyproject-fmt]
+indent = 4
+%%% output narrow
+[tool.uv]
+sources.pkg = { workspace = true }
+workspace.members = [ "a", "b" ]
+
+[tool.pyproject-fmt]
+indent = 4

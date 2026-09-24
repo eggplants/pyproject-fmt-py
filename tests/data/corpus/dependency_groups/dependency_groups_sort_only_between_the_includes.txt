@@ -1,0 +1,13 @@
+%%% case dependency_groups_tests.rs::test_dependency_groups_sort_only_between_the_includes
+%%% input -
+[dependency-groups]
+all = ["c<1", {include-group = "test"}, "z>1", "a>1", {include-group = "docs"}, "d>1"]
+%%% output short
+[dependency-groups]
+all = [ "c<1", { include-group = "test" }, "a>1", "z>1", { include-group = "docs" }, "d>1" ]
+%%% output long
+[dependency-groups]
+all = [ "c<1", { include-group = "test" }, "a>1", "z>1", { include-group = "docs" }, "d>1" ]
+%%% output keep-full-version
+[dependency-groups]
+all = [ "c<1", { include-group = "test" }, "a>1", "z>1", { include-group = "docs" }, "d>1" ]

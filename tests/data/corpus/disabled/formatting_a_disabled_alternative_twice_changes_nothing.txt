@@ -1,0 +1,13 @@
+%%% case disabled_tests.rs::test_formatting_a_disabled_alternative_twice_changes_nothing
+%%% input -
+[project]
+name = "active"
+# name = "alternative"
+%%% output short
+[project]
+name = "active"
+# name = "alternative"
+%%% output long
+[project]
+name = "active"
+# name = "alternative"

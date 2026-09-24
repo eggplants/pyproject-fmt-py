@@ -1,0 +1,10 @@
+%%% case mypy_tests.rs::test_mypy_plugins_order_preserved
+%%% input -
+[tool.mypy]
+plugins = ["pydantic.mypy", "numpy.typing.mypy_plugin", "z_first"]
+%%% output short
+[tool.mypy]
+plugins = [ "pydantic.mypy", "numpy.typing.mypy_plugin", "z_first" ]
+%%% output long
+[tool.mypy]
+plugins = [ "pydantic.mypy", "numpy.typing.mypy_plugin", "z_first" ]

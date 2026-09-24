@@ -1,0 +1,25 @@
+%%% case project_tests.rs::test_project_normalize_package_name_underscores
+%%% input -
+[project]
+dependencies = ["my_package>=1.0.0", "another.package>=2.0"]
+%%% output short
+[project]
+dependencies = [ "another-package>=2", "my-package>=1" ]
+%%% output long
+[project]
+dependencies = [ "another-package>=2", "my-package>=1" ]
+%%% output keep-full-version
+[project]
+dependencies = [ "another-package>=2.0", "my-package>=1.0.0" ]
+%%% output classifiers
+[project]
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]
+dependencies = [ "another-package>=2", "my-package>=1" ]

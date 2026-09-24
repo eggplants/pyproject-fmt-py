@@ -1,0 +1,19 @@
+%%% case setuptools_tests.rs::test_setuptools_sortable_arrays_sorted
+%%% input -
+[tool.setuptools]
+py-modules = ["zebra", "alpha"]
+platforms = ["windows", "linux", "darwin"]
+provides = ["zeta", "alpha"]
+obsoletes = ["legacy_z", "legacy_a"]
+%%% output short
+[tool.setuptools]
+py-modules = [ "alpha", "zebra" ]
+platforms = [ "darwin", "linux", "windows" ]
+provides = [ "alpha", "zeta" ]
+obsoletes = [ "legacy_a", "legacy_z" ]
+%%% output long
+[tool.setuptools]
+py-modules = [ "alpha", "zebra" ]
+platforms = [ "darwin", "linux", "windows" ]
+provides = [ "alpha", "zeta" ]
+obsoletes = [ "legacy_a", "legacy_z" ]

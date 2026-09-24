@@ -1,0 +1,13 @@
+%%% case poetry_tests.rs::test_poetry_long_format_build_constraints_expanded
+%%% input -
+[tool.poetry.build-constraints]
+zeta = { setuptools = "<78" }
+alpha = { setuptools = "<79" }
+%%% output short
+[tool.poetry]
+build-constraints.alpha = { setuptools = "<79" }
+build-constraints.zeta = { setuptools = "<78" }
+%%% output long
+[tool.poetry.build-constraints]
+alpha = { setuptools = "<79" }
+zeta = { setuptools = "<78" }

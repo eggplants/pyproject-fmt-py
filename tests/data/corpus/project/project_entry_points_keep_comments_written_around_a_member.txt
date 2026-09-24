@@ -1,0 +1,47 @@
+%%% case project_tests.rs::test_project_entry_points_keep_comments_written_around_a_member
+%%% input -
+[project]
+name = "demo"
+entry-points.group = {
+  # about a
+  a = "demo:a", # beside a
+  b = "demo:b",
+}
+%%% output short
+[project]
+name = "demo"
+# about a
+# beside a
+entry-points.group.a = "demo:a"
+entry-points.group.b = "demo:b"
+%%% output long
+[project]
+name = "demo"
+[project.entry-points]
+# about a
+# beside a
+group.a = "demo:a"
+group.b = "demo:b"
+%%% output keep-full-version
+[project]
+name = "demo"
+# about a
+# beside a
+entry-points.group.a = "demo:a"
+entry-points.group.b = "demo:b"
+%%% output classifiers
+[project]
+name = "demo"
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]
+# about a
+# beside a
+entry-points.group.a = "demo:a"
+entry-points.group.b = "demo:b"

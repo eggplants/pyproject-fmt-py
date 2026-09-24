@@ -1,0 +1,13 @@
+%%% case poetry_tests.rs::test_poetry_long_format_urls_alphabetized
+%%% input -
+[tool.poetry.urls]
+"Source" = "https://example.com"
+"Bug Tracker" = "https://example.com/issues"
+%%% output short
+[tool.poetry]
+urls."Bug Tracker" = "https://example.com/issues"
+urls.Source = "https://example.com"
+%%% output long
+[tool.poetry.urls]
+"Bug Tracker" = "https://example.com/issues"
+Source = "https://example.com"

@@ -1,0 +1,16 @@
+%%% case pytest_tests.rs::test_pytest_unknown_keys_alphabetized
+%%% input -
+[tool.pytest.ini_options]
+zzz_unknown = true
+aaa_unknown = false
+minversion = "8"
+%%% output short
+[tool.pytest]
+ini_options.minversion = "8"
+ini_options.aaa_unknown = false
+ini_options.zzz_unknown = true
+%%% output long
+[tool.pytest.ini_options]
+minversion = "8"
+aaa_unknown = false
+zzz_unknown = true

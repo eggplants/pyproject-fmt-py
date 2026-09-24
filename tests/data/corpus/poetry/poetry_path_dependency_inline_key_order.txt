@@ -1,0 +1,10 @@
+%%% case poetry_tests.rs::test_poetry_path_dependency_inline_key_order
+%%% input -
+[tool.poetry.dependencies]
+foo = { develop = true, path = "../foo", extras = ["all"] }
+%%% output short
+[tool.poetry]
+dependencies.foo = { path = "../foo", develop = true, extras = [ "all" ] }
+%%% output long
+[tool.poetry.dependencies]
+foo = { path = "../foo", develop = true, extras = [ "all" ] }

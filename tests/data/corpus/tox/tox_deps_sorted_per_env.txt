@@ -1,0 +1,13 @@
+%%% case tox_tests.rs::test_tox_deps_sorted_per_env
+%%% input -
+[tool.tox.env.test]
+deps = ["zebra", "alpha", "mike"]
+pass_env = ["HOME", "PATH"]
+%%% output short
+[tool.tox]
+env.test.deps = [ "alpha", "mike", "zebra" ]
+env.test.pass_env = [ "HOME", "PATH" ]
+%%% output long
+[tool.tox.env.test]
+deps = [ "alpha", "mike", "zebra" ]
+pass_env = [ "HOME", "PATH" ]

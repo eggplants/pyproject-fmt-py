@@ -1,0 +1,13 @@
+%%% case setuptools_tests.rs::test_setuptools_long_format_package_data_leads_with_the_catch_all
+%%% input -
+[tool.setuptools.package-data]
+pkg = ["*.txt"]
+"*" = ["*.cfg"]
+%%% output short
+[tool.setuptools]
+package-data."*" = [ "*.cfg" ]
+package-data.pkg = [ "*.txt" ]
+%%% output long
+[tool.setuptools.package-data]
+"*" = [ "*.cfg" ]
+pkg = [ "*.txt" ]

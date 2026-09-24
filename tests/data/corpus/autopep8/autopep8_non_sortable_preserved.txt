@@ -1,0 +1,16 @@
+%%% case autopep8_tests.rs::test_autopep8_non_sortable_preserved
+%%% input -
+[tool.autopep8]
+verbose = 2
+aggressive = 1
+max_line_length = 100
+%%% output short
+[tool.autopep8]
+max_line_length = 100
+aggressive = 1
+verbose = 2
+%%% output long
+[tool.autopep8]
+max_line_length = 100
+aggressive = 1
+verbose = 2

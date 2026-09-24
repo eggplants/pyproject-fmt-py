@@ -1,0 +1,15 @@
+%%% case mypy_tests.rs::test_mypy_does_not_reorder_unrelated_inline_tables
+%%% input -
+[project]
+name = "demo"
+authors = [ { email = "alice@example.com", name = "Alice" } ]
+%%% output short
+[project]
+name = "demo"
+authors = [ { name = "Alice", email = "alice@example.com" } ]
+%%% output long
+[project]
+name = "demo"
+[[project.authors]]
+name = "Alice"
+email = "alice@example.com"

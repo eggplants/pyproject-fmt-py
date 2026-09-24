@@ -1,0 +1,13 @@
+%%% case pyright_tests.rs::test_pyright_extra_paths_keep_their_order
+%%% input -
+[tool.pyright]
+extraPaths = ["stubs", "src"]
+include = ["src", "docs"]
+%%% output short
+[tool.pyright]
+include = [ "docs", "src" ]
+extraPaths = [ "stubs", "src" ]
+%%% output long
+[tool.pyright]
+include = [ "docs", "src" ]
+extraPaths = [ "stubs", "src" ]

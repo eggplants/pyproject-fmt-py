@@ -1,0 +1,21 @@
+%%% case dependency_groups_tests.rs::test_dependency_groups_unknown_group_name
+%%% input -
+[dependency-groups]
+custom = ["pkg>=1"]
+zebra = ["other>=2"]
+alpha = ["third>=3"]
+%%% output short
+[dependency-groups]
+alpha = [ "third>=3" ]
+custom = [ "pkg>=1" ]
+zebra = [ "other>=2" ]
+%%% output long
+[dependency-groups]
+alpha = [ "third>=3" ]
+custom = [ "pkg>=1" ]
+zebra = [ "other>=2" ]
+%%% output keep-full-version
+[dependency-groups]
+alpha = [ "third>=3" ]
+custom = [ "pkg>=1" ]
+zebra = [ "other>=2" ]

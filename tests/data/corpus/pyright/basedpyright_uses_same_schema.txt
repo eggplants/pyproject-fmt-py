@@ -1,0 +1,19 @@
+%%% case pyright_tests.rs::test_basedpyright_uses_same_schema
+%%% input -
+[tool.basedpyright]
+reportMissingImports = "error"
+failOnWarnings = true
+typeCheckingMode = "all"
+pythonVersion = "3.13"
+%%% output short
+[tool.basedpyright]
+pythonVersion = "3.13"
+typeCheckingMode = "all"
+failOnWarnings = true
+reportMissingImports = "error"
+%%% output long
+[tool.basedpyright]
+pythonVersion = "3.13"
+typeCheckingMode = "all"
+failOnWarnings = true
+reportMissingImports = "error"

@@ -1,0 +1,43 @@
+%%% case project_tests.rs::test_project_classifiers_below_the_configured_minimum
+%%% input -
+[project]
+name = "test"
+requires-python = ">=3.8,<3.11"
+classifiers = [
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+]
+%%% output short
+[project]
+name = "test"
+requires-python = ">=3.8,<3.11"
+classifiers = [
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+]
+%%% output long
+[project]
+name = "test"
+requires-python = ">=3.8,<3.11"
+classifiers = [
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+]
+%%% output keep-full-version
+[project]
+name = "test"
+requires-python = ">=3.8,<3.11"
+classifiers = [
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+]
+%%% output classifiers
+[project]
+name = "test"
+requires-python = ">=3.8,<3.11"
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+]

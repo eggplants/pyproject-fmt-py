@@ -1,0 +1,10 @@
+%%% case bandit_tests.rs::test_bandit_inner_tests_sorted
+%%% input -
+[tool.bandit.some_plugin]
+tests = ["B999", "B101"]
+%%% output short
+[tool.bandit]
+some_plugin.tests = [ "B101", "B999" ]
+%%% output long
+[tool.bandit.some_plugin]
+tests = [ "B101", "B999" ]

@@ -1,0 +1,40 @@
+%%% case hatch_tests.rs::test_hatch_long_format_env_table_keys_reordered
+%%% input -
+[tool.hatch.envs.default]
+scripts = { test = "pytest" }
+dependencies = ["zeta", "alpha"]
+python = "3.12"
+type = "virtual"
+extra-dependencies = ["zinc", "amber"]
+features = ["dev", "test"]
+platforms = ["linux", "macos"]
+pre-install-commands = ["echo pre"]
+post-install-commands = ["echo post"]
+env-include = ["FOO_*"]
+env-exclude = ["BAR_*"]
+%%% output short
+[tool.hatch]
+envs.default.type = "virtual"
+envs.default.platforms = [ "linux", "macos" ]
+envs.default.python = "3.12"
+envs.default.features = [ "dev", "test" ]
+envs.default.dependencies = [ "alpha", "zeta" ]
+envs.default.extra-dependencies = [ "amber", "zinc" ]
+envs.default.pre-install-commands = [ "echo pre" ]
+envs.default.post-install-commands = [ "echo post" ]
+envs.default.env-include = [ "FOO_*" ]
+envs.default.env-exclude = [ "BAR_*" ]
+envs.default.scripts = { test = "pytest" }
+%%% output long
+[tool.hatch.envs.default]
+type = "virtual"
+platforms = [ "linux", "macos" ]
+python = "3.12"
+features = [ "dev", "test" ]
+dependencies = [ "alpha", "zeta" ]
+extra-dependencies = [ "amber", "zinc" ]
+pre-install-commands = [ "echo pre" ]
+post-install-commands = [ "echo post" ]
+env-include = [ "FOO_*" ]
+env-exclude = [ "BAR_*" ]
+scripts = { test = "pytest" }

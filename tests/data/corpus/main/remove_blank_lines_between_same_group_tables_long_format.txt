@@ -1,0 +1,32 @@
+%%% case main_tests.rs::test_remove_blank_lines_between_same_group_tables_long_format
+%%% input -
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["ALL"]
+
+[tool.ruff.format]
+quote-style = "double"
+%%% output short
+[tool.ruff]
+line-length = 100
+format.quote-style = "double"
+lint.select = [ "ALL" ]
+%%% output long
+[tool.ruff]
+line-length = 100
+[tool.ruff.format]
+quote-style = "double"
+[tool.ruff.lint]
+select = [ "ALL" ]
+%%% output classifiers
+[tool.ruff]
+line-length = 100
+format.quote-style = "double"
+lint.select = [ "ALL" ]
+%%% output narrow
+[tool.ruff]
+line-length = 100
+format.quote-style = "double"
+lint.select = [ "ALL" ]

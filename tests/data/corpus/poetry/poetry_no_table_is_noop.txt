@@ -1,0 +1,10 @@
+%%% case poetry_tests.rs::test_poetry_no_table_is_noop
+%%% input -
+[project]
+name = "example"
+%%% output short
+[project]
+name = "example"
+%%% output long
+[project]
+name = "example"

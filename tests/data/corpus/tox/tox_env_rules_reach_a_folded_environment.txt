@@ -1,0 +1,19 @@
+%%% case tox_tests.rs::test_tox_env_rules_reach_a_folded_environment
+%%% input -
+[tool.tox.env.test]
+setenv = { A = "1" }
+usedevelop = true
+deps = ["Zebra >= 1.0", "alpha"]
+passenv = ["PATH", "HOME"]
+%%% output short
+[tool.tox]
+env.test.package = "editable"
+env.test.deps = [ "alpha", "zebra>=1" ]
+env.test.pass_env = [ "HOME", "PATH" ]
+env.test.set_env = { A = "1" }
+%%% output long
+[tool.tox.env.test]
+package = "editable"
+deps = [ "alpha", "zebra>=1" ]
+pass_env = [ "HOME", "PATH" ]
+set_env = { A = "1" }

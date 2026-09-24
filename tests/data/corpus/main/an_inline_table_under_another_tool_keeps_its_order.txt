@@ -1,0 +1,26 @@
+%%% case main_tests.rs::test_an_inline_table_under_another_tool_keeps_its_order
+%%% input -
+[tool.other]
+config = { z = 1, replace = true, a = 2 }
+source = { z = 1, path = "x", a = 2 }
+overrides = { z = 1, module = "m", a = 2 }
+%%% output short
+[tool.other]
+config = { z = 1, replace = true, a = 2 }
+source = { z = 1, path = "x", a = 2 }
+overrides = { z = 1, module = "m", a = 2 }
+%%% output long
+[tool.other]
+config = { z = 1, replace = true, a = 2 }
+source = { z = 1, path = "x", a = 2 }
+overrides = { z = 1, module = "m", a = 2 }
+%%% output classifiers
+[tool.other]
+config = { z = 1, replace = true, a = 2 }
+source = { z = 1, path = "x", a = 2 }
+overrides = { z = 1, module = "m", a = 2 }
+%%% output narrow
+[tool.other]
+config = { z = 1, replace = true, a = 2 }
+source = { z = 1, path = "x", a = 2 }
+overrides = { z = 1, module = "m", a = 2 }

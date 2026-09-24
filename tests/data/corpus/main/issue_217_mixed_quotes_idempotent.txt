@@ -1,0 +1,80 @@
+%%% case main_tests.rs::test_issue_217_mixed_quotes_idempotent
+%%% input -
+[project]
+name = "flexget"
+requires-python = ">=3.14"
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.14",
+]
+
+[tool.ruff]
+lint.per-file-ignores.'docs/scripts/*' = [ "T20" ]
+lint.per-file-ignores.'tests/*' = [ "T20" ]
+lint.per-file-ignores."flexget/*" = [ "PTH" ] # TODO
+%%% output short
+[project]
+name = "flexget"
+requires-python = ">=3.14"
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.14",
+]
+
+[tool.ruff]
+lint.per-file-ignores."docs/scripts/*" = [ "T20" ]
+lint.per-file-ignores."flexget/*" = [ "PTH" ]  # TODO
+lint.per-file-ignores."tests/*" = [ "T20" ]
+%%% output long
+[project]
+name = "flexget"
+requires-python = ">=3.14"
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.14",
+]
+
+[tool.ruff]
+[tool.ruff.lint]
+per-file-ignores."docs/scripts/*" = [ "T20" ]
+per-file-ignores."flexget/*" = [ "PTH" ]  # TODO
+per-file-ignores."tests/*" = [ "T20" ]
+%%% output classifiers
+[project]
+name = "flexget"
+requires-python = ">=3.14"
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]
+
+[tool.ruff]
+lint.per-file-ignores."docs/scripts/*" = [ "T20" ]
+lint.per-file-ignores."flexget/*" = [ "PTH" ]  # TODO
+lint.per-file-ignores."tests/*" = [ "T20" ]
+%%% output narrow
+[project]
+name = "flexget"
+requires-python = ">=3.14"
+classifiers = [
+  """\
+  Programming Language :: Python :: \
+  3 :: Only\
+  """,
+  """\
+  Programming Language :: Python :: \
+  3.14\
+  """,
+]
+
+[tool.ruff]
+lint.per-file-ignores."docs/scripts/*" = [
+  "T20"
+]
+lint.per-file-ignores."flexget/*" = [
+  "PTH"
+]  # TODO
+lint.per-file-ignores."tests/*" = [
+  "T20"
+]

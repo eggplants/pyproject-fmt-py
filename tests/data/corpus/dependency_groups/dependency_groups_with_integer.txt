@@ -1,0 +1,25 @@
+%%% case dependency_groups_tests.rs::test_dependency_groups_with_integer
+%%% input -
+[dependency-groups]
+test = [
+  "pkg>=1.0",
+  42,
+]
+%%% output short
+[dependency-groups]
+test = [
+  "pkg>=1",
+  42,
+]
+%%% output long
+[dependency-groups]
+test = [
+  "pkg>=1",
+  42,
+]
+%%% output keep-full-version
+[dependency-groups]
+test = [
+  "pkg>=1.0",
+  42,
+]

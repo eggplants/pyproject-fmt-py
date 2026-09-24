@@ -1,0 +1,5 @@
+%%% case build_systems_tests.rs::test_format_build_systems_no_build_system
+%%% input -
+%%% output short
+%%% output long
+%%% output keep-full-version

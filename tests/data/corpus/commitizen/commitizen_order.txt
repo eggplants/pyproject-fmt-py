@@ -1,0 +1,22 @@
+%%% case commitizen_tests.rs::test_commitizen_order
+%%% input -
+[tool.commitizen]
+update_changelog_on_bump = true
+version_files = ["src/pkg/__init__.py", "pyproject.toml"]
+tag_format = "v$version"
+version = "1.0.0"
+name = "cz_conventional_commits"
+%%% output short
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "1.0.0"
+version_files = [ "pyproject.toml", "src/pkg/__init__.py" ]
+tag_format = "v$version"
+update_changelog_on_bump = true
+%%% output long
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "1.0.0"
+version_files = [ "pyproject.toml", "src/pkg/__init__.py" ]
+tag_format = "v$version"
+update_changelog_on_bump = true

@@ -1,0 +1,15 @@
+%%% case coverage_tests.rs::test_coverage_run_before_report
+%%% input -
+[tool.coverage]
+report.omit = ["tests/*"]
+run.omit = ["tests/*"]
+%%% output short
+[tool.coverage]
+run.omit = [ "tests/*" ]
+report.omit = [ "tests/*" ]
+%%% output long
+[tool.coverage]
+[tool.coverage.run]
+omit = [ "tests/*" ]
+[tool.coverage.report]
+omit = [ "tests/*" ]

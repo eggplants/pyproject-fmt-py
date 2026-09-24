@@ -1,0 +1,70 @@
+%%% case main_tests.rs::test_issue_376_collapse_with_comments_stays_valid
+%%% input -
+[[tool.uv.index]]
+name = "pypi"
+url = "https://pypi.org/simple"
+# TODO: uncomment once ready
+# default = true
+authenticate = "never"
+
+[[tool.uv.index]]
+name = "company-master"
+url = "https://dl.cloudsmith.io/x"
+# ignore-error-codes = [400, 401, 403]
+authenticate = "always"
+%%% output short
+[[tool.uv.index]]
+name = "pypi"
+url = "https://pypi.org/simple"
+# TODO: uncomment once ready
+# default = true
+authenticate = "never"
+
+[[tool.uv.index]]
+name = "company-master"
+url = "https://dl.cloudsmith.io/x"
+# ignore-error-codes = [ 400, 401, 403 ]
+authenticate = "always"
+%%% output long
+[[tool.uv.index]]
+name = "pypi"
+url = "https://pypi.org/simple"
+# TODO: uncomment once ready
+# default = true
+authenticate = "never"
+
+[[tool.uv.index]]
+name = "company-master"
+url = "https://dl.cloudsmith.io/x"
+# ignore-error-codes = [ 400, 401, 403 ]
+authenticate = "always"
+%%% output classifiers
+[[tool.uv.index]]
+name = "pypi"
+url = "https://pypi.org/simple"
+# TODO: uncomment once ready
+# default = true
+authenticate = "never"
+
+[[tool.uv.index]]
+name = "company-master"
+url = "https://dl.cloudsmith.io/x"
+# ignore-error-codes = [ 400, 401, 403 ]
+authenticate = "always"
+%%% output narrow
+[[tool.uv.index]]
+name = "pypi"
+url = "https://pypi.org/simple"
+# TODO: uncomment once ready
+# default = true
+authenticate = "never"
+
+[[tool.uv.index]]
+name = "company-master"
+url = "https://dl.cloudsmith.io/x"
+# ignore-error-codes = [
+#   400,
+#   401,
+#   403
+# ]
+authenticate = "always"

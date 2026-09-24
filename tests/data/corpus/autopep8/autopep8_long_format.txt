@@ -1,0 +1,13 @@
+%%% case autopep8_tests.rs::test_autopep8_long_format
+%%% input -
+[tool.autopep8]
+select = ["E501", "E302"]
+max_line_length = 100
+%%% output short
+[tool.autopep8]
+max_line_length = 100
+select = [ "E302", "E501" ]
+%%% output long
+[tool.autopep8]
+max_line_length = 100
+select = [ "E302", "E501" ]

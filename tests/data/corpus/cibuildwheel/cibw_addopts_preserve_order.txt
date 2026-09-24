@@ -1,0 +1,13 @@
+%%% case cibuildwheel_tests.rs::test_cibw_addopts_preserve_order
+%%% input -
+[tool.cibuildwheel]
+before-all = "bash setup.sh"
+test-requires = ["pytest", "pytest-cov"]
+%%% output short
+[tool.cibuildwheel]
+before-all = "bash setup.sh"
+test-requires = [ "pytest", "pytest-cov" ]
+%%% output long
+[tool.cibuildwheel]
+before-all = "bash setup.sh"
+test-requires = [ "pytest", "pytest-cov" ]

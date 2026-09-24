@@ -1,0 +1,16 @@
+%%% case pyright_tests.rs::test_pyright_unknown_keys_alphabetized_after_known
+%%% input -
+[tool.pyright]
+zzz_unknown = true
+aaa_unknown = false
+pythonVersion = "3.12"
+%%% output short
+[tool.pyright]
+pythonVersion = "3.12"
+aaa_unknown = false
+zzz_unknown = true
+%%% output long
+[tool.pyright]
+pythonVersion = "3.12"
+aaa_unknown = false
+zzz_unknown = true

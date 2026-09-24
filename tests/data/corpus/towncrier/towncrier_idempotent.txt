@@ -1,0 +1,16 @@
+%%% case towncrier_tests.rs::test_towncrier_idempotent
+%%% input -
+[tool.towncrier]
+name = "Demo"
+package = "demo"
+directory = "changes"
+%%% output short
+[tool.towncrier]
+name = "Demo"
+package = "demo"
+directory = "changes"
+%%% output long
+[tool.towncrier]
+name = "Demo"
+package = "demo"
+directory = "changes"

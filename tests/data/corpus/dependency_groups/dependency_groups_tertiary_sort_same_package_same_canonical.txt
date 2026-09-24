@@ -1,0 +1,25 @@
+%%% case dependency_groups_tests.rs::test_dependency_groups_tertiary_sort_same_package_same_canonical
+%%% input -
+[dependency-groups]
+test = [
+  "pkg>=2.0",
+  "pkg>=1.0",
+]
+%%% output short
+[dependency-groups]
+test = [
+  "pkg>=1",
+  "pkg>=2",
+]
+%%% output long
+[dependency-groups]
+test = [
+  "pkg>=1",
+  "pkg>=2",
+]
+%%% output keep-full-version
+[dependency-groups]
+test = [
+  "pkg>=1.0",
+  "pkg>=2.0",
+]

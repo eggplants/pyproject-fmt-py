@@ -1,0 +1,16 @@
+%%% case interrogate_tests.rs::test_interrogate_arrays_sorted
+%%% input -
+[tool.interrogate]
+exclude = ["tests", "build", "docs"]
+extend-exclude = ["zeta", "alpha"]
+ignore-regex = ["^test_.*$", "^_.*$"]
+%%% output short
+[tool.interrogate]
+ignore-regex = [ "^_.*$", "^test_.*$" ]
+exclude = [ "build", "docs", "tests" ]
+extend-exclude = [ "alpha", "zeta" ]
+%%% output long
+[tool.interrogate]
+ignore-regex = [ "^_.*$", "^test_.*$" ]
+exclude = [ "build", "docs", "tests" ]
+extend-exclude = [ "alpha", "zeta" ]

@@ -1,0 +1,26 @@
+%%% case pixi_tests.rs::test_pixi_platforms_holding_a_table_keep_their_order
+%%% input -
+[tool.pixi]
+workspace.platforms = [
+  { name = "cuda-12", platform = "linux-64", cuda = "12" },
+  "win-64",
+  { name = "cuda-13", platform = "linux-64", cuda = "13" },
+  "linux-64",
+]
+%%% output short
+[tool.pixi]
+workspace.platforms = [
+  { name = "cuda-12", platform = "linux-64", cuda = "12" },
+  "win-64",
+  { name = "cuda-13", platform = "linux-64", cuda = "13" },
+  "linux-64",
+]
+%%% output long
+[tool.pixi]
+[tool.pixi.workspace]
+platforms = [
+  { name = "cuda-12", platform = "linux-64", cuda = "12" },
+  "win-64",
+  { name = "cuda-13", platform = "linux-64", cuda = "13" },
+  "linux-64",
+]

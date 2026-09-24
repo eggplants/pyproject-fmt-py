@@ -1,0 +1,13 @@
+%%% case hatch_tests.rs::test_hatch_metadata_keys_grouped
+%%% input -
+[tool.hatch.metadata]
+allow-ambiguous-features = true
+allow-direct-references = true
+%%% output short
+[tool.hatch]
+metadata.allow-direct-references = true
+metadata.allow-ambiguous-features = true
+%%% output long
+[tool.hatch.metadata]
+allow-direct-references = true
+allow-ambiguous-features = true

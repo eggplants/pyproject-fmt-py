@@ -1,0 +1,22 @@
+%%% case pixi_tests.rs::test_pixi_workspace_expanded_table
+%%% input -
+[tool.pixi.workspace]
+platforms = ["osx-arm64", "linux-64"]
+channels = ["conda-forge"]
+name = "my-project"
+documentation = "https://docs.example.com"
+homepage = "https://example.com"
+%%% output short
+[tool.pixi]
+workspace.name = "my-project"
+workspace.homepage = "https://example.com"
+workspace.documentation = "https://docs.example.com"
+workspace.channels = [ "conda-forge" ]
+workspace.platforms = [ "linux-64", "osx-arm64" ]
+%%% output long
+[tool.pixi.workspace]
+name = "my-project"
+homepage = "https://example.com"
+documentation = "https://docs.example.com"
+channels = [ "conda-forge" ]
+platforms = [ "linux-64", "osx-arm64" ]
