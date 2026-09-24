@@ -7,8 +7,10 @@ each of its scalar keys as the setting it spells.
 
 from __future__ import annotations
 
-import tomllib
 from typing import TYPE_CHECKING, TypeAlias
+
+import tomlkit
+from tomlkit.exceptions import TOMLKitError
 
 if TYPE_CHECKING:
     from collections.abc import Sequence
@@ -32,8 +34,8 @@ def settings_in(content: str, path: Sequence[str] = ()) -> dict[str, SettingValu
         TypeError: If the name the path gives holds something other than a table.
     """
     try:
-        held: SettingValue = tomllib.loads(content)
-    except tomllib.TOMLDecodeError as exc:
+        held: SettingValue = tomlkit.parse(content).unwrap()
+    except TOMLKitError as exc:
         raise SyntaxError(str(exc)) from exc
     for segment in path:
         if not isinstance(held, dict):

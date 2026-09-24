@@ -7,7 +7,7 @@ in a comment above the section.
 
 from __future__ import annotations
 
-import tomllib
+import sys
 from typing import TYPE_CHECKING
 
 import pytest
@@ -19,6 +19,11 @@ from pyproject_fmt_py import FormatError, Settings, format_toml
 
 if TYPE_CHECKING:
     from collections.abc import Iterator
+
+if sys.version_info >= (3, 11):
+    import tomllib
+else:  # pragma: no cover
+    import tomli as tomllib
 
 CASES = load_all(CORPUS)
 KNOWN_FAILURES = read_known_failures()

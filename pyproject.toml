@@ -14,7 +14,7 @@ keywords = [
 ]
 license = { text = "MIT" }
 authors = [ { name = "eggplants", email = "w10776e8w@yahoo.co.jp" } ]
-requires-python = ">=3.11"
+requires-python = ">=3.10"
 classifiers = [
   "Development Status :: 3 - Alpha",
   "Environment :: Console",
@@ -22,6 +22,7 @@ classifiers = [
   "License :: OSI Approved :: MIT License",
   "Operating System :: OS Independent",
   "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
   "Programming Language :: Python :: 3.13",
@@ -44,6 +45,7 @@ dev = [
   "pymarkdownlnt>=0.9.33",
   "pytest>=9.0.2",
   "pytest-cov>=7",
+  "tomli>=2.2.1; python_version<'3.11'",
 ]
 docs = [
   "pdoc>=16",
@@ -70,8 +72,9 @@ format.quote-style = "double"
 lint.select = [ "ALL" ]
 lint.ignore = [
   "COM812",
-  "CPY001", # Missing copyright notice (this project carries its licence in LICENSE.txt)
+  "CPY001",  # Missing copyright notice (this project carries its licence in LICENSE.txt)
   "D",
+  "PERF203", # `try`-`except` within a loop (only 3.10 pays for it, and the loops here are short)
 ]
 lint.per-file-ignores."packaging/entrypoint.py" = [
   "INP001", # Implicit namespace package (frozen entry point, not importable content)
