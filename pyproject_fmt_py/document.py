@@ -24,7 +24,7 @@ from tomlkit.exceptions import TOMLKitError
 from .errors import FormatError
 
 if TYPE_CHECKING:
-    from collections.abc import Iterable, Iterator
+    from collections.abc import Generator, Iterable, Iterator
 
     from .keys import KeyPath
 
@@ -205,7 +205,7 @@ def parse_repeating(content: str) -> Document:
 
 
 @contextlib.contextmanager
-def _repeats_allowed() -> Iterator[None]:
+def _repeats_allowed() -> Generator[None]:
     """Let the reader list a name it has already listed, rather than refusing the document."""
     appended, raw_appended = Container.append, Container._raw_append  # noqa: SLF001
 

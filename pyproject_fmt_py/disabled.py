@@ -18,7 +18,7 @@ from tomlkit import items as tk
 from tomlkit.exceptions import TOMLKitError
 
 if TYPE_CHECKING:
-    from collections.abc import Iterator, Sequence
+    from collections.abc import Generator, Sequence
 
     from .document import Entry
 
@@ -32,7 +32,7 @@ _in_use: list[str | None] = [None]
 
 
 @contextlib.contextmanager
-def in_use(marker: str) -> Iterator[None]:
+def in_use(marker: str) -> Generator[None]:
     """Hold the marker for as long as the pass runs, and take it back however the pass ends."""
     _in_use[0] = marker
     try:
